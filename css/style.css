@@ -1,0 +1,122 @@
+/* GENERAL */
+
+header.logoHeader {
+    height: 100px;
+    margin-top: 60px;
+    margin-bottom: 30px;
+}
+
+body.backgroungImg {
+    margin: 0;
+    padding: 0;
+    background-color: #4caf50;
+    background-image: url(../img/fond-vert-arbres.png);
+    background-repeat: no-repeat;
+    background-position: center top;
+    font-family: 'Segoe UI', 'OpenSans', 'sans-serif';
+    font-size: 1.2rem;
+    color: white;
+}
+ 
+
+/* ECRAN SIGN-UP */
+
+.spacer {
+    margin-bottom: 60px;
+}
+
+#returnArrow {
+    display: block;
+    margin-left: 36%;
+    margin-top: 20px;
+}
+
+#logoGtG2 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
+
+
+ /* ECRAN LOGIN */
+
+#logoGtG {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.formInput, button {
+    display: block;
+    margin : 20px auto;
+    font-family: 'Segoe UI', 'OpenSans', 'sans-serif';
+    border: white;
+    border-radius: 20px;
+    height: 40px;
+    text-align: center;
+    font-size: 1.2rem;
+    color: #707070;
+    width: 300px;
+    opacity: 0.84;
+}
+
+button {
+    height: 60px;
+    border: 1px solid #707070;
+    border-radius: 30px;
+    opacity: 1;
+}
+
+.text {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.socials {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#logoGoogle {
+    margin-right: 20px;
+}
+
+#linkInscription {
+    display: block;
+    text-align: center;
+    margin-top: 30px;
+}
+
+#linkInscription:link {
+    text-decoration: underline;
+    color: white;
+}
+
+#linkInscription:visited {
+    color: white;
+}
+
+
+/* GEOLOCALISATION */
+
+.title {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+#geolocalisationTitle {
+    font-size: 1.5rem;
+    margin-left: 60px;
+    margin-right: 60px;
+}
+
+#map {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
