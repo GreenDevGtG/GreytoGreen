@@ -13,11 +13,154 @@ body.backgroungImg {
     background-image: url(../img/fond-vert-arbres.png);
     background-repeat: no-repeat;
     background-position: center top;
+    height: 100%;
     font-family: 'Segoe UI', 'OpenSans', 'sans-serif';
     font-size: 1.2rem;
     color: white;
 }
- 
+
+
+/* SIDEBAR MENU LEFT */
+
+ /* The side navigation menu */
+ .sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: #424242;
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 50px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #ffffff;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav #sidenavLogo {
+    background-color: #fff;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-top: 10px;
+}
+
+#sidenavLogo #logoGtG {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-left: 70px;
+}
+
+#sidenav-events {
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
+
+#sidenav-tips {
+    margin-bottom: 30px;
+}
+
+#sidenav-geolocalisation {
+    margin-bottom: 30px;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+    color: #ccc;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+    transition: margin-left .5s;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+
+/* RIGHT MENU GENERAL */
+
+ /* The side navigation menu */
+ .searchnav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    right: 0;
+    background-color: #424242;
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 50px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.searchnav a {
+    padding: 8px 32px 8px 8px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #ffffff;
+    display: block;
+    transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.searchnav a:hover {
+    color: #ccc;
+}
+
+/* Position and style the close button (top right corner) */
+.searchnav .closebtnRight {
+    position: absolute;
+    top: 0;
+    left: 25px;
+    font-size: 36px;
+    margin-right: 50px;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+    transition: margin-right .5s;
+}
+
+#searchInput {
+    width: 200px;
+}
+
+ul.checkbox {
+    list-style: none;
+}
+
+.checkboxSearch {
+    margin-bottom: 20px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .searchnav {padding-top: 15px;}
+    .searchnav a {font-size: 18px;}
+}
 
 /* ECRAN SIGN-UP */
 
@@ -109,6 +252,11 @@ button {
     margin-bottom: 10px;
 }
 
+#menuIcon {
+    height: 100%;
+    margin-top: 5px;
+}
+
 #geolocalisationTitle {
     font-size: 1.5rem;
     margin-left: 60px;
@@ -120,3 +268,4 @@ button {
     margin-left: auto;
     margin-right: auto;
 }
+
