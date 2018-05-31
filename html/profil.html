@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe"
+        crossorigin="anonymous"></script>
+    <link href="../css/style.css" rel="stylesheet">
+    <title>Mon profil</title>
+
+</head>
+
+<body class="myProfil backgroundImg">
+    <div class="content">
+        <header class="title">
+
+            <!-- LEFT MENU -->
+
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" style="color:#ccc">
+                    <i class="fas fa-angle-left"></i>
+                </a>
+                <div id="sidenavLogo">
+                    <img src="../img/LogoGtG.png" id="logoGtG">
+                </div>
+                <a href="#" id="sidenav-events">
+                    <i class="far fa-calendar-alt"></i> Evènements</a>
+                <a href="#" id="sidenav-tips">
+                    <i class="far fa-lightbulb"></i> Astuces</a>
+                <a href="./geolocalisation.html" id="sidenav-geolocalisation">
+                    <i class="fas fa-map-marker-alt"></i> Lieux d'intérêt</a>
+                <a href="./profil.html" id="sidenav-profil">
+                    <i class="far fa-user"></i> Profil</a>
+            </div>
+
+            <!-- TITLE -->
+
+            <img id="profilMenuIcon" onclick="openNav()" src="../img/MenuIcon.png" alt="Menu">
+
+            <span id="profilTitle">Mon Profil</span>
+
+        </header>
+
+        <div class="profilHead">
+            <a href="#">
+                <i class="fas fa-power-off"></i>
+            </a>
+            <div>
+                <input id="profilPseudo" type="text" name="pseudo" placeholder="Pseudonyme">
+            </div>
+
+        </div>
+
+        <div class="profilInfos">
+            <input class="" type="text" name="lastname">
+            <input class="" type="text" name="firstname">
+            <input class="" type="text" name="email">
+            <input class="" type="password" name="password">
+            <input class="" type="text" name="location">
+            <input class="" type="text" name="address">
+            <input class="" type="date" name="birtday">
+        </div>
+    </div>
+    <script src="../js/scripts.js"></script>
+</body>
+
+</html>

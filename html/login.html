@@ -6,44 +6,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="../css/style.css" rel="stylesheet">
-    <title>Login Page</title>
+    <title>Se connecter</title>
 </head>
 
-<body class="login backgroungImg">
-    <header class="logoHeader">
-        <div>
-            <img id="logoGtG" src="../img/LogoGtGblanc.png" alt="logoGtG">
+<body class="login backgroundImg">
+    <div class="content">
+        <header class="logoHeader">
+            <div>
+                <img id="logoGtG" src="../img/LogoGtGblanc.png" alt="logoGtG">
+            </div>
+        </header>
+
+
+        <form>
+
+            <input class="formInput" type="text" name="email" placeholder="Email">
+
+            <input class="formInput" type="password" name="password" placeholder="Mot de passe">
+
+            <button class="button" type="submit">Connexion</button>
+        </form>
+
+        <div class="text">
+            Connectez-vous avec :
         </div>
-    </header>
+        <div class="socials">
+            <a href="#">
+                <img src="../img/Logo-google.png" alt="logoGoogle" id="logoGoogle">
+            </a>
+            <a href="#">
+                <img src="../img/Logo-facebook.png" alt="logoFB" id="logoFB">
+            </a>
+
+        </div>
 
 
-    <form>
-
-        <input class="formInput" type="text" name="email" placeholder="Email">
-
-        <input class="formInput" type="password" name="password" placeholder="Mot de passe">
-
-        <button class="button" type="submit">Connexion</button>
-    </form>
-
-    <div class="text">
-        Connectez-vous avec :
+        <div class="link">
+            <a href="./inscription.html" id="linkInscription">Inscription</a>
+        </div>
     </div>
-    <div class="socials">
-        <a href="#">
-            <img src="../img/Logo-google.png" alt="logoGoogle" id="logoGoogle">
-        </a>
-        <a href="#">
-            <img src="../img/Logo-facebook.png" alt="logoFB" id="logoFB">
-        </a>
-
-    </div>
-
-
-    <div class="link">
-        <a href="./inscription.html" id="linkInscription">Inscription</a>
-    </div>
-
 </body>
 
 </html>

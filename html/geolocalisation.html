@@ -8,76 +8,77 @@
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe"
         crossorigin="anonymous"></script>
     <link href="../css/style.css" rel="stylesheet">
-    <title>Geolocalisation Page</title>
+    <title>Géolocalisation</title>
 </head>
 
-<body class="geolocalisation backgroungImg"></body>
+<body class="geolocalisation backgroundImg">
+    <div class="content">
 
-<header class="title">
+        <header class="title">
 
-    <!-- LEFT MENU -->
+            <!-- LEFT MENU -->
 
-    <div id="mySidenav" class="sidenav">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" style="color:#ccc">
-            <i class="fas fa-angle-left"></i>
-        </a>
-        <div id="sidenavLogo">
-            <img src="../img/LogoGtG.png" id="logoGtG">
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" style="color:#ccc">
+                    <i class="fas fa-angle-left"></i>
+                </a>
+                <div id="sidenavLogo">
+                    <img src="../img/LogoGtG.png" id="logoGtG">
+                </div>
+                <a href="#" id="sidenav-events">
+                    <i class="far fa-calendar-alt"></i> Evènements</a>
+                <a href="#" id="sidenav-tips">
+                    <i class="far fa-lightbulb"></i> Astuces</a>
+                <a href="./geolocalisation.html" id="sidenav-geolocalisation">
+                    <i class="fas fa-map-marker-alt"></i> Lieux d'intérêt</a>
+                <a href="./profil.html" id="sidenav-profil">
+                    <i class="far fa-user"></i> Profil</a>
+            </div>
+
+            <!-- RIGHT MENU -->
+
+            <!-- <div id="mySearchnav" class="searchnav">
+                <a href="javascript:void(0)" class="closebtnRight" onclick="closeSearch()" style="color:#ccc">
+                    <i class="fas fa-angle-right"></i>
+                </a>
+                <input type="text" name="search" class="formInput" id="searchInput" placeholder="Rechercher">
+                <ul class="checkbox">
+                    <li>
+                        <input type="checkbox" class="checkboxSearch" name="checkbox1">
+                        <label for="checkbox1">Checkbox 1</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" class="checkboxSearch" name="checkbox2">
+                        <label for="checkbox2">Checkbox 2</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" class="checkboxSearch" name="checkbox3">
+                        <label for="checkbox3">Checkbox 3</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" class="checkboxSearch" name="checkbox4">
+                        <label for="checkbox4">Checkbox 4</label>
+                    </li>
+                </ul>
+            </div> -->
+
+            <!-- TITLE -->
+
+            <img id="menuIcon" onclick="openNav()" src="../img/MenuIcon.png" alt="Menu">
+            <span id="geolocalisationTitle">Géolocalisation</span>
+            <!-- <a href="#">
+                <img id="searchIcon" src="../img/SearchIcon.png" alt="Search" onclick="openSearch()">
+            </a> -->
+
+        </header>
+
+        <div id="main">
+                <iframe id="map" src="https://www.google.com/maps/d/u/0/embed?mid=1C465Rr02kZAYGsG_zxsSrA1PVDnnc1qF" 
+                width="358" height="600" frameborder="0" allowfullscreen></iframe>
         </div>
-        <a href="#" id="sidenav-events">
-            <i class="far fa-calendar-alt"></i> Evènements</a>
-        <a href="#" id="sidenav-tips">
-            <i class="far fa-lightbulb"></i> Astuces</a>
-        <a href="./geolocalisation.html" id="sidenav-geolocalisation">
-            <i class="fas fa-map-marker-alt"></i> Lieux d'intérêt</a>
-        <a href="#" id="sidenav-profil">
-            <i class="far fa-user"></i> Profil</a>
     </div>
 
-    <!-- RIGHT MENU -->
-
-    <div id="mySearchnav" class="searchnav">
-        <a href="javascript:void(0)" class="closebtnRight" onclick="closeSearch()" style="color:#ccc">
-            <i class="fas fa-angle-right"></i>
-        </a>
-        <input type="text" name="search" class="formInput" id="searchInput" placeholder="Rechercher">
-        <ul class="checkbox">
-            <li>
-                <input type="checkbox" class="checkboxSearch" name="checkbox1">
-                <label for="checkbox1">Checkbox 1</label>
-            </li>
-            <li>
-                <input type="checkbox" class="checkboxSearch" name="checkbox2">
-                <label for="checkbox2">Checkbox 2</label>
-            </li>
-            <li>
-                <input type="checkbox" class="checkboxSearch" name="checkbox3">
-                <label for="checkbox3">Checkbox 3</label>
-            </li>
-            <li>
-                <input type="checkbox" class="checkboxSearch" name="checkbox4">
-                <label for="checkbox4">Checkbox 4</label>
-            </li>
-        </ul>
-    </div>
-
-    <!-- TITLE -->
-    <img id="menuIcon" onclick="openNav()" src="../img/MenuIcon.png" alt="Menu">
-
-    <span id="geolocalisationTitle">Géolocalisation</span>
-    <a href="#">
-
-        <img id="searchIcon" src="../img/SearchIcon.png" alt="Search" onclick="openSearch()">
-    </a>
-
-</header>
-
-<div id="main" class="map">
-    <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d21761.65783161859!2d3.0500233674525417!3d50.63225070302413!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c2d579b3256e11%3A0x40af13e81646360!2sLille!5e0!3m2!1sen!2sfr!4v1527438526836"
-        width="358" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
-</div>
-
-<script src="../js/scripts.js"></script>
+    <script src="../js/scripts.js"></script>
 </body>
 
 </html>

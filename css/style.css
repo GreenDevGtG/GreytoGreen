@@ -1,22 +1,25 @@
 /* GENERAL */
 
+.backgroundImg {
+    margin: 0;
+    padding: 0;
+    background-image: url(../img/background-mountain.jpg);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: auto 100%;
+    height: 100vh;
+}
+
+.content {
+    font-family: 'Segoe UI', 'OpenSans', 'sans-serif';
+    font-size: 1.2rem;
+    color: white;
+}
+
 header.logoHeader {
     height: 100px;
     margin-top: 60px;
     margin-bottom: 30px;
-}
-
-body.backgroungImg {
-    margin: 0;
-    padding: 0;
-    background-color: #4caf50;
-    background-image: url(../img/fond-vert-arbres.png);
-    background-repeat: no-repeat;
-    background-position: center top;
-    height: 100%;
-    font-family: 'Segoe UI', 'OpenSans', 'sans-serif';
-    font-size: 1.2rem;
-    color: white;
 }
 
 
@@ -267,5 +270,50 @@ button {
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+
+
+/* PROFIL PAGE */
+
+#profilMenuIcon {
+    height: 100%;
+    margin-top: 5px;
+    margin-right: 40px;
+}
+
+#profilTitle {
+    font-size: 1.5rem;
+    margin-left: 60px;
+    margin-right: 100px;
+}
+
+.profilHead {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #087f23;
+    height: 150px;
+    width: 360px;
+    border-radius: 5px 5px 0 0;
+}
+
+.fa-power-off {
+    margin-left: 330px;
+    margin-top: 8px;
+    color: white;
+}
+
+#profilPseudo {
+    display: block;
+    margin : 40px auto;
+    font-family: 'Segoe UI', 'OpenSans', 'sans-serif';
+    background-color: #087f23;
+    border: none;
+    border-bottom: 2px solid #4caf50;
+    height: 30px;
+    text-align: center;
+    font-size: 1.2rem;
+    color: #4caf50;
+    width: 300px;
 }
 
