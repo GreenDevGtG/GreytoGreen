@@ -23,3 +23,5 @@ function openSearch() {
 function closeSearch() {
     document.getElementById("mySearchnav").style.width = "0";
 }
+
+
