@@ -13,7 +13,7 @@
 </head>
 
 <body class="myProfil backgroundImg">
-    <div class="content">
+    <section class="content">
         <header class="title">
 
             <!-- LEFT MENU -->
@@ -42,27 +42,32 @@
             <span id="profilTitle">Mon Profil</span>
 
         </header>
-
-        <div class="profilHead">
-            <a href="#">
-                <i class="fas fa-power-off"></i>
-            </a>
-            <div>
-                <input id="profilPseudo" type="text" name="pseudo" placeholder="Pseudonyme">
-            </div>
-
-        </div>
-
-        <div class="profilInfos">
-            <input class="" type="text" name="lastname">
-            <input class="" type="text" name="firstname">
-            <input class="" type="text" name="email">
-            <input class="" type="password" name="password">
-            <input class="" type="text" name="location">
-            <input class="" type="text" name="address">
-            <input class="" type="date" name="birtday">
-        </div>
-    </div>
+        <form id="profilFormBG">
+            <section class="profilHead">
+                <a href="#">
+                    <i class="fas fa-power-off"></i>
+                </a>
+                <div>
+                    <input id="profilPseudo" type="text" name="pseudo" placeholder="Pseudonyme">
+                </div>
+            </section>
+            <section class="profilInfos">
+                <input class="profilForm" type="text" name="lastname" placeholder="Nom">
+                <input class="profilForm" type="text" name="firstname" placeholder="Prénom">
+                <span class="fas fa-envelope"></span>
+                <input class="profilForm" type="email" name="email" placeholder="Email">
+                <span class="fas fa-lock"></span>
+                <input class="profilForm" type="password" name="password" placeholder="Mot de passe">
+                <span class="fas fa-building"></span>
+                <input class="profilForm" type="text" name="location" placeholder="Ville">
+                <span class="fas fa-home"></span>
+                <input class="profilForm" type="text" name="address" placeholder="Adresse">
+                <span class="fas fa-birthday-cake"></span>
+                <input class="profilForm" type="text" name="birtday" placeholder="Anniversaire">
+                <button class="button" id="btn-profil" type="submit">Enregistrer</button>
+            </section>
+        </form>
+    </section>
     <script src="../js/scripts.js"></script>
 </body>
 
