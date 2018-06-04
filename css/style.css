@@ -1,14 +1,30 @@
+*{
+    margin:0;
+    padding: 0;
+}
+
 /* GENERAL */
 
 .backgroundImg {
-    margin: 0;
-    padding: 0;
+    background-color: #087F23;
+}
+
+.backgroundImg::after {
+    content: "";
     background-image: url(../img/background-mountain.jpg);
     background-repeat: no-repeat;
     background-position: top center;
     background-size: cover;
     background-attachment: fixed;
-}
+    /* filter: blur(2px); */
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: fixed;
+    z-index: -1;
+}   
 
 .content {
     font-family: 'Segoe UI', 'OpenSans', 'sans-serif';
@@ -197,21 +213,24 @@ ul.checkbox {
     display: block;
     margin : 20px auto;
     font-family: 'Segoe UI', 'OpenSans', 'sans-serif';
-    border: white;
-    border-radius: 20px;
+    border-style: none;
+    border-radius: 9px;
     height: 40px;
-    text-align: center;
+    text-align: left;
+    padding:0 1rem;
     font-size: 1.2rem;
-    color: #707070;
-    width: 300px;
-    opacity: 0.84;
+    color: white;
+    width: 90%;
+    background-color: rgba(255, 255, 255, 0.15);
+    z-index: 4;
 }
+
 
 .button {
     height: 60px;
-    border: 1px solid #707070;
-    border-radius: 30px;
-    opacity: 1;
+    background-color: #424242;
+    text-align: center;
+    border-radius: 9px;
     margin-bottom: 5px;
 }
 
@@ -279,56 +298,49 @@ ul.checkbox {
 /* PROFIL PAGE */
 
 #profilMenuIcon {
-    height: 100%;
-    margin-top: 5px;
-    margin-right: 40px;
+    font-size: 1.5rem;
+    margin:5px 5px;
 }
 
 #profilTitle {
     font-size: 1.5rem;
-    margin-left: 60px;
-    margin-right: 100px;
+    width: 100%;
+    text-align: center;
 }
 
 #profilFormBG {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    background-color: #fff;
     height: 500px;
-    width: 360px;
-    border-radius: 5px 5px 5px 5px;
 }
 
 .profilHead {
-    display: block;
-    margin-bottom: 0;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: #07571a;
+    width: 100%;
+    background-color: #424242c9;
     height: 150px;
-    width: 360px;
-    border-radius: 5px 5px 0 0;
 }
 
 .fa-power-off {
-    margin-left: 330px;
-    margin-top: 8px;
     color: white;
+    font-size: 1.5rem;
+    float: right;
+    margin-top:10px;
+    margin-right:10px;
 }
 
 #profilPseudo {
+    width: 100%;
     display: block;
-    margin : 40px auto;
+    margin-top: 230px;
     font-family: 'Segoe UI', 'OpenSans', 'sans-serif';
-    background-color: #07571a;
+    background-color: #42424200;
     border: none;
     border-bottom: 1px solid #80E27E;
     height: 30px;
     text-align: center;
     font-size: 1.2rem;
     color: #80E27E;
-    width: 300px;
 }
 
 .profilInfos {
@@ -339,35 +351,30 @@ ul.checkbox {
     padding-top: 0;
     margin-left: auto;
     margin-right: auto;
-    background-color: #fff;
-    height: 550px;
-    width: 360px;
     border-radius: 0 0 5px 5px;
 }
 
 .profilForm {
     display: block;
-    margin : 20px 30px;
+    margin : 20px 5px;
+    padding-left: 30px;
     font-family: 'Segoe UI', 'OpenSans', 'sans-serif';
     border: none;
-    border-bottom: 1px solid #707070;
+    border-bottom: 1px solid #fff;
+    background-color: #00000000;
     height: 40px;
-    text-align: center;
     font-size: 1rem;
-    color: #707070;
-    width: 300px;
+    color: #fff;
+    width: calc(100% - 30px);
 }
 
 .fa-envelope, .fa-lock, .fa-building, .fa-home, .fa-birthday-cake {
+    margin: 0px 5px 5px 5px;
     position: absolute;
-    left: 5px;
-    color: #80E27E;
+    color: #fff;
     height: 50px;
 }
 
-.fa-envelope {
-    top: 130px;
-}
 
 #btn-profil {
     position: relative;
