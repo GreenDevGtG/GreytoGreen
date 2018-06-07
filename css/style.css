@@ -266,6 +266,19 @@ ul.checkbox {
 }
 
 
+/* CHARGEMENT */
+
+.loading {
+    background-color: #fff;
+}
+
+#loadingLogo {
+    padding-top: 20%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 /* GEOLOCALISATION */
 
 .title {
