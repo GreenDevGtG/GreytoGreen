@@ -7,43 +7,42 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe"
         crossorigin="anonymous"></script>
-    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/main.css" rel="stylesheet">
     <title>Mon profil</title>
 
 </head>
 
-<body class="myProfil backgroundImg">
-    <section class="content">
-        <header class="title">
+<body class="content backgroundImg">
+    <!-- MENU HAMBURGER -->
+    <input type="checkbox" id="navigation" />
+    <label class="bars" for="navigation">
+            <i class="fas fa-bars"></i>
+    </label>
 
-            <!-- LEFT MENU -->
+    <div class="menu">
+        <img src="../img/LogoGtG.png" class="logo">
+        <a href="#" class="link">
+            <i class="far fa-calendar-alt"></i> 
+            Evènements
+        </a>
+        <a href="#" class="link">
+            <i class="far fa-lightbulb"></i> 
+            Astuces
+        </a>
+        <a href="./geolocalisation.html" class="link">
+            <i class="fas fa-map-marker-alt"></i> 
+            Lieux d'intérêt
+        </a>
+        <a href="./profil.html" class="link">
+            <i class="far fa-user"></i> 
+            Profil
+        </a>
+    </div>
 
-            <div id="mySidenav" class="sidenav">
-                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" style="color:#ccc">
-                    <i class="fas fa-angle-left"></i>
-                </a>
-                <div id="sidenavLogo">
-                    <img src="../img/LogoGtG.png" id="logoGtG">
-                </div>
-                <a href="#" id="sidenav-events">
-                    <i class="far fa-calendar-alt"></i> Evènements</a>
-                <a href="#" id="sidenav-tips">
-                    <i class="far fa-lightbulb"></i> Astuces</a>
-                <a href="./geolocalisation.html" id="sidenav-geolocalisation">
-                    <i class="fas fa-map-marker-alt"></i> Lieux d'intérêt</a>
-                <a href="./profil.html" id="sidenav-profil">
-                    <i class="far fa-user"></i> Profil</a>
-            </div>
+    <!-- Page -->
+    <div class="page">
+        <span class="title center">Mon Profil</span>
 
-            <!-- TITLE -->
-
-            
-            <i id="profilMenuIcon" onclick="openNav()" class="fas fa-bars"></i>
-        
-
-            <span id="profilTitle">Mon Profil</span>
-
-        </header>
         <form id="profilFormBG">
             <section class="profilHead">
                 <a href="#">
@@ -68,8 +67,10 @@
                 <button class="button" id="btn-profil" type="submit">Enregistrer</button>
             </section>
         </form>
-    </section>
-    <script src="../js/scripts.js"></script>
+    </div>
+
 </body>
+<script src="../js/scripts.js"></script>
+
 
 </html>

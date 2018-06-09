@@ -1,0 +1,86 @@
+/* PROFIL PAGE */
+
+#profilMenuIcon {
+    font-size: 1.5rem;
+    margin:5px 5px;
+}
+
+#profilTitle {
+    font-size: 1.5rem;
+    width: 100%;
+    text-align: center;
+}
+
+#profilFormBG {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 500px;
+}
+
+.profilHead {
+    width: 100%;
+    background-color: #424242c9;
+    height: 150px;
+}
+
+.fa-power-off {
+    color: white;
+    font-size: 1.5rem;
+    float: right;
+    margin-top:10px;
+    margin-right:10px;
+}
+
+#profilPseudo {
+    width: 100%;
+    display: block;
+    margin-top: 230px;
+    font-family: 'Segoe UI', 'OpenSans', 'sans-serif';
+    background-color: #42424200;
+    border: none;
+    border-bottom: 1px solid #80E27E;
+    height: 30px;
+    text-align: center;
+    font-size: 1.2rem;
+    color: #80E27E;
+}
+
+.profilInfos {
+    position: relative;
+    display: block;
+    margin-top: 0;
+    margin-bottom: 5px;
+    padding-top: 0;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 0 0 5px 5px;
+}
+
+.profilForm {
+    display: block;
+    margin : 20px 5px;
+    padding-left: 30px;
+    font-family: 'Segoe UI', 'OpenSans', 'sans-serif';
+    border: none;
+    border-bottom: 1px solid #fff;
+    background-color: #00000000;
+    height: 40px;
+    font-size: 1rem;
+    color: #fff;
+    width: calc(100% - 30px);
+}
+
+.fa-envelope, .fa-lock, .fa-building, .fa-home, .fa-birthday-cake {
+    margin: 0px 5px 5px 5px;
+    position: absolute;
+    color: #fff;
+    height: 50px;
+}
+
+
+#btn-profil {
+    position: relative;
+    border: none;
+    margin-top: 40px;
+}

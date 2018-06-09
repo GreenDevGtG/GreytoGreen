@@ -1,0 +1,52 @@
+
+
+.logoGtG {
+    display: block;
+    margin: $size-default auto;
+}
+
+.formInput, .button {
+    background-color: $white-opac;
+    color: $font-color;
+    font-family: 'Segoe UI', 'OpenSans', 'sans-serif';
+    display: block;
+    border-style: none;
+    margin : $size-default auto;
+    width: 90%;
+    height: 40px;
+    border-radius: $rad;
+    padding: 0 $size-default;
+    font-size: 1.2rem;
+    z-index: 4;
+}
+
+
+.button {
+    height: 60px;
+    background-color: $grey;
+}
+
+
+
+.otherCo{
+    margin: $size-default*1.5 auto;
+}
+
+.socials {
+    display: flex;
+    justify-content: space-around;
+    background-color: $white-opac;
+    padding: $size-default 0;
+    & img{
+        height: 100%;
+    }
+}
+
+#linkInscription {
+    display: block;
+    margin: $size-default auto;
+    color: $font-color;
+    &:link{
+        text-decoration: underline;
+    }
+}

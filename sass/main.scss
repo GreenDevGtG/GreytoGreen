@@ -1,0 +1,100 @@
+$grey: #424242;
+$green: #087F23;
+$font-default: 'Segoe UI', 'OpenSans', 'sans-serif';
+$size-default: 1.2rem;
+$white-opac: rgba(255, 255, 255, 0.15);
+$font-color: white;
+$rad: 9px;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+.content {
+    overflow-x: hidden;
+    font-family: $font-default;
+    font-size: $size-default;
+    color: white;
+}
+
+.page{
+    width: 100%;
+    height: 100%;
+    -moz-transition:all 200ms ease;
+    -webkit-transition:all 200ms ease;
+    -o-transition:all 200ms ease;
+    transition:all 200ms ease;
+    &::before{
+        position: fixed;
+        content: "";
+        width: 100%;
+        height: 100%;
+        background-color: #42424200;
+        z-index: -2;
+        -moz-transition:all 200ms ease;
+        -webkit-transition:all 200ms ease;
+        -o-transition:all 200ms ease;
+        transition:all 200ms ease;
+    }
+}
+
+// menu hamburger
+
+@import 'menuHamburger';
+
+//menu
+
+@import 'menu';
+
+
+.backgroundImg {
+    background-color: #087F23;
+    &::after {
+        content: "";
+        background-image: url(../img/background-mountain.jpg);
+        background-repeat: no-repeat;
+        background-position: top center;
+        background-size: cover;
+        background-attachment: fixed;
+        opacity: 0.5;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        position: fixed;
+        z-index: -1;
+    }
+}
+
+.title {
+    display: block;
+    line-height: $size-default*3;
+}
+
+.center {
+    text-align: center;
+}
+
+header.logoHeader {
+    height: 100px;
+    margin-top: 60px;
+    margin-bottom: 30px;
+}
+
+// page login
+
+ @import 'login';
+
+ // inscription
+
+ @import 'signup';
+
+ //profil
+
+ @import 'profil';
