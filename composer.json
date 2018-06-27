@@ -1,0 +1,13 @@
+{
+    "name": "greendev/greytogreen",
+    "description": "Application GreytoGreen",
+    "type": "project",
+    "license": "MIT",
+    "require": {},
+    "autoload":{
+        "psr-4": {
+            "GreenDev\\": "src/GreenDev",
+            "":"app/model/"
+        }
+    }
+}
