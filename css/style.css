@@ -381,3 +381,12 @@ ul.checkbox {
     border: none;
     margin-top: 40px;
 }
+
+/* POPUP */
+
+.popup {
+    background-color: #fff;
+    border-radius: 5px;
+    height: auto;
+    width: auto;
+}
