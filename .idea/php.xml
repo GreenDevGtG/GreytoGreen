@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+<<<<<<< HEAD
   <component name="PhpIncludePathManager">
     <include_path>
       <path value="$PROJECT_DIR$/vendor/composer" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.1" />
+=======
+  <component name="PhpProjectSharedConfiguration" php_language_level="7.2" />
+>>>>>>> 498af64f9d6e00fb175e28df21fcf8ba481b0710
 </project>
