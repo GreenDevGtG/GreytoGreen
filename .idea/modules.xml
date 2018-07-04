@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-<<<<<<< HEAD
-      <module fileurl="file://$PROJECT_DIR$/.idea/Gtg.iml" filepath="$PROJECT_DIR$/.idea/Gtg.iml" />
-=======
       <module fileurl="file://$PROJECT_DIR$/.idea/GreytoGreen.iml" filepath="$PROJECT_DIR$/.idea/GreytoGreen.iml" />
->>>>>>> 498af64f9d6e00fb175e28df21fcf8ba481b0710
     </modules>
   </component>
 </project>
