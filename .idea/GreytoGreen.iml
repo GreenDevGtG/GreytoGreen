@@ -2,6 +2,7 @@
 <module type="WEB_MODULE" version="4">
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
+<<<<<<< HEAD
       <sourceFolder url="file://$MODULE_DIR$/app/model" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/GreenDev" isTestSource="false" packagePrefix="GreenDev\" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/composer" />
@@ -43,6 +44,12 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/swiftmailer-bundle" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/symfony" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/twig/twig" />
+=======
+      <sourceFolder url="file://$MODULE_DIR$/src/ArticleBundle" isTestSource="false" packagePrefix="ArticleBundle\" />
+      <sourceFolder url="file://$MODULE_DIR$/src/AppBundle" isTestSource="false" packagePrefix="AppBundle\" />
+      <sourceFolder url="file://$MODULE_DIR$/tests" isTestSource="true" packagePrefix="Tests\" />
+      <sourceFolder url="file://$MODULE_DIR$/src/UserBundle" isTestSource="false" packagePrefix="UserBundle\" />
+>>>>>>> 1e5e05ca2a188778059ac7b14346b0352dfe9845
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

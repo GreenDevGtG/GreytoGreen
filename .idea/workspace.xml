@@ -1,118 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-<<<<<<< HEAD
-    <list default="true" id="a0ef3009-2609-41cf-b54b-a6eec9b37db8" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.sass-cache/b4ba9232e0e1b583a17d876e1e0bf970ad739f3c/_login.scssc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.sass-cache/b4ba9232e0e1b583a17d876e1e0bf970ad739f3c/_menu.scssc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.sass-cache/b4ba9232e0e1b583a17d876e1e0bf970ad739f3c/_menuHamburger.scssc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.sass-cache/b4ba9232e0e1b583a17d876e1e0bf970ad739f3c/_profil.scssc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.sass-cache/b4ba9232e0e1b583a17d876e1e0bf970ad739f3c/_signup.scssc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.sass-cache/b4ba9232e0e1b583a17d876e1e0bf970ad739f3c/login.scssc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.sass-cache/b4ba9232e0e1b583a17d876e1e0bf970ad739f3c/main.scssc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Base de données.mwb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Base de données.mwb.bak" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Maquette/admin/Ajout tips Admin prévi.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Maquette/admin/Ajout tips Admin prévi@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Maquette/admin/Ajout tips Admin.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Maquette/admin/Ajout tips Admin@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Maquette/admin/Ajout évènement Admin.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Maquette/admin/Ajout évènement Admin@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Maquette/admin/Ajout évènement admin prévi.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Maquette/admin/Ajout évènement admin prévi@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Maquette/admin/Astuce Admin.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Maquette/admin/Astuce Admin@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Maquette/admin/Evenement Admin.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Maquette/admin/Evenement Admin@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Maquette/ex/Astuce.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Maquette/ex/Astuce@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Maquette/ex/Chargement.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Maquette/ex/Chargement@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Maquette/ex/Connexion.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Maquette/ex/Connexion@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Maquette/ex/Evenement.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Maquette/ex/Evenement@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Maquette/ex/Filtre Evènement.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Maquette/ex/Filtre Evènement@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Maquette/ex/Filtre astuce.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Maquette/ex/Filtre astuce@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Maquette/ex/Géolocalisation.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Maquette/ex/Géolocalisation@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Maquette/ex/Inscription.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Maquette/ex/Inscription@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Maquette/ex/Menu.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Maquette/ex/Menu@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Maquette/ex/déconnexion.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Maquette/ex/déconnexion@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Maquette/ex/filtre géolocalisation.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Maquette/ex/filtre géolocalisation@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Maquette/ex/profil.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Maquette/ex/profil@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Maquette/user/Astuce.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Maquette/user/Astuce@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Maquette/user/Chargement.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Maquette/user/Chargement@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Maquette/user/Connexion.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Maquette/user/Connexion@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Maquette/user/Evenement.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Maquette/user/Evenement@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Maquette/user/Filtre Evènement.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Maquette/user/Filtre Evènement@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Maquette/user/Filtre astuce.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Maquette/user/Filtre astuce@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Maquette/user/Géolocalisation.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Maquette/user/Géolocalisation@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Maquette/user/Inscription.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Maquette/user/Inscription@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Maquette/user/Menu.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Maquette/user/Menu@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Maquette/user/profil – 2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Maquette/user/profil – 2@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Maquette/user/profil.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Maquette/user/profil@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.MD" beforeDir="false" afterPath="$PROJECT_DIR$/README.MD" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/main.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/main.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/geolocalisation.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/inscription.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/login.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/profil.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/sidenav.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/FlecheRetour.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/Logo-facebook.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/Logo-google.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/LogoGtG.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/LogoGtGblanc.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/Map.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/MenuIcon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/SearchIcon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/background-mountain-green.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/background-mountain-transparent.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/background-mountain.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/boutton-connexion.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/fond-vert-arbres.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/scripts.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/proto.xd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sass/_login.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sass/_menu.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sass/_menuHamburger.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sass/_profil.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sass/_signup.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sass/main.scss" beforeDir="false" />
-=======
-    <list default="true" id="ea1ec889-98fe-4178-b258-b5f22ea1e294" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/geolocalisation.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/geolocalisation.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/inscription.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/inscription.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/profil.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/profil.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/scripts.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/scripts.js" afterDir="false" />
->>>>>>> 498af64f9d6e00fb175e28df21fcf8ba481b0710
+    <list default="true" id="da43b7a5-4a89-4005-9849-09cbff0c9a2c" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/GreytoGreen.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/GreytoGreen.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Gtg.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/AppKernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/AppKernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/config.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/routing.yml" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/routing.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/symfony_requirements" beforeDir="false" afterPath="$PROJECT_DIR$/bin/symfony_requirements" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/SymfonyRequirements.php" beforeDir="false" afterPath="$PROJECT_DIR$/var/SymfonyRequirements.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/config.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -121,172 +25,29 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-<<<<<<< HEAD
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="7" selection-start-line="3" selection-start-column="7" selection-end-line="3" selection-end-column="7" />
-=======
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="geolocalisation.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/html/geolocalisation.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="52" column="52" selection-start-line="52" selection-start-column="52" selection-end-line="52" selection-end-column="52" />
-              <folding>
-                <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
->>>>>>> 498af64f9d6e00fb175e28df21fcf8ba481b0710
-            </state>
-          </provider>
-        </entry>
-      </file>
-<<<<<<< HEAD
-      <file leaf-file-name="composer.json" pinned="false" current-in-tab="false">
+      <file leaf-file-name="composer.json" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/composer.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
-=======
-      <file leaf-file-name="profil.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/html/profil.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="28" column="25" selection-start-line="28" selection-start-column="25" selection-end-line="28" selection-end-column="25" />
->>>>>>> 498af64f9d6e00fb175e28df21fcf8ba481b0710
+            <state relative-caret-position="136">
+              <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
             </state>
           </provider>
-        </entry>
-      </file>
-<<<<<<< HEAD
-      <file leaf-file-name="app.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/config/app.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" selection-start-line="11" selection-end-line="11" />
-=======
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/style.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="316">
-              <caret line="208" column="23" lean-forward="true" selection-start-line="208" selection-start-column="23" selection-end-line="208" selection-end-column="23" />
->>>>>>> 498af64f9d6e00fb175e28df21fcf8ba481b0710
-            </state>
-          </provider>
-        </entry>
-      </file>
-<<<<<<< HEAD
-      <file leaf-file-name="env.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/env.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="22" lean-forward="true" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
-=======
-      <file leaf-file-name="inscription.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/html/inscription.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="18" column="29" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="29" />
->>>>>>> 498af64f9d6e00fb175e28df21fcf8ba481b0710
-            </state>
-          </provider>
-        </entry>
-      </file>
-<<<<<<< HEAD
-      <file leaf-file-name="env.exemple.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/env.exemple.php">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="init.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/init.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
-=======
-      <file leaf-file-name="login.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/html/login.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="612">
-              <caret line="36" column="46" selection-start-line="36" selection-start-column="46" selection-end-line="36" selection-end-column="46" />
->>>>>>> 498af64f9d6e00fb175e28df21fcf8ba481b0710
-            </state>
-          </provider>
-        </entry>
-      </file>
-<<<<<<< HEAD
-      <file leaf-file-name="Response.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Aston/Http/Response.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-119" />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Request.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Aston/Http/Request.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="108" column="35" selection-start-line="108" selection-start-column="35" selection-end-line="108" selection-end-column="35" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Api.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Aston/Api/Api.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Connection.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Aston/Db/Connection.php">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
   </component>
-=======
-    </leaf>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>left</find>
-    </findStrings>
-  </component>
->>>>>>> 498af64f9d6e00fb175e28df21fcf8ba481b0710
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-<<<<<<< HEAD
         <option value="$PROJECT_DIR$/composer.json" />
-        <option value="$PROJECT_DIR$/src/Aston/Api/Api.php" />
-        <option value="$PROJECT_DIR$/app/config/app.php" />
-        <option value="$PROJECT_DIR$/env.php" />
-        <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/README.MD" />
-        <option value="$PROJECT_DIR$/init.php" />
-        <option value="$PROJECT_DIR$/src/Aston/Http/Request.php" />
-=======
-        <option value="$PROJECT_DIR$/html/sidenav.html" />
-        <option value="$PROJECT_DIR$/css/style.css" />
-        <option value="$PROJECT_DIR$/js/scripts.js" />
-        <option value="$PROJECT_DIR$/html/geolocalisation.html" />
-        <option value="$PROJECT_DIR$/html/login.html" />
-        <option value="$PROJECT_DIR$/html/inscription.html" />
-        <option value="$PROJECT_DIR$/html/profil.html" />
->>>>>>> 498af64f9d6e00fb175e28df21fcf8ba481b0710
       </list>
     </option>
   </component>
@@ -299,156 +60,82 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="PhpServers">
-    <servers />
-  </component>
-<<<<<<< HEAD
-  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP">
+  <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
       <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/twig/twig" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/vendor/psr/simple-cache" />
+      <path value="$PROJECT_DIR$/vendor/psr/link" />
+      <path value="$PROJECT_DIR$/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/vendor/psr/cache" />
+      <path value="$PROJECT_DIR$/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/vendor/jdorn/sql-formatter" />
+      <path value="$PROJECT_DIR$/vendor/incenteev/composer-parameter-handler" />
+      <path value="$PROJECT_DIR$/vendor/sensiolabs/security-checker" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php70" />
+      <path value="$PROJECT_DIR$/vendor/symfony/phpunit-bridge" />
+      <path value="$PROJECT_DIR$/vendor/symfony/symfony" />
+      <path value="$PROJECT_DIR$/vendor/symfony/monolog-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-util" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php56" />
+      <path value="$PROJECT_DIR$/vendor/symfony/swiftmailer-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-icu" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-apcu" />
+      <path value="$PROJECT_DIR$/vendor/monolog/monolog" />
+      <path value="$PROJECT_DIR$/vendor/paragonie/random_compat" />
+      <path value="$PROJECT_DIR$/vendor/sensio/generator-bundle" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/lexer" />
+      <path value="$PROJECT_DIR$/vendor/sensio/distribution-bundle" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/orm" />
+      <path value="$PROJECT_DIR$/vendor/sensio/framework-extra-bundle" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/inflector" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/annotations" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/dbal" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/instantiator" />
+      <path value="$PROJECT_DIR$/vendor/fig/link-util" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/collections" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/common" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/cache" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/doctrine-cache-bundle" />
+      <path value="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="953" />
-    <option name="width" value="974" />
-    <option name="height" value="1047" />
-=======
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="15" />
     <option name="y" value="30" />
     <option name="width" value="2019" />
     <option name="height" value="1092" />
-  </component>
-  <component name="ProjectLevelVcsManager">
-    <ConfirmationsSetting value="2" id="Add" />
->>>>>>> 498af64f9d6e00fb175e28df21fcf8ba481b0710
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-<<<<<<< HEAD
       <pane id="Scope" />
-=======
->>>>>>> 498af64f9d6e00fb175e28df21fcf8ba481b0710
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-<<<<<<< HEAD
-              <item name="Gtg" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Gtg" type="462c0819:PsiDirectoryNode" />
+              <item name="GreytoGreen" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GreytoGreen" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Gtg" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Gtg" type="462c0819:PsiDirectoryNode" />
+              <item name="GreytoGreen" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GreytoGreen" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Gtg" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Gtg" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Gtg" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Gtg" type="462c0819:PsiDirectoryNode" />
-              <item name="resource" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Gtg" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Gtg" type="462c0819:PsiDirectoryNode" />
-              <item name="resource" type="462c0819:PsiDirectoryNode" />
-              <item name="Maquette" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Gtg" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Gtg" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Gtg" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Gtg" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Aston" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Gtg" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Gtg" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Aston" type="462c0819:PsiDirectoryNode" />
-              <item name="Api" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Gtg" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Gtg" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Aston" type="462c0819:PsiDirectoryNode" />
-              <item name="Db" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Gtg" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Gtg" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Aston" type="462c0819:PsiDirectoryNode" />
-              <item name="Http" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Gtg" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Gtg" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Aston" type="462c0819:PsiDirectoryNode" />
-              <item name="Http" type="462c0819:PsiDirectoryNode" />
-              <item name="Response" type="462c0819:PsiDirectoryNode" />
-=======
-              <item name="GreytoGreen" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GreytoGreen" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="GreytoGreen" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GreytoGreen" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="GreytoGreen" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GreytoGreen" type="462c0819:PsiDirectoryNode" />
-              <item name="html" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="GreytoGreen" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GreytoGreen" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
->>>>>>> 498af64f9d6e00fb175e28df21fcf8ba481b0710
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-<<<<<<< HEAD
-=======
-      <pane id="Scope" />
->>>>>>> 498af64f9d6e00fb175e28df21fcf8ba481b0710
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-<<<<<<< HEAD
-=======
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../bin/php/php7.2.4/php.exe" />
->>>>>>> 498af64f9d6e00fb175e28df21fcf8ba481b0710
-    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
-    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
   </component>
-<<<<<<< HEAD
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\wamp64\www\Gtg" />
-    </key>
-  </component>
-=======
->>>>>>> 498af64f9d6e00fb175e28df21fcf8ba481b0710
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -466,60 +153,25 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-<<<<<<< HEAD
-      <changelist id="a0ef3009-2609-41cf-b54b-a6eec9b37db8" name="Default" comment="" />
-      <created>1529672105388</created>
+      <changelist id="da43b7a5-4a89-4005-9849-09cbff0c9a2c" name="Default" comment="" />
+      <created>1531039974995</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1529672105388</updated>
-      <workItem from="1529672106560" duration="4898000" />
-=======
-      <changelist id="ea1ec889-98fe-4178-b258-b5f22ea1e294" name="Default" comment="" />
-      <created>1530431304866</created>
-      <option name="number" value="Default" />
-      <option name="presentableId" value="Default" />
-      <updated>1530431304866</updated>
-      <workItem from="1530431308549" duration="8901000" />
-      <workItem from="1530497353909" duration="1575000" />
->>>>>>> 498af64f9d6e00fb175e28df21fcf8ba481b0710
+      <updated>1531039974995</updated>
+      <workItem from="1531039981142" duration="62000" />
+      <workItem from="1531063426905" duration="458000" />
+      <workItem from="1531063943927" duration="24000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-<<<<<<< HEAD
-    <option name="totallyTimeSpent" value="4898000" />
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="953" y="0" width="974" height="1047" extended-state="0" />
-    <editor active="true" />
-    <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22860125" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="right" id="Database" />
-      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-=======
-    <option name="totallyTimeSpent" value="10476000" />
+    <option name="totallyTimeSpent" value="544000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1380" height="783" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24377745" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24963397" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
@@ -538,7 +190,6 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" />
->>>>>>> 498af64f9d6e00fb175e28df21fcf8ba481b0710
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -548,163 +199,23 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Aston/Db/Connection.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Aston/Api/Api.php">
+    <entry file="file://$PROJECT_DIR$/app/AppKernel.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
-          <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
+          <caret line="2" column="4" lean-forward="true" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
+          <folding>
+            <element signature="e#7#66#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="7" selection-start-line="3" selection-start-column="7" selection-end-line="3" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/env.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="22" lean-forward="true" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.MD">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="527">
-            <caret line="31" column="3" selection-start-line="31" selection-start-column="3" selection-end-line="31" selection-end-column="3" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/env.exemple.php">
+    <entry file="file://$PROJECT_DIR$/app/AppCache.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/app.php">
+    <entry file="file://$PROJECT_DIR$/composer.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/init.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Aston/Http/Response.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-119" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Aston/Http/Request.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="108" column="35" selection-start-line="108" selection-start-column="35" selection-end-line="108" selection-end-column="35" />
-=======
-    <entry file="file://$PROJECT_DIR$/html/geolocalisation.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
-          <folding>
-            <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/html/profil.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="833">
-          <caret line="49" column="6" lean-forward="true" selection-start-line="49" selection-start-column="6" selection-end-line="49" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6647">
-          <caret line="391" column="1" lean-forward="true" selection-start-line="391" selection-start-column="1" selection-end-line="391" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/html/inscription.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="51" selection-start-line="11" selection-start-column="51" selection-end-line="11" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/html/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="51" selection-start-line="11" selection-start-column="51" selection-end-line="11" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/html/sidenav.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/scripts.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/html/geolocalisation.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="52" column="52" selection-start-line="52" selection-start-column="52" selection-end-line="52" selection-end-column="52" />
-          <folding>
-            <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
-          <caret line="208" column="23" lean-forward="true" selection-start-line="208" selection-start-column="23" selection-end-line="208" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/html/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="36" column="46" selection-start-line="36" selection-start-column="46" selection-end-line="36" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/html/inscription.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="18" column="29" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/html/profil.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="28" column="25" selection-start-line="28" selection-start-column="25" selection-end-line="28" selection-end-column="25" />
->>>>>>> 498af64f9d6e00fb175e28df21fcf8ba481b0710
+        <state relative-caret-position="136">
+          <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
         </state>
       </provider>
     </entry>
