@@ -5,10 +5,14 @@ namespace ArticleBundle\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 
-class DefaultController extends Controller
+
+/**
+ * @Route("/astuce")
+ */
+class AstuceController extends Controller
 {
     /**
-     * @Route("/", name="article_homepage")
+     * @Route("/", name="astuce_homepage")
      */
     public function indexAction()
     {
@@ -16,7 +20,7 @@ class DefaultController extends Controller
         $categorie = $repo->find(16);
         $astuces = $categorie->getArticle();
 
-        return $this->render('@Article/Default/index.html.twig',[
+        return $this->render('@Article/Default/astuce.html.twig',[
             'astuces' => $astuces,
         ]);
     }
