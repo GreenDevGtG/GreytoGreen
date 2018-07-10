@@ -1,6 +1,16 @@
-Hello World! articles
-{% for astuce in astuces %}
+{% extends 'base.html.twig' %}
 
-    <h1>{{ astuce.nom }}</h1>
+{% block body %}
 
-{% endfor %}
+    {% block navbar %}
+        {% include 'block/navbar.html.twig' %}
+    {% endblock %}
+
+    <h1>{% block titre %}{% endblock %}</h1>
+
+    {% block content %}{% endblock %}
+
+    {% block footer %}
+        {% include 'block/footer.html.twig' %}
+    {% endblock %}
+{% endblock %}

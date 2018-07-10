@@ -1,6 +1,10 @@
-Hello World! evenement
-{% for evenement in evenements %}
+{% extends 'base.html.twig' %}
 
-    <h1>{{ evenement.nom }}</h1>
+{% block body %}
+    Hello World! evenement
+    {% for evenement in evenements %}
 
-{% endfor %}
+        <h1>{{ evenement.nom }}</h1>
+
+    {% endfor %}
+{% endblock %}
