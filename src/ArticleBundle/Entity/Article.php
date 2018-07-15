@@ -1,9 +1,6 @@
 <?php
-
 namespace ArticleBundle\Entity;
-
 use Doctrine\ORM\Mapping as ORM;
-
 /**
  * Article
  *
@@ -281,7 +278,4 @@ class Article
         $this->lieu = $lieu;
         return $this;
     }
-
-
-
 }

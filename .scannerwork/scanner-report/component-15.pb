@@ -1,0 +1,1 @@
+src/ArticleBundle :rsrc\ArticleBundle

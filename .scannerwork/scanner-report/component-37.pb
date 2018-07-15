@@ -1,0 +1,1 @@
+%src/UserBundle :#rsrc\UserBundle

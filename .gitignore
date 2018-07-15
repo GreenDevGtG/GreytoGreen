@@ -16,5 +16,6 @@
 /vendor/
 /web/bundles/
 node_modules
+.idea/
 .DS_Store
-.idea
+

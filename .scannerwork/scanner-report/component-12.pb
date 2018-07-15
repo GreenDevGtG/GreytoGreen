@@ -1,0 +1,1 @@
+src/ArticleBundle/Controller :rsrc\ArticleBundle\Controller

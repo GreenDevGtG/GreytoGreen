@@ -1,0 +1,166 @@
+Environment variables:
+  - =::=::\
+  - =C:=C:\wamp64\www\GreytoGreen
+  - ACLOCAL_PATH=C:\Program Files\Git\mingw64\share\aclocal;C:\Program Files\Git\usr\share\aclocal
+  - ALLUSERSPROFILE=C:\ProgramData
+  - APPDATA=C:\Users\Phaenomena\AppData\Roaming
+  - COMMONPROGRAMFILES=C:\Program Files\Common Files
+  - COMPUTERNAME=ZENBOOK
+  - COMSPEC=C:\WINDOWS\system32\cmd.exe
+  - CONFIG_SITE=C:/Program Files/Git/mingw64/etc/config.site
+  - CommonProgramFiles(x86)=C:\Program Files (x86)\Common Files
+  - CommonProgramW6432=C:\Program Files\Common Files
+  - DASHLANE_DLL_DIR=C:\Users\Phaenomena\AppData\Roaming\Dashlane\5.17.0.23771\bin\Firefox_Extension\{442718d9-475e-452a-b3e1-fb1ee16b8e9f}\components;C:\Users\Phaenomena\AppData\Roaming\Dashlane\5.17.0.23771\ucrt;C:\Users\Phaenomena\AppData\Roaming\Dashlane\5.17.0.23771\bin\Qt;C:\Users\Phaenomena\AppData\Roaming\Dashlane\5.17.0.23771\ucrt;C:\Users\Phaenomena\AppData\Roaming\Dashlane\5.17.0.23771\bin\Ssl
+  - DISPLAY=needs-to-be-defined
+  - DriverData=C:\Windows\System32\Drivers\DriverData
+  - ERROR_CODE=0
+  - EXEPATH=C:\Program Files\Git
+  - HOME=C:\Users\Phaenomena
+  - HOMEDRIVE=C:
+  - HOMEPATH=\Users\Phaenomena
+  - HOSTNAME=ZENBOOK
+  - INFOPATH=C:\Program Files\Git\usr\local\info;C:\Program Files\Git\usr\share\info;C:\Program Files\Git\usr\info;C:\Program Files\Git\share\info
+  - JAVA_EXEC="C:\sonarqube-7.2.1\sonar-scanner-3.2.0.1227-windows\bin\..\jre\bin\java.exe"
+  - JAVA_HOME=C:\sonarqube-7.2.1\sonar-scanner-3.2.0.1227-windows\bin\..\jre
+  - LANG=fr_FR.UTF-8
+  - LOCALAPPDATA=C:\Users\Phaenomena\AppData\Local
+  - LOGONSERVER=\\ZENBOOK
+  - MANPATH=C:\Program Files\Git\mingw64\share\man;C:\Program Files\Git\usr\local\man;C:\Program Files\Git\usr\share\man;C:\Program Files\Git\usr\man;C:\Program Files\Git\share\man
+  - MINGW_CHOST=x86_64-w64-mingw32
+  - MINGW_PACKAGE_PREFIX=mingw-w64-x86_64
+  - MINGW_PREFIX=C:/Program Files/Git/mingw64
+  - MOZ_PLUGIN_PATH=C:\PROGRAM FILES (X86)\FOXIT SOFTWARE\FOXIT READER\plugins\
+  - MSYSTEM=MINGW64
+  - MSYSTEM_CARCH=x86_64
+  - MSYSTEM_CHOST=x86_64-w64-mingw32
+  - MSYSTEM_PREFIX=C:/Program Files/Git/mingw64
+  - NUMBER_OF_PROCESSORS=4
+  - ORIGINAL_PATH=C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\Phaenomena\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client;C:\Program Files\Intel\iCLS Client;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\WiFi\bin;C:\Program Files\Common Files\Intel\WirelessCommon;C:\Program Files (x86)\Skype\Phone;C:\Program Files\Git\cmd;C:\WINDOWS\System32\OpenSSH;C:\wamp64\bin\php\php7.2.4;C:\ProgramData\ComposerSetup\bin;C:\Program Files\nodejs;C:\sonarqube-7.2.1\sonar-scanner-3.2.0.1227-windows\bin;C:\wamp64\www\GreytoGreen\vendor\bin;C:\Users\Phaenomena\AppData\Local\Microsoft\WindowsApps;C:\Users\Phaenomena\AppData\Roaming\Dashlane\4.6.5.21982\bin\Firefox_Extension\{442718d9-475e-452a-b3e1-fb1ee16b8e9f}\components;C:\Users\Phaenomena\AppData\Roaming\Dashlane\4.6.6.23032\bin\Firefox_Extension\{442718d9-475e-452a-b3e1-fb1ee16b8e9f}\components;C:\texlive\2017\bin\win32;C:\Users\Phaenomena\AppData\Roaming\Dashlane\5.11.0.19338\bin\Firefox_Extension\{442718d9-475e-452a-b3e1-fb1ee16b8e9f}\components;C:\Users\Phaenomena\AppData\Roaming\Dashlane\5.11.0.19338\ucrt;C:\Program Files\Microsoft VS Code\bin;C:\Users\Phaenomena\AppData\Local\Microsoft\WindowsApps;C:\Users\Phaenomena\AppData\Roaming\Composer\vendor\bin;C:\Users\Phaenomena\AppData\Roaming\npm;C:\Users\Phaenomena\AppData\Roaming\Dashlane\5.17.0.23771\bin\Firefox_Extension\{442718d9-475e-452a-b3e1-fb1ee16b8e9f}\components;C:\Users\Phaenomena\AppData\Roaming\Dashlane\5.17.0.23771\ucrt;C:\Users\Phaenomena\AppData\Roaming\Dashlane\5.17.0.23771\bin\Qt;C:\Users\Phaenomena\AppData\Roaming\Dashlane\5.17.0.23771\ucrt;C:\Users\Phaenomena\AppData\Roaming\Dashlane\5.17.0.23771\bin\Ssl
+  - ORIGINAL_TEMP=C:/Users/PHAENO~1/AppData/Local/Temp
+  - ORIGINAL_TMP=C:/Users/PHAENO~1/AppData/Local/Temp
+  - OS=Windows_NT
+  - OneDrive=C:\Users\Phaenomena\OneDrive
+  - PATH=C:\Users\Phaenomena\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\Phaenomena\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client;C:\Program Files\Intel\iCLS Client;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\WiFi\bin;C:\Program Files\Common Files\Intel\WirelessCommon;C:\Program Files (x86)\Skype\Phone;C:\Program Files\Git\cmd;C:\WINDOWS\System32\OpenSSH;C:\wamp64\bin\php\php7.2.4;C:\ProgramData\ComposerSetup\bin;C:\Program Files\nodejs;C:\sonarqube-7.2.1\sonar-scanner-3.2.0.1227-windows\bin;C:\wamp64\www\GreytoGreen\vendor\bin;C:\Users\Phaenomena\AppData\Local\Microsoft\WindowsApps;C:\Users\Phaenomena\AppData\Roaming\Dashlane\4.6.5.21982\bin\Firefox_Extension\{442718d9-475e-452a-b3e1-fb1ee16b8e9f}\components;C:\Users\Phaenomena\AppData\Roaming\Dashlane\4.6.6.23032\bin\Firefox_Extension\{442718d9-475e-452a-b3e1-fb1ee16b8e9f}\components;C:\texlive\2017\bin\win32;C:\Users\Phaenomena\AppData\Roaming\Dashlane\5.11.0.19338\bin\Firefox_Extension\{442718d9-475e-452a-b3e1-fb1ee16b8e9f}\components;C:\Users\Phaenomena\AppData\Roaming\Dashlane\5.11.0.19338\ucrt;C:\Program Files\Microsoft VS Code\bin;C:\Users\Phaenomena\AppData\Local\Microsoft\WindowsApps;C:\Users\Phaenomena\AppData\Roaming\Composer\vendor\bin;C:\Users\Phaenomena\AppData\Roaming\npm;C:\Users\Phaenomena\AppData\Roaming\Dashlane\5.17.0.23771\bin\Firefox_Extension\{442718d9-475e-452a-b3e1-fb1ee16b8e9f}\components;C:\Users\Phaenomena\AppData\Roaming\Dashlane\5.17.0.23771\ucrt;C:\Users\Phaenomena\AppData\Roaming\Dashlane\5.17.0.23771\bin\Qt;C:\Users\Phaenomena\AppData\Roaming\Dashlane\5.17.0.23771\ucrt;C:\Users\Phaenomena\AppData\Roaming\Dashlane\5.17.0.23771\bin\Ssl;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl
+  - PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
+  - PKG_CONFIG_PATH=C:\Program Files\Git\mingw64\lib\pkgconfig;C:\Program Files\Git\mingw64\share\pkgconfig
+  - PLINK_PROTOCOL=ssh
+  - PROCESSOR_ARCHITECTURE=AMD64
+  - PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 61 Stepping 4, GenuineIntel
+  - PROCESSOR_LEVEL=6
+  - PROCESSOR_REVISION=3d04
+  - PROGRAMFILES=C:\Program Files
+  - PROJECT_HOME=C:\wamp64\www\GreytoGreen
+  - PROMPT=$P$G
+  - PS1=\[\033]0;$TITLEPREFIX:$PWD\007\]\n\[\033[32m\]\u@\h \[\033[35m\]$MSYSTEM \[\033[33m\]\w\[\033[36m\]`__git_ps1`\[\033[0m\]\n$ 
+  - PSModulePath=C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules\;C:\Program Files\WindowsPowerShell\Modules;C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules
+  - PUBLIC=C:\Users\Public
+  - PWD=C:/wamp64/www/GreytoGreen
+  - ProgramData=C:\ProgramData
+  - ProgramFiles(x86)=C:\Program Files (x86)
+  - ProgramW6432=C:\Program Files
+  - SESSIONNAME=Console
+  - SHELL=C:\Program Files\Git\usr\bin\bash.exe
+  - SHLVL=1
+  - SONAR_SCANNER_HOME=C:\sonarqube-7.2.1\sonar-scanner-3.2.0.1227-windows\bin\..
+  - SSH_ASKPASS=C:/Program Files/Git/mingw64/libexec/git-core/git-gui--askpass
+  - SYSTEMDRIVE=C:
+  - SYSTEMROOT=C:\WINDOWS
+  - TEMP=C:\Users\PHAENO~1\AppData\Local\Temp
+  - TERM=xterm
+  - TMP=C:\Users\PHAENO~1\AppData\Local\Temp
+  - TMPDIR=C:\Users\PHAENO~1\AppData\Local\Temp
+  - USERDOMAIN=ZENBOOK
+  - USERDOMAIN_ROAMINGPROFILE=ZENBOOK
+  - USERNAME=Phaenomena
+  - USERPROFILE=C:\Users\Phaenomena
+  - WINDIR=C:\WINDOWS
+  - _=C:/sonarqube-7.2.1/sonar-scanner-3.2.0.1227-windows/bin/sonar-scanner.bat
+  - scriptdir=C:\sonarqube-7.2.1\sonar-scanner-3.2.0.1227-windows\bin
+  - use_embedded_jre=true
+System properties:
+  - awt.toolkit=sun.awt.windows.WToolkit
+  - file.encoding=Cp1252
+  - file.encoding.pkg=sun.io
+  - file.separator=\
+  - java.awt.graphicsenv=sun.awt.Win32GraphicsEnvironment
+  - java.awt.headless=true
+  - java.awt.printerjob=sun.awt.windows.WPrinterJob
+  - java.class.path=C:\sonarqube-7.2.1\sonar-scanner-3.2.0.1227-windows\bin\..\lib\sonar-scanner-cli-3.2.0.1227.jar
+  - java.class.version=52.0
+  - java.endorsed.dirs=C:\sonarqube-7.2.1\sonar-scanner-3.2.0.1227-windows\jre\lib\endorsed
+  - java.ext.dirs=C:\sonarqube-7.2.1\sonar-scanner-3.2.0.1227-windows\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext
+  - java.home=C:\sonarqube-7.2.1\sonar-scanner-3.2.0.1227-windows\jre
+  - java.io.tmpdir=C:\Users\PHAENO~1\AppData\Local\Temp\
+  - java.library.path=C:\sonarqube-7.2.1\sonar-scanner-3.2.0.1227-windows\jre\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Users\Phaenomena\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\Phaenomena\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client;C:\Program Files\Intel\iCLS Client;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\WiFi\bin;C:\Program Files\Common Files\Intel\WirelessCommon;C:\Program Files (x86)\Skype\Phone;C:\Program Files\Git\cmd;C:\WINDOWS\System32\OpenSSH;C:\wamp64\bin\php\php7.2.4;C:\ProgramData\ComposerSetup\bin;C:\Program Files\nodejs;C:\sonarqube-7.2.1\sonar-scanner-3.2.0.1227-windows\bin;C:\wamp64\www\GreytoGreen\vendor\bin;C:\Users\Phaenomena\AppData\Local\Microsoft\WindowsApps;C:\Users\Phaenomena\AppData\Roaming\Dashlane\4.6.5.21982\bin\Firefox_Extension\{442718d9-475e-452a-b3e1-fb1ee16b8e9f}\components;C:\Users\Phaenomena\AppData\Roaming\Dashlane\4.6.6.23032\bin\Firefox_Extension\{442718d9-475e-452a-b3e1-fb1ee16b8e9f}\components;C:\texlive\2017\bin\win32;C:\Users\Phaenomena\AppData\Roaming\Dashlane\5.11.0.19338\bin\Firefox_Extension\{442718d9-475e-452a-b3e1-fb1ee16b8e9f}\components;C:\Users\Phaenomena\AppData\Roaming\Dashlane\5.11.0.19338\ucrt;C:\Program Files\Microsoft VS Code\bin;C:\Users\Phaenomena\AppData\Local\Microsoft\WindowsApps;C:\Users\Phaenomena\AppData\Roaming\Composer\vendor\bin;C:\Users\Phaenomena\AppData\Roaming\npm;C:\Users\Phaenomena\AppData\Roaming\Dashlane\5.17.0.23771\bin\Firefox_Extension\{442718d9-475e-452a-b3e1-fb1ee16b8e9f}\components;C:\Users\Phaenomena\AppData\Roaming\Dashlane\5.17.0.23771\ucrt;C:\Users\Phaenomena\AppData\Roaming\Dashlane\5.17.0.23771\bin\Qt;C:\Users\Phaenomena\AppData\Roaming\Dashlane\5.17.0.23771\ucrt;C:\Users\Phaenomena\AppData\Roaming\Dashlane\5.17.0.23771\bin\Ssl;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl;.
+  - java.runtime.name=Java(TM) SE Runtime Environment
+  - java.runtime.version=1.8.0_121-b13
+  - java.specification.name=Java Platform API Specification
+  - java.specification.vendor=Oracle Corporation
+  - java.specification.version=1.8
+  - java.vendor=Oracle Corporation
+  - java.vendor.url=http://java.oracle.com/
+  - java.vendor.url.bug=http://bugreport.sun.com/bugreport/
+  - java.version=1.8.0_121
+  - java.vm.info=mixed mode
+  - java.vm.name=Java HotSpot(TM) 64-Bit Server VM
+  - java.vm.specification.name=Java Virtual Machine Specification
+  - java.vm.specification.vendor=Oracle Corporation
+  - java.vm.specification.version=1.8
+  - java.vm.vendor=Oracle Corporation
+  - java.vm.version=25.121-b13
+  - line.separator=
+
+  - os.arch=amd64
+  - os.name=Windows 10
+  - os.version=10.0
+  - path.separator=;
+  - project.home=C:\wamp64\www\GreytoGreen
+  - scanner.home=C:\sonarqube-7.2.1\sonar-scanner-3.2.0.1227-windows\bin\..
+  - sun.arch.data.model=64
+  - sun.boot.class.path=C:\sonarqube-7.2.1\sonar-scanner-3.2.0.1227-windows\jre\lib\resources.jar;C:\sonarqube-7.2.1\sonar-scanner-3.2.0.1227-windows\jre\lib\rt.jar;C:\sonarqube-7.2.1\sonar-scanner-3.2.0.1227-windows\jre\lib\sunrsasign.jar;C:\sonarqube-7.2.1\sonar-scanner-3.2.0.1227-windows\jre\lib\jsse.jar;C:\sonarqube-7.2.1\sonar-scanner-3.2.0.1227-windows\jre\lib\jce.jar;C:\sonarqube-7.2.1\sonar-scanner-3.2.0.1227-windows\jre\lib\charsets.jar;C:\sonarqube-7.2.1\sonar-scanner-3.2.0.1227-windows\jre\lib\jfr.jar;C:\sonarqube-7.2.1\sonar-scanner-3.2.0.1227-windows\jre\classes
+  - sun.boot.library.path=C:\sonarqube-7.2.1\sonar-scanner-3.2.0.1227-windows\jre\bin
+  - sun.cpu.endian=little
+  - sun.cpu.isalist=amd64
+  - sun.desktop=windows
+  - sun.io.unicode.encoding=UnicodeLittle
+  - sun.java.command=org.sonarsource.scanner.cli.Main -X
+  - sun.java.launcher=SUN_STANDARD
+  - sun.jnu.encoding=Cp1252
+  - sun.management.compiler=HotSpot 64-Bit Tiered Compilers
+  - sun.os.patch.level=
+  - user.country=FR
+  - user.dir=C:\wamp64\www\GreytoGreen
+  - user.home=C:\Users\Phaenomena
+  - user.language=fr
+  - user.name=Phaenomena
+  - user.script=
+  - user.timezone=Europe/Paris
+  - user.variant=
+SonarQube plugins:
+  - SonarPython 1.10.0.2131 (python)
+  - SonarGo 1.1.0.1612 (go)
+  - Svn 1.7.0.1017 (scmsvn)
+  - SonarJS 4.1.0.6085 (javascript)
+  - SonarC# 7.2.0.5463 (csharp)
+  - SonarJava 5.4.0.14284 (java)
+  - LDAP 2.2.0.608 (ldap)
+  - Git 1.4.1.1128 (scmgit)
+  - SonarFlex 2.4.0.1222 (flex)
+  - SonarXML 1.5.1.1452 (xml)
+  - SonarPHP 2.13.0.3107 (php)
+  - SonarTS 1.7.0.2893 (typescript)
+Global properties:
+  - sonar.core.id=AWSJLPdvh8-NsQD2Fzdg
+  - sonar.core.startTime=2018-07-15T00:01:24+0200
+Settings for module: GreytoGreen
+  - sonar.host.url=http://localhost:9000
+  - sonar.projectBaseDir=C:\wamp64\www\GreytoGreen
+  - sonar.projectKey=GreytoGreen
+  - sonar.projectName=GreytoGreen
+  - sonar.projectVersion=1.0
+  - sonar.scanner.app=ScannerCli
+  - sonar.scanner.appVersion=3.2.0.1227
+  - sonar.sourceEncoding=windows-1252
+  - sonar.sources=C:\wamp64\www\GreytoGreen\src
+  - sonar.verbose=true
+  - sonar.working.directory=C:\wamp64\www\GreytoGreen\.scannerwork

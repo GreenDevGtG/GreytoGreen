@@ -1,0 +1,1 @@
+&src/UserBundle/Tests/Controller :$rsrc\UserBundle\Tests\Controller
