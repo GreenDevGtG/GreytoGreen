@@ -4,10 +4,31 @@
 
 {% block content %}
 
-    Hello World!
-    {% for astuce in astuces %}
+    {% for key,astuce in astuces %}
+        <div class="article">
+            <header class="row article-entete">
+                <div class="col-1">
+                    <a class="button-upDown" data-toggle="collapse" href="#collapse{{ key }}" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        <i class="text-white fa fa-sort-down"></i>
+                    </a>
+                </div>
+                <h4 class="article-titre center col-8">{{ astuce.nom|capitalize }}</h4>
+                <div class="col-3">
+                    {% for key,cat in astuce.categorie if cat.nom != "Astuce" %}
+                        <span class="article-categorie badge badge-light float-right">
+                            {{ cat.nom }}
+                        </span>
+                    {% endfor %}
+                </div>
+            </header>
+            <div class="collapse" id="collapse{{ key }}">
+                <img class="article-image img-responsive text-center" src="{{ astuce.urlImage }}" alt="">
+                <div>
+                    {{ astuce.contenu }}
+                </div>
+            </div>
 
-        <h1>{{ astuce.nom }}</h1>
+        </div>
 
     {% endfor %}
 

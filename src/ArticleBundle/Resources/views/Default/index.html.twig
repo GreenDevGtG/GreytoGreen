@@ -6,9 +6,15 @@
         {% include 'block/navbar.html.twig' %}
     {% endblock %}
 
-    <h1>{% block titre %}{% endblock %}</h1>
 
-    {% block content %}{% endblock %}
+
+    <div class="page">
+        <div class="container">
+            <span class="title center">{% block titre %}{% endblock %}</span>
+            {% block content %}{% endblock %}
+        </div>
+
+    </div>
 
     {% block footer %}
         {% include 'block/footer.html.twig' %}
