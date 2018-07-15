@@ -1,4 +1,3 @@
-
 <?php
 namespace ArticleBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
@@ -18,7 +17,7 @@ class Article
      * @ORM\GeneratedValue(strategy="IDENTITY")
      */
     private $id;
-    
+
     /**
      * @var string
      *
