@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    Hello World! evenement
+    {% for evenement in evenements %}
+
+        <h1>{{ evenement.nom }}</h1>
+
+    {% endfor %}
+{% endblock %}

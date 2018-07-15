@@ -1,58 +1,106 @@
+
 <?php
-
 namespace ArticleBundle\Entity;
-
 use Doctrine\ORM\Mapping as ORM;
-
 /**
  * Article
  *
  * @ORM\Table(name="article")
- * @ORM\Entity(repositoryClass="ArticleBundle\Repository\ArticleRepository")
+ * @ORM\Entity
  */
 class Article
 {
     /**
      * @var int
      *
-     * @ORM\Column(name="id", type="integer")
+     * @ORM\Column(name="id", type="integer", nullable=false)
      * @ORM\Id
-     * @ORM\GeneratedValue(strategy="AUTO")
+     * @ORM\GeneratedValue(strategy="IDENTITY")
      */
     private $id;
-
+    
     /**
      * @var string
      *
-     * @ORM\Column(name="Nom", type="string", length=100)
+     * @ORM\Column(name="nom", type="string", length=100, nullable=false)
      */
     private $nom;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="Contenu", type="text")
+     * @ORM\Column(name="contenu", type="text", length=65535, nullable=false)
      */
     private $contenu;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="URL_image", type="text")
+     * @ORM\Column(name="url_image", type="text", length=65535, nullable=false)
      */
-    private $uRLImage;
+    private $urlImage;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="URL_source", type="text")
+     * @ORM\Column(name="url_source", type="text", length=65535, nullable=false)
      */
-    private $uRLSource;
-
+    private $urlSource;
 
     /**
-     * Get id
+     * @var \DateTime
      *
+     * @ORM\Column(name="cree_le", type="datetime", nullable=false)
+     */
+    private $creeLe;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="mis_a_jour_le", type="datetime", nullable=false)
+     */
+    private $misAJourLe;
+
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     *
+     * @ORM\ManyToMany(targetEntity="UserBundle\Entity\Utilisateur", mappedBy="article")
+     */
+    private $utilisateur;
+
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     *
+     * @ORM\ManyToMany(targetEntity="AppBundle\Entity\Categorie", mappedBy="article")
+     */
+    private $categorie;
+
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     *
+     * @ORM\ManyToMany(targetEntity="AppBundle\Entity\Lieu", inversedBy="article")
+     * @ORM\JoinTable(name="evenement",
+     *   joinColumns={
+     *     @ORM\JoinColumn(name="article_id", referencedColumnName="id")
+     *   },
+     *   inverseJoinColumns={
+     *     @ORM\JoinColumn(name="lieu_id", referencedColumnName="id")
+     *   }
+     * )
+     */
+    private $lieu;
+
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->utilisateur = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->categorie = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->lieu = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
      * @return int
      */
     public function getId()
@@ -61,22 +109,16 @@ class Article
     }
 
     /**
-     * Set nom
-     *
-     * @param string $nom
-     *
+     * @param int $id
      * @return Article
      */
-    public function setNom($nom)
+    public function setId($id)
     {
-        $this->nom = $nom;
-
+        $this->id = $id;
         return $this;
     }
 
     /**
-     * Get nom
-     *
      * @return string
      */
     public function getNom()
@@ -85,22 +127,16 @@ class Article
     }
 
     /**
-     * Set contenu
-     *
-     * @param string $contenu
-     *
+     * @param string $nom
      * @return Article
      */
-    public function setContenu($contenu)
+    public function setNom($nom)
     {
-        $this->contenu = $contenu;
-
+        $this->nom = $nom;
         return $this;
     }
 
     /**
-     * Get contenu
-     *
      * @return string
      */
     public function getContenu()
@@ -109,51 +145,138 @@ class Article
     }
 
     /**
-     * Set uRLImage
-     *
-     * @param string $uRLImage
-     *
+     * @param string $contenu
      * @return Article
      */
-    public function setURLImage($uRLImage)
+    public function setContenu($contenu)
     {
-        $this->uRLImage = $uRLImage;
-
+        $this->contenu = $contenu;
         return $this;
     }
 
     /**
-     * Get uRLImage
-     *
      * @return string
      */
-    public function getURLImage()
+    public function getUrlImage()
     {
-        return $this->uRLImage;
+        return $this->urlImage;
     }
 
     /**
-     * Set uRLSource
-     *
-     * @param string $uRLSource
-     *
+     * @param string $urlImage
      * @return Article
      */
-    public function setURLSource($uRLSource)
+    public function setUrlImage($urlImage)
     {
-        $this->uRLSource = $uRLSource;
-
+        $this->urlImage = $urlImage;
         return $this;
     }
 
     /**
-     * Get uRLSource
-     *
      * @return string
      */
-    public function getURLSource()
+    public function getUrlSource()
     {
-        return $this->uRLSource;
+        return $this->urlSource;
+    }
+
+    /**
+     * @param string $urlSource
+     * @return Article
+     */
+    public function setUrlSource($urlSource)
+    {
+        $this->urlSource = $urlSource;
+        return $this;
+    }
+
+    /**
+     * @return \DateTime
+     */
+    public function getCreeLe()
+    {
+        return $this->creeLe;
+    }
+
+    /**
+     * @param \DateTime $creeLe
+     * @return Article
+     */
+    public function setCreeLe($creeLe)
+    {
+        $this->creeLe = $creeLe;
+        return $this;
+    }
+
+    /**
+     * @return \DateTime
+     */
+    public function getMisAJourLe()
+    {
+        return $this->misAJourLe;
+    }
+
+    /**
+     * @param \DateTime $misAJourLe
+     * @return Article
+     */
+    public function setMisAJourLe($misAJourLe)
+    {
+        $this->misAJourLe = $misAJourLe;
+        return $this;
+    }
+
+    /**
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getUtilisateur()
+    {
+        return $this->utilisateur;
+    }
+
+    /**
+     * @param \Doctrine\Common\Collections\Collection $utilisateur
+     * @return Article
+     */
+    public function setUtilisateur($utilisateur)
+    {
+        $this->utilisateur = $utilisateur;
+        return $this;
+    }
+
+    /**
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getCategorie()
+    {
+        return $this->categorie;
+    }
+
+    /**
+     * @param \Doctrine\Common\Collections\Collection $categorie
+     * @return Article
+     */
+    public function setCategorie($categorie)
+    {
+        $this->categorie = $categorie;
+        return $this;
+    }
+
+    /**
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getLieu()
+    {
+        return $this->lieu;
+    }
+
+    /**
+     * @param \Doctrine\Common\Collections\Collection $lieu
+     * @return Article
+     */
+    public function setLieu($lieu)
+    {
+        $this->lieu = $lieu;
+        return $this;
     }
 }
-

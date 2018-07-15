@@ -37,6 +37,11 @@ framework:
 twig:
     debug: '%kernel.debug%'
     strict_variables: '%kernel.debug%'
+    form_themes:
+      - "bootstrap_4_layout.html.twig"
+    globals:
+      data:
+        company_name: '%company_name%'
 
 # Doctrine Configuration
 doctrine:

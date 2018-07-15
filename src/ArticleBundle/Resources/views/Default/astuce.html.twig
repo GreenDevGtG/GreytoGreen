@@ -1,0 +1,14 @@
+{% extends '@Article/Default/index.html.twig' %}
+
+{% block titre %} Astuce {% endblock %}
+
+{% block content %}
+
+    Hello World!
+    {% for astuce in astuces %}
+
+        <h1>{{ astuce.nom }}</h1>
+
+    {% endfor %}
+
+{% endblock %}
