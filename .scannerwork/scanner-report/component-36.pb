@@ -1,0 +1,1 @@
+$6src/UserBundle/Tests/Controller/UserControllerTest.php 2phpXhr6src/UserBundle/Tests/Controller/UserControllerTest.php

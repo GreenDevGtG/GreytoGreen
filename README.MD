@@ -3,7 +3,7 @@
 
   
 
-Grey to Green is a WebApp which aims to propose multiple tools for a ecologie life easiest.
+Grey to Green is a WebApp which aims to propose multiple tools for an easier ecologic life.
 
   
 

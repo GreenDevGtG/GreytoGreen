@@ -1,0 +1,1 @@
+	src/AppBundle/Controller :rsrc\AppBundle\Controller

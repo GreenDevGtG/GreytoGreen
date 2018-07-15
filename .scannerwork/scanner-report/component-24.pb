@@ -1,0 +1,1 @@
+src/UserBundle/Controller :rsrc\UserBundle\Controller

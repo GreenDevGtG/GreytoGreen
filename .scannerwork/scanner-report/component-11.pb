@@ -1,0 +1,2 @@
+src/ArticleBundle/Entity :
+rsrc\ArticleBundle\Entity

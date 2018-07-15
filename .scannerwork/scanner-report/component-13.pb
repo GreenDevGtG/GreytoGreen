@@ -1,0 +1,1 @@
+%src/ArticleBundle/Entity/Category.php 2phpXChr%src/ArticleBundle/Entity/Category.php

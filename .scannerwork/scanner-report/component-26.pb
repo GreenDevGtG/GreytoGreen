@@ -1,0 +1,1 @@
+src/UserBundle/Entity :rsrc\UserBundle\Entity
