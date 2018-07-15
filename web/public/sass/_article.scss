@@ -1,0 +1,16 @@
+.article{
+  background-color: #ffffff44;
+  .article-entete {
+    height: 60px;
+    line-height: 60px;
+    .article-titre {
+      margin:auto;
+    }
+    .article-categorie {
+      margin: 5px;
+    }
+    .button-upDown {
+      margin: auto 30px;
+    }
+  }
+}

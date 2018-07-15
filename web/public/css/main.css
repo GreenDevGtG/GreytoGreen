@@ -253,4 +253,16 @@ header.logoHeader {
   border: none;
   margin-top: 40px; }
 
+.article {
+  background-color: #ffffff44; }
+  .article .article-entete {
+    height: 60px;
+    line-height: 60px; }
+    .article .article-entete .article-titre {
+      margin: auto; }
+    .article .article-entete .article-categorie {
+      margin: 5px; }
+    .article .article-entete .button-upDown {
+      margin: auto 30px; }
+
 /*# sourceMappingURL=main.css.map */
