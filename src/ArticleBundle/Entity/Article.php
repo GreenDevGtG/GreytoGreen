@@ -1,11 +1,14 @@
 <?php
 namespace ArticleBundle\Entity;
+
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
 /**
  * Article
  *
  * @ORM\Table(name="article")
  * @ORM\Entity
+ * @ORM\HasLifecycleCallbacks()
  */
 class Article
 {
@@ -71,6 +74,14 @@ class Article
      * @var \Doctrine\Common\Collections\Collection
      *
      * @ORM\ManyToMany(targetEntity="AppBundle\Entity\Categorie", mappedBy="article")
+     * @ORM\JoinTable(name="categorie_article",
+     *   joinColumns={
+     *     @ORM\JoinColumn(name="article_id", referencedColumnName="id")
+     *   },
+     *   inverseJoinColumns={
+     *     @ORM\JoinColumn(name="categorie_id", referencedColumnName="id")
+     *   }
+     * )
      */
     private $categorie;
 
@@ -90,6 +101,16 @@ class Article
     private $lieu;
 
     /**
+     * @var string
+     */
+    private $tmpPath;
+
+    /**
+     * @var UploadedFile
+     */
+    private $file;
+
+    /**
      * Constructor
      */
     public function __construct()
@@ -97,6 +118,70 @@ class Article
         $this->utilisateur = new \Doctrine\Common\Collections\ArrayCollection();
         $this->categorie = new \Doctrine\Common\Collections\ArrayCollection();
         $this->lieu = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * @param UploadedFile|null $file
+     * @return Article
+     */
+    public function setFile(UploadedFile $file = null)
+    {
+        $this->file = $file;
+
+        if (isset($this->urlImage)) {
+            $this->tmpPath = $this->urlImage;
+            $this->urlImage = null;
+        } else {
+            $this->urlImage = '';
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return UploadedFile
+     */
+    public function getFile()
+    {
+        return $this->file;
+    }
+
+    /**
+     * Fonction permettant de renomer l'image avant la sauvegarde en base.
+     *
+     * @ORM\PrePersist()
+     * @ORM\PreUpdate()
+     */
+    public function preUpload()
+    {
+        if ($this->getFile() !== null) {
+            $hash = sha1(uniqid(mt_rand(), true));
+
+            // $hash ~= sd54sdf54sf6zaqsd54sqd654ds.jpg
+            $this->setUrlImage($hash . '.' . $this->getFile()->guessExtension());
+        }
+    }
+
+    /**
+     * @ORM\PostPersist()
+     * @ORM\PostUpdate()
+     */
+    public function upload()
+    {
+        if ($this->getFile() === null) {
+            return;
+        }
+
+        $this->getFile()->move($this->getUploadRootDir(), $this->getUrlImage());
+        $this->setFile(null);
+    }
+
+    /**
+     * @return string
+     */
+    public function getUploadRootDir()
+    {
+        return __DIR__ . '/../../../web/upload/astuces';
     }
 
     /**
@@ -277,6 +362,28 @@ class Article
     {
         $this->lieu = $lieu;
         return $this;
+    }
+
+    /**
+     * Gets triggered only on insert
+
+     * @ORM\PrePersist
+     */
+    public function onPrePersist()
+    {
+        $this->creeLe = new \DateTime("now");
+        $this->misAJourLe = new \DateTime("now");
+
+    }
+
+    /**
+     * Gets triggered every time on update
+
+     * @ORM\PreUpdate
+     */
+    public function onPreUpdate()
+    {
+        $this->misAJourLe = new \DateTime("now");
     }
 
     function miseEnFormeContenu(){
