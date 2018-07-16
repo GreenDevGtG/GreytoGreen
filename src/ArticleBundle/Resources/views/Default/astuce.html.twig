@@ -3,7 +3,7 @@
 {% block titre %} Astuce {% endblock %}
 
 {% block content %}
-
+    <div class="container">
     {% for key,astuce in astuces %}
         <div class="article">
             <header class="row article-entete">
@@ -20,16 +20,18 @@
                         </span>
                     {% endfor %}
                 </div>
+                
             </header>
-            <div class="collapse" id="collapse{{ key }}">
-                <img class="article-image img-responsive text-center" src="{{ astuce.urlImage }}" alt="">
-                <div>
+            <div class="collapse text-center" id="collapse{{ key }}">
+                <img class="article-image img-responsive " src="{{ astuce.urlImage }}" alt="">
+                <div class="article-contenu">
                     {{ astuce.contenu }}
                 </div>
+            <div>
+                <a class="article-source" href="{{ astuce.urlSource }}">Source</a>
+            </div> 
             </div>
-
         </div>
-
     {% endfor %}
-
+</div>
 {% endblock %}

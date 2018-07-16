@@ -12,5 +12,20 @@
     .button-upDown {
       margin: auto 30px;
     }
+    .article-contenu {
+      margin: 20px;
+    }
   }
+  .article-image{
+    max-width: 600px ;
+    width: 100%;
+  }
+  .article-source{
+    background-color: #ffffff60;
+    color:royalblue;
+    padding: 5px;
+    font-style: italic;
+    margin: auto 20px;
+  }
+
 }

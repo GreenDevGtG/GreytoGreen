@@ -264,5 +264,16 @@ header.logoHeader {
       margin: 5px; }
     .article .article-entete .button-upDown {
       margin: auto 30px; }
+    .article .article-entete .article-contenu {
+      margin: 20px; }
+  .article .article-image {
+    max-width: 600px;
+    width: 100%; }
+  .article .article-source {
+    background-color: #ffffff60;
+    color: royalblue;
+    padding: 5px;
+    font-style: italic;
+    margin: auto 20px; }
 
 /*# sourceMappingURL=main.css.map */
