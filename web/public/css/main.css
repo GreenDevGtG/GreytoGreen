@@ -32,6 +32,12 @@ html, body {
     -o-transition: all 200ms ease;
     transition: all 200ms ease; }
 
+.footer {
+  font-size: 0.8rem;
+  text-align: center;
+  padding: 0;
+  margin: 0; }
+
 .bars {
   display: block;
   width: 42px;
@@ -175,6 +181,7 @@ header.logoHeader {
 
 #returnArrow {
   display: block;
+  color: #fff;
   margin-left: 1.2rem;
   margin-top: 1.2rem; }
 
@@ -193,6 +200,10 @@ header.logoHeader {
   margin-left: auto;
   margin-right: auto;
   height: 500px; }
+
+input {
+    text-align:center;
+ }
 
 .profilHead {
   width: 100%;
@@ -264,5 +275,37 @@ header.logoHeader {
       margin: 5px; }
     .article .article-entete .button-upDown {
       margin: auto 30px; }
+
+/* PAGE ACCUEIL */
+.titreAccueil {
+  padding-top: 15%;
+  text-align: center;
+  font-size: 1.3rem;
+  text-transform: uppercase; }
+
+#logoAccueil {
+  display: block;
+  margin: 15% auto;
+}
+
+.textAccueil {
+  text-align: center;
+  color: #fff;
+}
+
+#liensAccueil {
+  text-align: center;
+  padding: 10% 0; }
+
+.linkAccueil {
+  display: inline-block;
+  padding: 0 2%;
+  margin: auto;
+  color: white; }
+  .linkAccueil:link {
+    text-decoration: underline; }
+  .linkAccueil:hover {
+    color: #ccc; }
+
 
 /*# sourceMappingURL=main.css.map */

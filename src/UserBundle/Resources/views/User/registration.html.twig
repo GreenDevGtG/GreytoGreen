@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}M'inscrire{% endblock %}
+
+{% block body %}
+
+    {% block navbar %}
+        {% include 'block/navbar.html.twig' %}
+    {% endblock %}
+
+        <div class="page">
+            <div class="container">
+                <header>
+                    <div class="col-2">
+                        <a href="{{ path('signIn') }}">
+                            <i id="returnArrow" class="fas fa-caret-left"></i>
+                        </a>
+                    </div>
+                    <div class="container-fluid text-center">
+                        <img class="logoGtG" src="{{ asset("public/img/LogoGtGblanc.png") }}" alt="logoGtG">
+                    </div>
+                </header>
+
+                <form>
+                    <input class="formInput" type="text" name="pseudo" placeholder="Pseudonyme">
+                    <input class="formInput" type="email" name="email" placeholder="Email">
+                    <input class="formInput" type="password" name="password" placeholder="Mot de passe">
+                    <input class="formInput" type="text" name="location" placeholder="Ville">
+
+
+                    <button class="button" type="submit">Inscription</button>
+                </form>
+            </div>
+        </div>
+
+{% endblock %}

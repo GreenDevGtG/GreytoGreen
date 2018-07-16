@@ -20,7 +20,7 @@ class DefaultController extends Controller
         $categorie = $repo->find(16);
         $astuces = $categorie->getArticle();
 
-        return $this->render('@Article/Default/index.html.twig',[
+        return $this->render('default/index.html.twig',[
             'astuces' => $astuces,
         ]);
     }
