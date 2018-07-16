@@ -8,13 +8,33 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 class UserController extends Controller
 {
     /**
-     * @Route("/user")
+     * @Route("/user", name="myProfil")
      */
     public function userAction()
     {
-        return $this->render('UserBundle:User:user.html.twig', array(
-            // ...
-        ));
+        return $this->render('@User/User/user.html.twig', [
+
+        ]);
+    }
+
+    /**
+     * @Route("/login", name="signIn")
+     */
+    public function loginAction()
+    {
+        return $this->render('@User/User/login.html.twig', [
+
+            ]);
+    }
+
+    /**
+     * @Route("/registration", name="signUp")
+     */
+    public function registrationAction()
+    {
+        return $this->render('@User/User/registration.html.twig', [
+
+            ]);
     }
 
 }
