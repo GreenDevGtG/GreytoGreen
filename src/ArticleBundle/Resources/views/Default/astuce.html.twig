@@ -8,7 +8,7 @@
         <div class="article">
             <header class="row article-entete">
                 <div class="col-1">
-                    <a class="button-upDown" data-toggle="collapse" href="#collapse{{ key }}" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    <a class="button-upDown" data-toggle="collapse" href="#collapse{{ key }}" role="button" aria-expanded="false" aria-controls="collapse{{ key }}">
                         <i class="text-white fa fa-sort-down"></i>
                     </a>
                 </div>
@@ -24,7 +24,7 @@
             <div class="collapse" id="collapse{{ key }}">
                 <img class="article-image img-responsive text-center" src="{{ astuce.urlImage }}" alt="">
                 <div>
-                    {{ astuce.contenu }}
+                    {{ astuce.miseEnFormeContenu }}
                 </div>
             </div>
 

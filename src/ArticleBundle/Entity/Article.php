@@ -278,4 +278,29 @@ class Article
         $this->lieu = $lieu;
         return $this;
     }
+
+    function miseEnFormeContenu(){
+        $postTitre='</h3>';
+    
+        $postContenu='</div>';;
+    
+        $tab= explode('**',$this->getContenu());
+        foreach ($tab as $key => $value) {
+            if($key % 2 != 0){
+                $tab[$key]='<h3>
+                <a class="button-upDown" data-toggle="collapse" href="#collapseIn'.$key.'" role="button" aria-expanded="false" aria-controls="collapseIn'.$key.'">
+                    <i class="text-white fa fa-sort-down"></i>
+                </a>
+                '.$value.$postTitre;
+            }
+            elseif ($key != 0) {
+                $value=str_replace('--','<br>-',$value);
+                $tab[$key]='<div class="collapse" id="collapseIn' . ($key - 1) . '" >'.$value.$postContenu;
+            }
+        }
+        $raw = implode(' ',$tab);
+        
+        echo htmlspecialchars_decode($raw);
+        
+    }
 }
