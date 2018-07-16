@@ -46,7 +46,8 @@
 
 {% endblock %}
 
-    {% block javascripts %}
+{% block javascripts %}
+    {{ parent() }}
         <script type="text/javascript">
             $("#opener").click(function () {
                 $("#dialog").dialog("open");
@@ -71,4 +72,4 @@
                 });
             });
         </script>
-    {% endblock %}
+{% endblock %}
