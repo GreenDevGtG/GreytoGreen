@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Me connecter{% endblock %}
+
+{% block body %}
+
+    {% block navbar %}
+        {% include 'block/navbar.html.twig' %}
+    {% endblock %}
+
+        <div class="page">
+            <div class="container">
+                <header class="logoHeader">
+                    <div class="container-fluid text-center">
+                        <img class="logoGtG center-block" src="{{ asset("public/img/LogoGtGblanc.png") }}" alt="logoGtG">
+                    </div>
+                </header>
+
+                <form>
+                    <input class="formInput" type="email" name="email" placeholder="Email">
+
+                    <input class="formInput" type="password" name="password" placeholder="Mot de passe">
+
+                    <button class="button" type="submit">Connexion</button>
+                </form>
+
+                <div class="center">
+                </div>
+
+                <div class="center otherCo text-center">Connectez-vous avec :</div>
+
+                <div class="socials">
+                    <a href="#">
+                        <img src="{{ asset("public/img/Logo-google.png") }}" alt="logoGoogle" id="logoGoogle">
+                    </a>
+                    <a href="#">
+                        <img src="{{ asset("public/img/Logo-facebook.png") }}" alt="logoFB" id="logoFB">
+                    </a>
+                </div>
+
+
+                <div class="lin center">
+                    <a href="{{ path('signUp') }}" id="linkInscription">Inscription</a>
+                </div>
+            </div>
+        </div>
+
+{% endblock %}
