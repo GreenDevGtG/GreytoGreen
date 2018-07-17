@@ -1,9 +1,9 @@
 .article{
   background-color: #ffffff66;
   border-top: 1px solid #fff;
+  margin: 5px;
 
   .article-entete {
-    height: 60px;
     line-height: 60px;
     .article-titre {
       margin:auto;
@@ -23,9 +23,9 @@
     width: 100%;
   }
   .article-source{
-    background-color: #ffffff60;
+    
     color:royalblue;
-    padding: 5px;
+    padding: 3px;
     font-style: italic;
     margin: auto 20px;
   }

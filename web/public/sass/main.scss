@@ -98,6 +98,10 @@ header.logoHeader {
     margin-bottom: 30px;
 }
 
+.container {
+    height: 100%;
+}
+
 // page login
 
  @import 'login';
@@ -114,6 +118,12 @@ header.logoHeader {
 
 @import "article";
 
+
+// map
+
+@import "map";
+
 // accueil
 
 @import "accueil";
+
