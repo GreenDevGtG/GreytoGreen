@@ -1,10 +1,37 @@
-{% extends 'base.html.twig' %}
+{% extends '@Article/Default/index.html.twig' %}
 
-{% block body %}
-    Hello World! evenement
-    {% for evenement in evenements %}
+{% block titre %} Evènements {% endblock %}
 
-        <h1>{{ evenement.nom }}</h1>
+{% block content %}
+
+    {% for key,evenement in evenements %}
+        <div class="article">
+            <header class="row article-entete">
+                <div class="col-1">
+                    <a class="button-upDown" data-toggle="collapse" href="#collapse{{ key }}" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        <i class="text-white fa fa-sort-down"></i>
+                    </a>
+                </div>
+                <h4 class="article-titre center col-8">{{ evenement.nom|capitalize }}</h4>
+                <div class="col-3">
+                    {% for key,cat in evenement.categorie if cat.nom != "Evenement" %}
+                        <span class="article-categorie badge badge-light float-right">
+                            {{ cat.nom }}
+                        </span>
+                    {% endfor %}
+                </div>
+            </header>
+            <div class="collapse text-center" id="collapse{{ key }}">
+                <img class="article-image img-responsive" width="600px" src="{{ evenement.urlImage }}">
+                <div>
+                    {{ evenement.contenu }}
+                </div>
+                <div>
+                    <a class="article-source" href="{{ evenement.urlSource }}">Source</a>
+                </div>
+            </div>   
+        </div>
 
     {% endfor %}
+
 {% endblock %}
