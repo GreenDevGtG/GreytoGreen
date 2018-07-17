@@ -1,75 +1,45 @@
-{% extends 'base.html.twig' %}
+{% extends '@User/Default/index.html.twig' %}
 
-{% block title %}Mon profil{% endblock %}
+{% block title %} Mon profil {% endblock %}
+{% block titre %} Mon profil {% endblock %}
 
-{% block body %}
 
-    {% block navbar %}
-        {% include 'block/navbar.html.twig' %}
-    {% endblock %}
+{% block content %}
 
-    <div class="page">
-        <div class="container">
-            <span class="title center">Mon Profil</span>
+    <form id="profilFormBG">
+        <section class="profilHead">
+            <a href="#" id="opener">
+                <i class="fas fa-power-off"></i>
+            </a>
+            <input id="profilPseudo" type="text" name="pseudo" placeholder="Pseudonyme">
 
-            <form id="profilFormBG">
-                <section class="profilHead">
-                    <a href="#" id="opener">
-                        <i class="fas fa-power-off"></i>
-                    </a>
-                    <input id="profilPseudo" type="text" name="pseudo" placeholder="Pseudonyme">
+        </section>
+        <section class="profilInfos">
+            <input class="profilForm" type="text" name="lastname" placeholder="Nom">
+            <input class="profilForm" type="text" name="firstname" placeholder="Prénom">
+            <span class="fas fa-envelope"></span>
+            <input class="profilForm" type="email" name="email" placeholder="Email">
+            <span class="fas fa-lock"></span>
+            <input class="profilForm" type="password" name="password" placeholder="Mot de passe">
+            <span class="fas fa-building"></span>
+            <input class="profilForm" type="text" name="location" placeholder="Ville">
+            <span class="fas fa-home"></span>
+            <input class="profilForm" type="text" name="address" placeholder="Adresse">
+            <span class="fas fa-birthday-cake"></span>
+            <input class="profilForm" type="text" name="birtday" placeholder="Anniversaire">
+            <button class="button" id="btn-profil" type="submit">Enregistrer</button>
+        </section>
+    </form>
 
-                </section>
-                <section class="profilInfos">
-                    <input class="profilForm" type="text" name="lastname" placeholder="Nom">
-                    <input class="profilForm" type="text" name="firstname" placeholder="Prénom">
-                    <span class="fas fa-envelope"></span>
-                    <input class="profilForm" type="email" name="email" placeholder="Email">
-                    <span class="fas fa-lock"></span>
-                    <input class="profilForm" type="password" name="password" placeholder="Mot de passe">
-                    <span class="fas fa-building"></span>
-                    <input class="profilForm" type="text" name="location" placeholder="Ville">
-                    <span class="fas fa-home"></span>
-                    <input class="profilForm" type="text" name="address" placeholder="Adresse">
-                    <span class="fas fa-birthday-cake"></span>
-                    <input class="profilForm" type="text" name="birtday" placeholder="Anniversaire">
-                    <button class="button" id="btn-profil" type="submit">Enregistrer</button>
-                </section>
-            </form>
-        </div>
+    <div class="popup" id="dialog" title="Déconnexion">
+        <p>Voulez-vous vous déconnecter ?</p>
     </div>
 
-<div class="popup" id="dialog" title="Déconnexion">
-    <p>
-        Voulez-vous vous déconnecter ?</p>
-</div>
-
-{% endblock %}
-
-{% block javascripts %}
+    {% block javascripts %}
     {{ parent() }}
-        <script type="text/javascript">
-            $("#opener").click(function () {
-                $("#dialog").dialog("open");
-            });
-            $(document).ready(function () {
-                $(function () {
-                    $("#dialog").dialog({
-                        autoOpen: false,
-                        resizable: false,
-                        height: "auto",
-                        width: 400,
-                        modal: true,
-                        buttons: {
-                            "Deconnexion": function () {
-                                $(this).dialog("close");
-                            },
-                            "Annuler": function () {
-                                $(this).dialog("close");
-                            }
-                        }
-                    });
-                });
-            });
-        </script>
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script type="text/javascript" src="{{ asset('public/js/popup.js') }}"></script>
+    {% endblock %}
+
 {% endblock %}
