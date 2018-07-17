@@ -32,6 +32,15 @@ html, body {
     -o-transition: all 200ms ease;
     transition: all 200ms ease; }
 
+.footer {
+  font-size: 0.8rem;
+  text-align: center;
+  padding: 0;
+  margin: 0; }
+
+input {
+  text-align: center; }
+
 .bars {
   display: block;
   width: 42px;
@@ -132,6 +141,9 @@ header.logoHeader {
   height: 100px;
   margin-top: 60px;
   margin-bottom: 30px; }
+
+.container {
+  height: 100%; }
 
 .logoGtG {
   display: block;
@@ -253,11 +265,66 @@ header.logoHeader {
   border: none;
   margin-top: 40px; }
 
+.ui-dialog {
+  background: #fff;
+  background-color: #fff;
+  border-radius: 5px;
+  height: auto;
+  width: auto; }
+
+.ui-dialog-titlebar {
+  font-family: "Segoe UI", "OpenSans", "sans-serif";
+  padding-top: 6px;
+  text-align: center; }
+
+.ui-dialog-title {
+  color: #a80505;
+  font-family: "Segoe UI", "OpenSans", "sans-serif";
+  font-size: 1.1rem; }
+
+.ui-dialog-titlebar-close {
+  visibility: hidden; }
+
+.ui-dialog-content {
+  color: #000;
+  text-align: center;
+  font-size: 1.1rem; }
+
+.ui-dialog-buttonpane {
+  border-top: 1px solid #ccc; }
+
+.ui-dialog-buttonset {
+  display: inline-block;
+  background: #fff;
+  background-color: #fff;
+  border: none;
+  width: 100%; }
+
+.ui-button {
+  display: inline;
+  padding: 5px 30%;
+  background: #fff;
+  background-color: #fff;
+  border: none;
+  font-size: 1.1rem; }
+
+.ui-state-default {
+  background-color: #fff;
+  background: #fff; }
+
+.ui-state-hover {
+  background-color: #ccc;
+  background: #ccc; }
+
+.ui-state-active {
+  background-color: #ccc;
+  background: #ccc; }
+
 .article {
   background-color: #ffffff66;
-  border-top: 1px solid #fff; }
+  border-top: 1px solid #fff;
+  margin: 5px; }
   .article .article-entete {
-    height: 60px;
     line-height: 60px; }
     .article .article-entete .article-titre {
       margin: auto; }
@@ -271,13 +338,51 @@ header.logoHeader {
     max-width: 600px;
     width: 100%; }
   .article .article-source {
-    background-color: #ffffff60;
     color: royalblue;
-    padding: 5px;
+    padding: 3px;
     font-style: italic;
     margin: auto 20px; }
   .article .article-image {
     max-width: 600px;
     width: 100%; }
+
+.map-container {
+  width: 100%;
+  height: calc(100% - 60px); }
+
+#map {
+  text-align: center;
+  width: 100%;
+  height: 100%; }
+
+.titreAccueil {
+  padding-top: 15%;
+  text-align: center;
+  font-size: 1.3rem;
+  text-transform: uppercase; }
+
+#logoAccueil {
+  display: block;
+  margin: 15% auto; }
+
+.textAccueil {
+  text-align: center;
+  color: #fff; }
+
+#liensAccueil {
+  text-align: center;
+  padding: 10% 0; }
+
+.linkAccueil {
+  display: inline-block;
+  padding: 0 2%;
+  margin: auto;
+  color: white; }
+
+.linkAccueil:link {
+  text-decoration: underline; }
+
+.linkAccueil:hover {
+  color: #ccc; }
 
 /*# sourceMappingURL=main.css.map */

@@ -84,3 +84,69 @@
     border: none;
     margin-top: 40px;
 }
+
+.ui-dialog {
+    background: #fff;
+    background-color: #fff;
+    border-radius: 5px;
+    height: auto;
+    width: auto;
+  }
+  
+  .ui-dialog-titlebar {
+    font-family: "Segoe UI", "OpenSans", "sans-serif";
+    padding-top: 6px;
+    text-align: center;
+  }
+  
+  .ui-dialog-title {
+    color: rgb(168, 5, 5);
+    font-family: "Segoe UI", "OpenSans", "sans-serif";
+    font-size: 1.1rem;
+  }
+  
+  .ui-dialog-titlebar-close {
+    visibility: hidden;
+  }
+  
+  .ui-dialog-content {
+    color: #000;
+    text-align: center;
+    font-size: 1.1rem;
+  }
+  
+  .ui-dialog-buttonpane {
+    border-top: 1px solid #ccc;
+  }
+  
+  .ui-dialog-buttonset {
+    display: inline-block;
+    background: #fff;
+    background-color: #fff;
+    border: none;
+    width: 100%;
+  }
+  
+  .ui-button {
+    display: inline;
+    padding: 5px 30%;
+    background: #fff;
+    background-color: #fff;
+    border: none;
+    font-size: 1.1rem;
+  }
+  
+  .ui-state-default {
+    background-color: #fff;
+    background: #fff;
+  }
+  
+  .ui-state-hover {
+    background-color: #ccc;
+    background: #ccc;
+  }
+  
+  .ui-state-active {
+    background-color: #ccc;
+    background: #ccc;
+  }

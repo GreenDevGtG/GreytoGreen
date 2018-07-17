@@ -10,13 +10,10 @@
 
     <div class="page">
         <div class="container">
-            <span class="title center">{% block titre %}{% endblock %}</span>
+            <h4 class="title center">{% block titre %}{% endblock %}</h4>
             {% block content %}{% endblock %}
         </div>
     </div>
 
-    {% block footer %}
-        {% include 'block/footer.html.twig' %}
-    {% endblock %}
-
+   
 {% endblock %}
