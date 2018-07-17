@@ -44,6 +44,17 @@ html, body {
     }
 }
 
+.footer {
+    font-size: 0.8rem;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+input {
+    text-align:center;
+}
+
 // menu hamburger
 
 @import 'menuHamburger';
@@ -102,3 +113,7 @@ header.logoHeader {
 // article
 
 @import "article";
+
+// accueil
+
+@import "accueil";

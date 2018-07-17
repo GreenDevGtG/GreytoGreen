@@ -1,1 +1,22 @@
-Hello World!
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    {% block navbar %}
+        {% include 'block/navbar.html.twig' %}
+    {% endblock %}
+
+
+
+    <div class="page">
+        <div class="container">
+            <span class="title center">{% block titre %}{% endblock %}</span>
+            {% block content %}{% endblock %}
+        </div>
+    </div>
+
+    {% block footer %}
+        {% include 'block/footer.html.twig' %}
+    {% endblock %}
+
+{% endblock %}
