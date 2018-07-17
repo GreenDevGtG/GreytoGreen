@@ -14,7 +14,7 @@
                 </div>
                 <h4 class="article-titre center col-8">{{ astuce.nom|capitalize }}</h4>
                 <div class="col-3">
-                    {% for key,cat in astuce.categorie if cat.nom != "Astuce" %}
+                    {% for key,cat in astuce.categories if cat.nom != "Astuce" %}
                         <span class="article-categorie badge badge-light float-right">
                             {{ cat.nom }}
                         </span>

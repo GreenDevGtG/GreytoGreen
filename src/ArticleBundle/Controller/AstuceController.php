@@ -18,9 +18,9 @@ class AstuceController extends Controller
      */
     public function indexAction()
     {
-        $repo = $this->getDoctrine()->getRepository('AppBundle:Categorie');
+        $repo = $this->getDoctrine()->getRepository('ArticleBundle:Categorie');
         $categorie = $repo->find(16);
-        $astuces = $categorie->getArticle();
+        $astuces = $categorie->getArticles();
 
         return $this->render('@Article/Default/astuce.html.twig',[
             'astuces' => $astuces,

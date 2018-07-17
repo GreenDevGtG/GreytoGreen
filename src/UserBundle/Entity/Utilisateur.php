@@ -17,7 +17,7 @@ class Utilisateur
      *
      * @ORM\Column(name="id", type="smallint", nullable=false, options={"unsigned"=true})
      * @ORM\Id
-     * @ORM\GeneratedValue(strategy="IDENTITY")
+     * @ORM\GeneratedValue(strategy="AUTO")
      */
     private $id;
 
@@ -101,24 +101,16 @@ class Utilisateur
     /**
      * @var \Doctrine\Common\Collections\Collection
      *
-     * @ORM\ManyToMany(targetEntity="ArticleBundle\Entity\Article", inversedBy="utilisateur")
-     * @ORM\JoinTable(name="auteur",
-     *   joinColumns={
-     *     @ORM\JoinColumn(name="utilisateur_id", referencedColumnName="id")
-     *   },
-     *   inverseJoinColumns={
-     *     @ORM\JoinColumn(name="article_id", referencedColumnName="id")
-     *   }
-     * )
+     * @ORM\ManyToMany(targetEntity="ArticleBundle\Entity\Article", mappedBy="utilisateurs")
      */
-    private $article;
+    private $articles;
 
     /**
      * Constructor
      */
     public function __construct()
     {
-        $this->article = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->articles = new \Doctrine\Common\Collections\ArrayCollection();
     }
 
     /**
@@ -340,9 +332,9 @@ class Utilisateur
     /**
      * @return \Doctrine\Common\Collections\Collection
      */
-    public function getArticle()
+    public function getArticles()
     {
-        return $this->article;
+        return $this->articles;
     }
 
     /**
@@ -351,7 +343,7 @@ class Utilisateur
      */
     public function setArticle($article)
     {
-        $this->article = $article;
+        $this->articles[] = $article;
         return $this;
     }
 

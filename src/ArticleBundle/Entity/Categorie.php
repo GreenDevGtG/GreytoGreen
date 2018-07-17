@@ -1,6 +1,5 @@
 <?php
-
-namespace AppBundle\Entity;
+namespace ArticleBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
@@ -17,7 +16,7 @@ class Categorie
      *
      * @ORM\Column(name="id", type="integer", nullable=false)
      * @ORM\Id
-     * @ORM\GeneratedValue(strategy="IDENTITY")
+     * @ORM\GeneratedValue(strategy="AUTO")
      */
     private $id;
 
@@ -31,24 +30,16 @@ class Categorie
     /**
      * @var \Doctrine\Common\Collections\Collection
      *
-     * @ORM\ManyToMany(targetEntity="ArticleBundle\Entity\Article", inversedBy="categorie")
-     * @ORM\JoinTable(name="categorie_article",
-     *   joinColumns={
-     *     @ORM\JoinColumn(name="categorie_id", referencedColumnName="id")
-     *   },
-     *   inverseJoinColumns={
-     *     @ORM\JoinColumn(name="article_id", referencedColumnName="id")
-     *   }
-     * )
+     * @ORM\ManyToMany(targetEntity="ArticleBundle\Entity\Article", mappedBy="categories")
      */
-    private $article;
+    private $articles;
 
     /**
      * Constructor
      */
     public function __construct()
     {
-        $this->article = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->articles = new \Doctrine\Common\Collections\ArrayCollection();
     }
 
     /**
@@ -90,20 +81,18 @@ class Categorie
     /**
      * @return \Doctrine\Common\Collections\Collection
      */
-    public function getArticle()
+    public function getArticles()
     {
-        return $this->article;
+        return $this->articles;
     }
 
     /**
      * @param \Doctrine\Common\Collections\Collection $article
      * @return Categorie
      */
-    public function setArticle($article)
+    public function setArticles($article)
     {
-        $this->article = $article;
+        $this->articles[] = $article;
         return $this;
     }
-
-
 }

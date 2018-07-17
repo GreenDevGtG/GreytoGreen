@@ -17,7 +17,7 @@ class Article
      *
      * @ORM\Column(name="id", type="integer", nullable=false)
      * @ORM\Id
-     * @ORM\GeneratedValue(strategy="IDENTITY")
+     * @ORM\GeneratedValue(strategy="AUTO")
      */
     private $id;
 
@@ -66,39 +66,26 @@ class Article
     /**
      * @var \Doctrine\Common\Collections\Collection
      *
-     * @ORM\ManyToMany(targetEntity="UserBundle\Entity\Utilisateur", mappedBy="article")
+     * @ORM\ManyToMany(targetEntity="UserBundle\Entity\Utilisateur", inversedBy="articles")
+     * @ORM\JoinTable(name="auteur")
      */
-    private $utilisateur;
+    private $utilisateurs;
 
     /**
      * @var \Doctrine\Common\Collections\Collection
      *
-     * @ORM\ManyToMany(targetEntity="AppBundle\Entity\Categorie", mappedBy="article")
-     * @ORM\JoinTable(name="categorie_article",
-     *   joinColumns={
-     *     @ORM\JoinColumn(name="article_id", referencedColumnName="id")
-     *   },
-     *   inverseJoinColumns={
-     *     @ORM\JoinColumn(name="categorie_id", referencedColumnName="id")
-     *   }
-     * )
+     * @ORM\ManyToMany(targetEntity="ArticleBundle\Entity\Categorie", inversedBy="articles")
+     * @ORM\JoinTable(name="categorie_article")
      */
-    private $categorie;
+    private $categories;
 
     /**
      * @var \Doctrine\Common\Collections\Collection
      *
-     * @ORM\ManyToMany(targetEntity="AppBundle\Entity\Lieu", inversedBy="article")
-     * @ORM\JoinTable(name="evenement",
-     *   joinColumns={
-     *     @ORM\JoinColumn(name="article_id", referencedColumnName="id")
-     *   },
-     *   inverseJoinColumns={
-     *     @ORM\JoinColumn(name="lieu_id", referencedColumnName="id")
-     *   }
-     * )
+     * @ORM\ManyToMany(targetEntity="AppBundle\Entity\Lieu", inversedBy="articles")
+     * @ORM\JoinTable(name="evenement")
      */
-    private $lieu;
+    private $lieus;
 
     /**
      * @var string
@@ -115,8 +102,8 @@ class Article
      */
     public function __construct()
     {
-        $this->utilisateur = new \Doctrine\Common\Collections\ArrayCollection();
-        $this->categorie = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->utilisateurs = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->categories = new \Doctrine\Common\Collections\ArrayCollection();
         $this->lieu = new \Doctrine\Common\Collections\ArrayCollection();
     }
 
@@ -292,75 +279,76 @@ class Article
         return $this;
     }
 
-    /**
-     * @return \DateTime
-     */
+    
     public function getMisAJourLe()
     {
         return $this->misAJourLe;
     }
 
-    /**
-     * @param \DateTime $misAJourLe
-     * @return Article
-     */
+    
     public function setMisAJourLe($misAJourLe)
     {
         $this->misAJourLe = $misAJourLe;
         return $this;
     }
 
-    /**
-     * @return \Doctrine\Common\Collections\Collection
-     */
-    public function getUtilisateur()
+   
+    public function getUtilisateurs()
     {
-        return $this->utilisateur;
+        return $this->utilisateurs;
     }
 
-    /**
-     * @param \Doctrine\Common\Collections\Collection $utilisateur
-     * @return Article
-     */
+   
     public function setUtilisateur($utilisateur)
     {
-        $this->utilisateur = $utilisateur;
+        $utilisateur->setArticle($this);
+        $this->utilisateurs[] = $utilisateur;
         return $this;
     }
 
     /**
      * @return \Doctrine\Common\Collections\Collection
      */
-    public function getCategorie()
+    public function getCategories()
     {
-        return $this->categorie;
+        return $this->categories;
     }
 
     /**
-     * @param \Doctrine\Common\Collections\Collection $categorie
      * @return Article
      */
-    public function setCategorie($categorie)
+    public function setCategories($categories)
     {
-        $this->categorie = $categorie;
+        foreach ($categories as $categorie) {
+            $categorie->setArticle($this);
+            $this->categories[] = $categorie;
+        }  
         return $this;
     }
 
     /**
-     * @return \Doctrine\Common\Collections\Collection
+     * @return Article
      */
-    public function getLieu()
+    public function setCategorie(ArticleBundle\Entity\Categorie $categorie)
     {
-        return $this->lieu;
+        $categorie->setArticle($this);
+        $this->categories[] = $categorie;
+        return $this;
+    }
+
+    
+    public function getLieus()
+    {
+        return $this->lieus;
     }
 
     /**
-     * @param \Doctrine\Common\Collections\Collection $lieu
      * @return Article
      */
     public function setLieu($lieu)
     {
-        $this->lieu = $lieu;
+        $lieu->setArticle($this);
+        $this->lieu[] = $lieu;
         return $this;
     }
 
