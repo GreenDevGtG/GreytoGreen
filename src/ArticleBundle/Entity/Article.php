@@ -66,9 +66,9 @@ class Article
     /**
      * @var \Doctrine\Common\Collections\Collection
      *
-     * @ORM\ManyToMany(targetEntity="UserBundle\Entity\User", mappedBy="article")
+     * 
      */
-    private $utilisateur;
+    private $user;
 
     /**
      * @var \Doctrine\Common\Collections\Collection
@@ -115,7 +115,7 @@ class Article
      */
     public function __construct()
     {
-        $this->utilisateur = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->user = new \Doctrine\Common\Collections\ArrayCollection();
         $this->categorie = new \Doctrine\Common\Collections\ArrayCollection();
         $this->lieu = new \Doctrine\Common\Collections\ArrayCollection();
     }
@@ -313,18 +313,18 @@ class Article
     /**
      * @return \Doctrine\Common\Collections\Collection
      */
-    public function getUtilisateur()
+    public function getUser()
     {
-        return $this->utilisateur;
+        return $this->user;
     }
 
     /**
-     * @param \Doctrine\Common\Collections\Collection $utilisateur
+     * @param \Doctrine\Common\Collections\Collection $user
      * @return Article
      */
-    public function setUtilisateur($utilisateur)
+    public function setUser($user)
     {
-        $this->utilisateur = $utilisateur;
+        $this->user = $user;
         return $this;
     }
 
