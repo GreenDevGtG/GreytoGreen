@@ -88,7 +88,7 @@ class Article
     /**
      * @var \Doctrine\Common\Collections\Collection
      *
-     * @ORM\ManyToMany(targetEntity="AppBundle\Entity\Lieu", inversedBy="article")
+     * @ORM\ManyToMany(targetEntity="MapBundle\Entity\Lieu", inversedBy="article")
      * @ORM\JoinTable(name="evenement",
      *   joinColumns={
      *     @ORM\JoinColumn(name="article_id", referencedColumnName="id")
