@@ -33,3 +33,8 @@ services:
     # AppBundle\Service\ExampleService:
     #     arguments:
     #         $someArgument: 'some_value'
+    ArticleRepository:
+        class: ArticleBundle\Repository\ArticleRepository
+        factory: ["@doctrine.orm.entity_manager", getRepository]
+        arguments:
+          - ArticleBundle\Entity\Article

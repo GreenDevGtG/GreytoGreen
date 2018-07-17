@@ -7,7 +7,7 @@ use Symfony\Component\HttpFoundation\File\UploadedFile;
  * Article
  *
  * @ORM\Table(name="article")
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="ArticleBundle\Repository\ArticleRepository")
  * @ORM\HasLifecycleCallbacks()
  */
 class Article
@@ -320,9 +320,10 @@ class Article
     public function setCategories($categories)
     {
         foreach ($categories as $categorie) {
-            $categorie->setArticle($this);
+            $categorie->setArticles($this);
             $this->categories[] = $categorie;
-        }  
+        } 
+
         return $this;
     }
 
@@ -331,7 +332,7 @@ class Article
      */
     public function setCategorie(ArticleBundle\Entity\Categorie $categorie)
     {
-        $categorie->setArticle($this);
+        $categorie->setArticles($this);
         $this->categories[] = $categorie;
         return $this;
     }

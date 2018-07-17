@@ -13,10 +13,6 @@ class ArticleRepository extends \Doctrine\ORM\EntityRepository
 
     public function categorieQueryBuilder(){
 
-        return $this->createQueryBuilder('a')
-            ->join('a.categorie', 'c')
-            ->addSelect('c')
-            ->where('a.id = :id')
-            ->setParameter('id', $article);
+        
     }
 }

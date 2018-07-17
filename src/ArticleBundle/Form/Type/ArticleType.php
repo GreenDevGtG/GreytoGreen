@@ -26,9 +26,6 @@ class ArticleType extends AbstractType
             ->add('categories', EntityType::class, array(
                 'class' => Categorie::class,
                 'choice_label' => 'getNom',
-                'query_builder' => function(ArticleRepository $repo) {
-                    return $repo->categorieQueryBuilder();
-                },
                 'multiple' => true
             ))
             ->add('submit', SubmitType::class, [
