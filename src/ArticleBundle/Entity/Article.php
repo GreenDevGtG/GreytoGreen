@@ -66,7 +66,7 @@ class Article
     /**
      * @var \Doctrine\Common\Collections\Collection
      *
-     * @ORM\ManyToMany(targetEntity="UserBundle\Entity\Utilisateur", mappedBy="article")
+     * @ORM\ManyToMany(targetEntity="UserBundle\Entity\User", mappedBy="article")
      */
     private $utilisateur;
 
