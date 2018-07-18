@@ -324,16 +324,19 @@ header.logoHeader {
   background-color: #ffffff66;
   border-top: 1px solid #fff;
   margin: 5px; }
-  .article .article-entete {
-    line-height: 60px; }
-    .article .article-entete .article-titre {
+  .article .button-upDown:hover {
+    color: white;
+    text-decoration: none; }
+  .article .button-upDown .article-entete {
+    line-height: 60px;
+    color: white;
+    text-decoration: none; }
+    .article .button-upDown .article-entete .article-titre {
       margin: auto; }
-    .article .article-entete .article-categorie {
+    .article .button-upDown .article-entete .article-categorie {
       margin: 5px; }
-    .article .article-entete .button-upDown {
-      margin: auto 30px; }
-    .article .article-entete .article-contenu {
-      margin: 20px; }
+  .article .article-contenu {
+    margin: 20px; }
   .article .article-image {
     max-width: 600px;
     width: 100%; }

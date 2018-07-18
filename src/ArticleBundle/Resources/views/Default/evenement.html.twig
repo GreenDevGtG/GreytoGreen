@@ -6,34 +6,35 @@
 
     {% for key,evenement in evenements %}
         <div class="article">
+            <a class="button-upDown" data-toggle="collapse" href="#collapse{{ key }}" role="button" aria-expanded="false" aria-controls="collapse{{ key }}">
             <header class="row article-entete">
                 <div class="col-1">
-                    <a class="button-upDown" data-toggle="collapse" href="#collapse{{ key }}" role="button" aria-expanded="false" aria-controls="collapseExample">
                         <i class="text-white fa fa-sort-down"></i>
-                    </a>
+                    
                 </div>
                 <h4 class="article-titre center col-8">{{ evenement.nom|capitalize }}</h4>
                 <div class="col-3">
-                    {% for key,cat in evenement.categorie if cat.nom != "Evenement" %}
+                    {% for key,cat in evenement.categories if cat.nom != "Evènement" %}
                         <span class="article-categorie badge badge-light float-right">
                             {{ cat.nom }}
                         </span>
                     {% endfor %}
                 </div>
+                
             </header>
-            <div class="collapse text-center" id="collapse{{ key }}">
-                <img class="article-image img-responsive" src="{{ evenement.urlImage }}">
-                <div>
-                    {{ evenement.contenu }}
-                    
-                    <a class="article-source" href="{{ evenement.urlSource }}">Source</a>
+            </a>
+            <div class="collapse" id="collapse{{ key }}">
+            <div class="text-center">
+                <img class="article-image img-responsive " src="{{ evenement.urlImage }}" alt="">
+            </div>    
+            <div>
+                <div class="article-contenu">
+                    <p>{{ evenement.miseEnFormeContenu }}</p> 
                 </div>
-                
-                
-                
-            </div>   
+                <a class="article-source" href="{{ evenement.urlSource }}">Source</a>
+            </div> 
+            </div>
         </div>
-
     {% endfor %}
 
 {% endblock %}

@@ -82,7 +82,7 @@ class Article
     /**
      * @var \Doctrine\Common\Collections\Collection
      *
-     * @ORM\ManyToMany(targetEntity="AppBundle\Entity\Lieu", inversedBy="articles")
+     * @ORM\ManyToMany(targetEntity="MapBundle\Entity\Lieu", inversedBy="articles")
      * @ORM\JoinTable(name="evenement")
      */
     private $lieus;
@@ -376,22 +376,22 @@ class Article
     }
 
     function miseEnFormeContenu(){
-        $postTitre='</h3>';
+        $postTitre='</h4>';
     
         $postContenu='</div>';;
     
         $tab= explode('**',$this->getContenu());
         foreach ($tab as $key => $value) {
             if($key % 2 != 0){
-                $tab[$key]='<h3>
-                <a class="button-upDown" data-toggle="collapse" href="#collapseIn'.$key.'" role="button" aria-expanded="false" aria-controls="collapseIn'.$key.'">
+                $tab[$key]='<h4>
+                <a class="button-upDown" data-toggle="collapse" href="#collapseIn'.$this->getId().$key.'" role="button" aria-expanded="false" aria-controls="collapseIn'.$this->getId().$key.'">
                     <i class="text-white fa fa-sort-down"></i>
                 </a>
                 '.$value.$postTitre;
             }
-            elseif ($key != 0) {
+            elseif($key != 0) {
                 $value=str_replace('--','<br>-',$value);
-                $tab[$key]='<div class="collapse" id="collapseIn' . ($key - 1) . '" >'.$value.$postContenu;
+                $tab[$key]='<div class="collapse" id="collapseIn' . ($this->getId().$key - 1) . '" >'.$value.$postContenu;
             }
         }
         $raw = implode(' ',$tab);
