@@ -451,18 +451,18 @@ class Article
     }
 
     function miseEnFormeContenu(){
-        $postTitre='</h4>';
+        $postTitre='</h5>';
     
         $postContenu='</div>';;
     
         $tab= explode('**',$this->getContenu());
         foreach ($tab as $key => $value) {
             if($key % 2 != 0){
-                $tab[$key]='<h4>
+                $tab[$key]='<hr><h5>
                 <a class="button-upDown" data-toggle="collapse" href="#collapseIn'.$this->getId().$key.'" role="button" aria-expanded="false" aria-controls="collapseIn'.$this->getId().$key.'">
-                    <i class="text-white fa fa-sort-down"></i>
-                </a>
-                '.$value.$postTitre;
+                    <i class="fa fa-sort-down"></i>
+                
+                '.$value.$postTitre."</a>";
             }
             elseif($key !=0) {
                 $value=str_replace('--','<br>-',$value);

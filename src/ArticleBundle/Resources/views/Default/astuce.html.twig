@@ -1,6 +1,11 @@
 {% extends '@Article/Default/index.html.twig' %}
 
-{% block titre %} Astuce {% endblock %}
+{% block titre %} Astuce 
+
+<a href="{{ path('astuce_add') }}" class="link ajout"><i class="fas fa-plus"></i></a>
+
+{% endblock %}
+
 
 {% block filtre %}
     {% include 'block/filtre.html.twig' %}
@@ -12,9 +17,12 @@
         <div class="article">
             <a class="button-upDown" data-toggle="collapse" href="#collapse{{ key }}" role="button" aria-expanded="false" aria-controls="collapse{{ key }}">
             <header class="row article-entete">
-                <h5 class="article-titre col-8"><i class="fa fa-sort-down"></i>{{ astuce.nom|capitalize }}</h5>
-                <div class="col-4">
-                    {% for key,cat in astuce.categories if cat.nom != "Astuce" %}
+                <div class="col-1">
+                        <i class="fa fa-sort-down header"></i> 
+                </div>
+                <h5 class="article-titre col-8">{{ astuce.nom }}</h5>
+                <div class="col-3">
+                    {% for key,cat in astuce.categories if cat.id != 1 %}
                         <span class="article-categorie badge badge-light float-right">
                             {{ cat.nom }}
                         </span>
