@@ -5,7 +5,11 @@
     {% block content %}
 
         <img class="center" src="{{ asset("public/img/LogoGtGblanc.png") }}" id="logoAccueil">
-        <p>{{ 'registration.confirmed'|trans({'%username%': user.username}) }}</p>
+        
+        <div class="alert alert-dismissible alert-light">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            {{ 'registration.confirmed'|trans({'%username%': user.username}) }}
+        </div>
         
         {% if targetUrl %}
             <p><a href="{{ targetUrl }}">{{ 'registration.back'|trans }}</a></p>
