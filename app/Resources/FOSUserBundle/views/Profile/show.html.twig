@@ -1,5 +1,14 @@
-{% extends "@FOSUser/layout.html.twig" %}
+{% extends '@User/Default/index.html.twig' %}
 
-{% block fos_user_content %}
-    {% include "@FOSUser/Profile/show_content.html.twig" %}
-{% endblock fos_user_content %}
+{% block content %}
+
+    {% block fos_user_content %}
+        <div class="page">
+            <div class="container">
+                <img class="center" src="{{ asset("public/img/LogoGtGblanc.png") }}" id="logoAccueil">
+                {% include "@FOSUser/Profile/show_content.html.twig" %}
+            </div>
+        </div>
+    {% endblock fos_user_content %}
+
+{% endblock %}

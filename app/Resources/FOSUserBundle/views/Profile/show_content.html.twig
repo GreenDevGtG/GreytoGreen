@@ -4,3 +4,8 @@
     <p>{{ 'profile.show.username'|trans }}: {{ user.username }}</p>
     <p>{{ 'profile.show.email'|trans }}: {{ user.email }}</p>
 </div>
+
+<div id="liensAccueil">
+    <a class="linkAccueil" href="{{ path('fos_user_profile_edit') }}">Modifier mon profil</a>
+    <a class="linkAccueil" href="{{ path('fos_user_change_password') }}">Changer le mot de passe</a>
+</div>

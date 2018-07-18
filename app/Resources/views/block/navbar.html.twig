@@ -17,8 +17,29 @@
         <i class="fas fa-map-marker-alt"></i>
         Bonnes adresses
     </a>
-    <a href="{{ path('myProfil') }}" class="link">
-        <i class="far fa-user"></i>
-        Mon profil
-    </a>
+
+    <div>
+        {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+            <a href="{{ path('fos_user_profile_show') }}" class="link">
+                <i class="far fa-user"></i>
+                Mon profil
+            </a>
+
+            <a class="link" href="{{ path('fos_user_security_logout') }}">
+                <i class="fas fa-power-off"></i>
+            </a>
+        {% else %}
+            <a class="link" href="{{ path('fos_user_security_login') }}">
+                <i class="fas fa-sign-in-alt"></i>
+                {{ 'layout.login'|trans({}, 'FOSUserBundle') }}
+            </a>
+
+            <a class="link" href="{{ path('fos_user_registration_register') }}">
+                <i class="fas fa-clipboard-list"></i>
+                {{ 'layout.register'|trans({}, 'FOSUserBundle') }}
+            </a>
+        {% endif %}
+    </div>
+
+
 </div>

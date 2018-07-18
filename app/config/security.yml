@@ -21,6 +21,9 @@ security:
 
             logout:       true
             anonymous:    true
+            remember_me:
+                secret:   %secret%
+                # %secret% est un paramètre de parameter
 
     access_control:
         - { path: ^/login$, role: IS_AUTHENTICATED_ANONYMOUSLY }
