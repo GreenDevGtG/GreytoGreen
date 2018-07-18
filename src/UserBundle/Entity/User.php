@@ -42,7 +42,6 @@ class User extends BaseUser
 
     /**
      * @ORM\Column(name="birthday", type="date", nullable=true)
-     * @Assert\Date()
      */
     protected $birthday;
 
