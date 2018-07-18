@@ -1,19 +1,25 @@
 .article{
   background-color: #ffffffaa;
-  border-top: 2px solid black;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
   color:black;
+  margin-bottom: 5px;
   .button-upDown{
+    color: black;
+    .fa.header{
+      margin: auto 10px;
+    }
      &:hover{
       color: black;
       text-decoration: none;
     }
     .article-entete {
-     
       color: black;
       text-decoration: none;
+      min-height: 60px;
       .article-titre {
         margin:auto;
-        line-height: 60px;
+        font-weight: 400;
       }
       .article-categorie {
         margin: 5px;
@@ -22,6 +28,7 @@
   }
   .article-contenu {
       margin: 20px;
+      font-weight: 200;
     }
   .article-image{
     max-width: 600px ;

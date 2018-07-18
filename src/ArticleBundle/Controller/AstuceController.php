@@ -43,7 +43,7 @@ class AstuceController extends Controller
 
             $em->flush();
 
-            $this->addFlash('success', 'Astuce Ajouté');
+            $this->addFlash('success', 'Astuce ajoutée');
             return $this->redirectToRoute('astuce_homepage');
         }
 

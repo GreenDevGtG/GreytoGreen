@@ -16,6 +16,10 @@ html, body {
     height: 100%;
 }
 
+hr {
+    border: 1px solid black;
+}
+
 .content {
     overflow-x: hidden;
     font-family: $font-default;
@@ -88,6 +92,21 @@ input {
     line-height: $size-default*3;
 }
 
+.fa-plus{
+color: black;
+background-color: #FFFFFF90;
+padding: 5px;
+}
+
+.fa-pen{
+    color: black;
+}
+
+.ajout {
+position: relative;
+display: block;
+text-align: right;
+}
 .center {
     text-align: center;
 }
