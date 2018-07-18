@@ -15,7 +15,10 @@ html, body {
     width: 100%;
     height: 100%;
 }
+body{
+    overflow-y: scroll;
 
+}
 .content {
     overflow-x: hidden;
     font-family: $font-default;
@@ -63,6 +66,9 @@ input {
 
 @import 'menu';
 
+//filtre
+
+@import 'filtre';
 
 .backgroundImg {
     background-color: #087F23;

@@ -11,8 +11,14 @@ namespace ArticleBundle\Repository;
 class ArticleRepository extends \Doctrine\ORM\EntityRepository
 {
 
-    public function categorieQueryBuilder(){
-
-        
-    }
+    public function findByCategoryAndOrderByName($categories)
+    {
+    return $this->createQueryBuilder('a')
+        ->where('a.categories = :categories')
+        ->setParameter('categories', $categories)
+        ->orderBy('a.misAJourLe', 'ASC')
+        ->getQuery()
+        ->getResult()
+    ;
+    }   
 }

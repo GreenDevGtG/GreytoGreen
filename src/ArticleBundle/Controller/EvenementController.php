@@ -19,8 +19,12 @@ class EvenementController extends Controller
         $repo = $this->getDoctrine()->getRepository('ArticleBundle:Categorie');
         $categorie = $repo->find(15);
         $event = $categorie->getArticles();
+        $cats = $repo->findAll();
+
         return $this->render('@Article/Default/evenement.html.twig',[
-            'evenements' => $event,
+            'articles' => $event,
+            'categories' => $cats
+
         ]);
     }
 }

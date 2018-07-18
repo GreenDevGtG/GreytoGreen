@@ -1,0 +1,18 @@
+<input class="burger" type="checkbox" id="trie"/>
+<label class="filterlab" for="trie">
+    <i class="fas fa-filter"></i>
+</label>
+<div class="filtre">
+    <h4 class="center mt-4">Catégorie</h4>
+    <form name="article" method="post" enctype="multipart/form-data">
+        <select id="article_categories" name="article[categories][]" required="required" class="form-control" multiple="multiple">
+            {% for key,categorie in categories %}
+                <option value="{{ key }}">{{ categorie.nom }}</option>
+            {% endfor %}
+        </select>
+        <div class="form-group">
+            <button type="submit" id="article_submit" name="article[submit]" class="btn btn-success btn">Submit</button>
+        </div>
+    </form>
+
+</div>

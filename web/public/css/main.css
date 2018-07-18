@@ -7,6 +7,9 @@ html, body {
   width: 100%;
   height: 100%; }
 
+body {
+  overflow-y: scroll; }
+
 .content {
   overflow-x: hidden;
   font-family: "Segoe UI", "OpenSans", "sans-serif";
@@ -59,19 +62,57 @@ input {
   transition: all 200ms ease;
   z-index: 500; }
 
-input[type="checkbox"] {
+.filterlab {
+  display: block;
+  width: 42px;
+  height: 42px;
+  line-height: 42px;
+  color: #fff;
+  text-align: center;
+  font-size: 2em;
+  line-height: 1.2rem;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  -moz-transition: all 200ms ease;
+  -webkit-transition: all 200ms ease;
+  -o-transition: all 200ms ease;
+  transition: all 200ms ease;
+  z-index: 500; }
+
+input[type="checkbox"]#navigation {
   display: none; }
-  input[type="checkbox"]:checked ~ .menu {
+  input[type="checkbox"]#navigation:checked ~ .menu {
     margin: 0; }
-  input[type="checkbox"]:checked ~ .bars {
+  input[type="checkbox"]#navigation:checked ~ .bars {
     left: 250px; }
-  input[type="checkbox"]:checked ~ .page {
+  input[type="checkbox"]#navigation:checked ~ .page {
     overflow: hidden;
     -webkit-transform: translate3d(250px, 0, 0);
     -moz-transform: translate3d(250px, 0, 0);
     -o-transform: translate3d(250px, 0, 0);
     transform: translate3d(250px, 0, 0); }
-  input[type="checkbox"]:checked ~ .page::before {
+  input[type="checkbox"]#navigation:checked ~ .page::before {
+    position: fixed;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: #222222ee;
+    z-index: 2; }
+
+input[type="checkbox"]#trie {
+  display: none; }
+  input[type="checkbox"]#trie:checked ~ .filtre {
+    margin: 0; }
+  input[type="checkbox"]#trie:checked ~ .filterlab {
+    right: 250px; }
+  input[type="checkbox"]#trie:checked ~ .page {
+    overflow: hidden;
+    -webkit-transform: translate3d(-250px, 0, 0);
+    -moz-transform: translate3d(-250px, 0, 0);
+    -o-transform: translate3d(-250px, 0, 0);
+    transform: translate3d(-250px, 0, 0); }
+  input[type="checkbox"]#trie:checked ~ .page::before {
     position: fixed;
     content: "";
     width: 100%;
@@ -101,6 +142,40 @@ input[type="checkbox"] {
     .menu .link:hover {
       color: #ccc; }
   .menu .logo {
+    background-color: #fff;
+    display: block;
+    padding: 40px 4.8rem;
+    width: 100%; }
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px; }
+
+  .sidenav a {
+    font-size: 18px; } }
+.filtre {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 250px;
+  height: 100%;
+  margin: 0 -250px 0 0;
+  -moz-transition: all 200ms ease;
+  -webkit-transition: all 200ms ease;
+  -o-transition: all 200ms ease;
+  transition: all 200ms ease;
+  background-color: #424242; }
+  .filtre .link {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #ffffff;
+    display: block;
+    transition: 0.3s; }
+    .filtre .link:hover {
+      color: #ccc; }
+  .filtre .logo {
     background-color: #fff;
     display: block;
     padding: 40px 4.8rem;
@@ -322,19 +397,23 @@ header.logoHeader {
 
 .article {
   background-color: #ffffffaa;
-  border-top: 2px solid black;
-  color: black; }
-  .article .button-upDown:hover {
-    color: black;
-    text-decoration: none; }
-  .article .button-upDown .article-entete {
-    color: black;
-    text-decoration: none; }
-    .article .button-upDown .article-entete .article-titre {
-      margin: auto;
-      line-height: 60px; }
-    .article .button-upDown .article-entete .article-categorie {
-      margin: 5px; }
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  color: black;
+  margin-bottom: 5px; }
+  .article .button-upDown {
+    color: black; }
+    .article .button-upDown:hover {
+      color: black;
+      text-decoration: none; }
+    .article .button-upDown .article-entete {
+      color: black;
+      text-decoration: none; }
+      .article .button-upDown .article-entete .article-titre {
+        margin: auto;
+        line-height: 60px; }
+      .article .button-upDown .article-entete .article-categorie {
+        margin: 5px; }
   .article .article-contenu {
     margin: 20px; }
   .article .article-image {
