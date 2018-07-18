@@ -6,33 +6,26 @@ use Doctrine\ORM\Mapping as ORM;
 
 /**
  * Evenement
- *
  */
 class Evenement
 {
     /**
      * @var \DateTime
-     *
      */
     private $date_debut;
 
     /**
      * @var \DateTime
-     *
      */
     private $date_fin;
 
     /**
      * @var \Lieu
-     *
-     * })
      */
     private $lieu;
 
     /**
      * @var \Article
-     *
-     * })
      */
     private $article;
 
