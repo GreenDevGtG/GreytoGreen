@@ -1,0 +1,44 @@
+{% trans_default_domain 'FOSUserBundle' %}
+
+{% if error %}
+    <div class="alert alert-dismissible alert-danger">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        {{ error.messageKey|trans(error.messageData, 'security') }}
+    </div>
+
+{% endif %}
+
+<form action="{{ path("fos_user_security_check") }}" method="post">
+    {% if csrf_token %}
+        <input class="formInput" type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
+    {% endif %}
+
+
+    <div class="form-group">
+        <input class="formInput" type="text" id="username" name="_username" value="{{ last_username }}" required="required" autocomplete="username" placeholder="{{ 'security.login.username'|trans }}" />
+    </div>
+
+    <div class="form-group">
+        <input class="formInput" type="password" id="password" name="_password" required="required" autocomplete="current-password" placeholder="{{ 'security.login.password'|trans }}" />
+    </div>
+
+    <input class="button" type="submit" id="_submit" name="_submit" value="{{ 'security.login.submit'|trans }}" />
+</form>
+
+<div class="center"></div>
+
+<div class="center otherCo text-center">Connectez-vous avec :</div>
+
+    <div class="socials">
+        <a href="#">
+            <img src="{{ asset("public/img/Logo-google.png") }}" alt="logoGoogle" id="logoGoogle">
+        </a>
+        <a href="#">
+            <img src="{{ asset("public/img/Logo-facebook.png") }}" alt="logoFB" id="logoFB">
+        </a>
+    </div>
+
+
+    <div class="lin center">
+        <a href="{{ path('fos_user_registration_register') }}" id="linkInscription">Inscription</a>
+    </div>

@@ -22,6 +22,11 @@ hr {
     border: 1px solid black;
 }
 
+a:hover{
+    text-decoration: none;
+
+}
+
 .content {
     overflow-x: hidden;
     font-family: $font-default;

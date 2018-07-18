@@ -66,10 +66,9 @@ class Article
     /**
      * @var \Doctrine\Common\Collections\Collection
      *
-     * @ORM\ManyToMany(targetEntity="UserBundle\Entity\Utilisateur", inversedBy="articles")
-     * @ORM\JoinTable(name="auteur")
+     * 
      */
-    private $utilisateurs;
+    private $user;
 
     /**
      * @var \Doctrine\Common\Collections\Collection
@@ -102,9 +101,9 @@ class Article
      */
     public function __construct()
     {
-        $this->utilisateurs = new \Doctrine\Common\Collections\ArrayCollection();
         $this->categories = new \Doctrine\Common\Collections\ArrayCollection();
-        $this->lieu = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->user = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->lieus = new \Doctrine\Common\Collections\ArrayCollection();
     }
 
     /**
@@ -367,17 +366,22 @@ class Article
         return $this;
     }
 
-   
-    public function getUtilisateurs()
+
+    /**
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getUser()
     {
-        return $this->utilisateurs;
+        return $this->user;
     }
 
-   
-    public function setUtilisateur($utilisateur)
+    /**
+     * @param \Doctrine\Common\Collections\Collection $user
+     * @return Article
+     */
+    public function setUser($user)
     {
-        $utilisateur->setArticle($this);
-        $this->utilisateurs[] = $utilisateur;
+        $this->user = $user;
         return $this;
     }
 
@@ -405,7 +409,7 @@ class Article
     /**
      * @return Article
      */
-    public function setCategorie(ArticleBundle\Entity\Categorie $categorie)
+    public function setCategorie(\ArticleBundle\Entity\Categorie $categorie)
     {
         $categorie->setArticles($this);
         $this->categories[] = $categorie;
@@ -458,8 +462,8 @@ class Article
         $tab= explode('**',$this->getContenu());
         foreach ($tab as $key => $value) {
             if($key % 2 != 0){
-                $tab[$key]='<hr><h5>
-                <a class="button-upDown" data-toggle="collapse" href="#collapseIn'.$this->getId().$key.'" role="button" aria-expanded="false" aria-controls="collapseIn'.$this->getId().$key.'">
+                $tab[$key]='<hr><h5 class="button-upDown">
+                <a data-toggle="collapse" href="#collapseIn'.$this->getId().$key.'" role="button" aria-expanded="false" aria-controls="collapseIn'.$this->getId().$key.'">
                     <i class="fa fa-sort-down"></i>
                 
                 '.$value.$postTitre."</a>";

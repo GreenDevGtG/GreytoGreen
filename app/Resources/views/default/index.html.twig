@@ -15,23 +15,42 @@
             {% endblock %}
 
             {% block content %} 
-                <img src="{{ asset("public/img/LogoGtGblanc.png") }}" id="logoAccueil">
+
+                <img class="center" src="{{ asset("public/img/LogoGtGblanc.png") }}" id="logoAccueil">
                 <div class="textAccueil">
                     Grey to Green transforme votre quotidien simplement, 
                     </br>par des petits gestes éco-responsables
                 </div>
 
                 <div id="liensAccueil">
-                    <a class="linkAccueil" href="{{ path('signUp') }}">S'inscrire</a>
-                    <a class="linkAccueil" href="{{ path('signIn') }}">Se connecter</a>
+                    <a class="linkAccueil" href="{{ path('fos_user_registration_register') }}">S'inscrire</a>
+                    <a class="linkAccueil" href="{{ path('fos_user_security_login') }}">Se connecter</a>
                 </div>
+
+                <div id="aboutGtG">
+                    <p class="center formInput">
+                        <a class="linkAccueil" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                            <i class="text-white fa fa-sort-down"></i>
+                            A propos de Grey to Green
+                        </a>
+                    </p>
+                    <div class="collapse center" id="collapseExample">
+                        <div class="card card-body">
+                            <p>L’application doit permettre de simplifier les démarches écologiques au quotidien tout en mettant en relation les différents acteurs du domaine.</p>
+                            <p>Vous trouverez dans cette application des astuces (recettes, DIY, recyclage) et des évènements (conférences, salons, festivals) ainsi qu'un page de bonnes adresses autour de votre position.</p>
+
+                        </div>
+                    </div>
+                </div>
+
             {% endblock %}
         </div>
 
-    </div>
-    <div>
-    {% block footer %}
-        {% include 'block/footer.html.twig' %}
-    {% endblock %}
+        <div>
+        {% block footer %}
+            {% include 'block/footer.html.twig' %}
+        {% endblock %}
+        </div>
+
     </div>
 {% endblock %}

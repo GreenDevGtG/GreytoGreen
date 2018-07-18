@@ -1,8 +1,9 @@
 {% extends '@Article/Default/index.html.twig' %}
 
-{% block titre %} Astuce 
-
-<a href="{{ path('astuce_add') }}" class="link ajout"><i class="fas fa-plus"></i></a>
+{% block titre %} Astuce
+    {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+        <a href="{{ path('astuce_add') }}" class="link ajout"><i class="fas fa-plus"></i></a>
+    {% endif %}
 
 {% endblock %}
 
