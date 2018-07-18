@@ -3,7 +3,7 @@
 namespace ArticleBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Request;
 
 
@@ -36,10 +36,10 @@ class AstuceController extends Controller
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $product = $form->getData();
+            $article = $form->getData();
 
             $em = $this->getDoctrine()->getManager();
-            $em->persist($product);
+            $em->persist($article);
 
             $em->flush();
 
@@ -50,5 +50,38 @@ class AstuceController extends Controller
         return $this->render('@Article/Astuce/add.html.twig', [
             'form' => $form->createView()
         ]);
+    }
+
+    /**
+     * @Route("/update/{id}", name="astuce_update", requirements={"id"="\d+"})
+     */
+    public function updateAction($id, Request $request)
+    {
+
+        if (is_null($id)) {
+            $postData = $request->get('article');
+            $id = $postData['id'];
+        }
+
+        $em = $this->getDoctrine()->getManager();
+        $article = $em->getRepository('ArticleBundle:Article')->find($id);
+        $form = $this->createForm('ArticleBundle\Form\Type\ArticleType', $article);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $article = $form->getData();
+
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($article);
+
+            $em->flush();
+
+            return $this->redirectToRoute('astuce_homepage');
+        }
+        //\Symfony\Component\VarDumper\VarDumper::dump($form->getData());
+        //echo $form->getErrors();
+        return $this->render('@Article/Astuce/update.html.twig', array(
+            'form' => $form->createView()
+        ));
     }
 }

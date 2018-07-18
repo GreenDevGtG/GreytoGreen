@@ -3,7 +3,7 @@
 namespace ArticleBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Symfony\Component\Routing\Annotation\Route;
 
 
 /**
@@ -16,18 +16,10 @@ class EvenementController extends Controller
      */
     public function indexAction()
     {
-        // $repo = $this->getDoctrine()->getRepository('AppBundle:Categorie');
-        // $categorie = $repo->find(15);
-        // $event = $categorie->getArticle();
-        $em = $this->getDoctrine()->getManager();
-        $event=$em->createQueryBuilder()
-                    ->select('a')
-                    ->from('AppBundle:Evenement', 'e')
-                    ->join('e.article','a')
-                    ->where('a.categorie = :id')
-                    ->setParameters('id',15)
-                    ->getQuery()
-                    ->getResult();
+        $repo = $this->getDoctrine()->getRepository('ArticleBundle:Categorie');
+        $categorie = $repo->find(15);
+        $event = $categorie->getArticles();
+      
 
         return $this->render('@Article/Default/evenement.html.twig',[
             'evenements' => $event,

@@ -1,29 +1,33 @@
 .article{
-  background-color: #ffffff66;
-  border-top: 1px solid #fff;
-  margin: 5px;
-
-  .article-entete {
-    line-height: 60px;
-    .article-titre {
-      margin:auto;
+  background-color: #ffffffaa;
+  border-top: 2px solid black;
+  color:black;
+  .button-upDown{
+     &:hover{
+      color: black;
+      text-decoration: none;
     }
-    .article-categorie {
-      margin: 5px;
-    }
-    .button-upDown {
-      margin: auto 30px;
-    }
-    .article-contenu {
-      margin: 20px;
+    .article-entete {
+     
+      color: black;
+      text-decoration: none;
+      .article-titre {
+        margin:auto;
+        line-height: 60px;
+      }
+      .article-categorie {
+        margin: 5px;
+      }
     }
   }
+  .article-contenu {
+      margin: 20px;
+    }
   .article-image{
     max-width: 600px ;
     width: 100%;
   }
   .article-source{
-    
     color:royalblue;
     padding: 3px;
     font-style: italic;

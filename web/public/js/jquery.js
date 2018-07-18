@@ -13,5 +13,13 @@ jQuery(document).ready(function($) {
         }
     });
 
+    $(window).click(function()
+    {
+        $('input[type="checkbox"]').prop('checked', false);
+    });
+    $('.menu,.burger').click(function(event)
+    {
+        event.stopPropagation();
+    });
 
 });

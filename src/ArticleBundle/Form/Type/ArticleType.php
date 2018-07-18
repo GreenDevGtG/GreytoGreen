@@ -22,7 +22,9 @@ class ArticleType extends AbstractType
         $builder->add('nom', TextType::class)
             ->add('contenu', TextareaType::class)
             ->add('urlSource', TextareaType::class)
-            ->add('file', FileType::class)
+            ->add('file', FileType::class,array(
+                'required' => false
+            ))
             ->add('categories', EntityType::class, array(
                 'class' => Categorie::class,
                 'choice_label' => 'getNom',

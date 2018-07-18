@@ -321,19 +321,22 @@ header.logoHeader {
   background: #ccc; }
 
 .article {
-  background-color: #ffffff66;
-  border-top: 1px solid #fff;
-  margin: 5px; }
-  .article .article-entete {
-    line-height: 60px; }
-    .article .article-entete .article-titre {
-      margin: auto; }
-    .article .article-entete .article-categorie {
+  background-color: #ffffffaa;
+  border-top: 2px solid black;
+  color: black; }
+  .article .button-upDown:hover {
+    color: black;
+    text-decoration: none; }
+  .article .button-upDown .article-entete {
+    color: black;
+    text-decoration: none; }
+    .article .button-upDown .article-entete .article-titre {
+      margin: auto;
+      line-height: 60px; }
+    .article .button-upDown .article-entete .article-categorie {
       margin: 5px; }
-    .article .article-entete .button-upDown {
-      margin: auto 30px; }
-    .article .article-entete .article-contenu {
-      margin: 20px; }
+  .article .article-contenu {
+    margin: 20px; }
   .article .article-image {
     max-width: 600px;
     width: 100%; }
