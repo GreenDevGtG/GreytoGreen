@@ -1,84 +1,490 @@
-/*
-Error: Invalid CSS after "    color:black": expected "{", was ";"
-        on line 9 of sass/_article.scss
-        from line 143 of sass/main.scss
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
 
-4:   border-bottom: 1px solid black;
-5:   color:black;
-6:   margin-bottom: 5px;
-7:   .button-upDown{
-8: <<<<<<< HEAD
-9:     color:black;
-10: =======
-11:     color: black;
-12:     .fa.header{
-13:       margin: auto 10px;
-14:     }
+html, body {
+  width: 100%;
+  height: 100%; }
 
-Backtrace:
-sass/_article.scss:9
-sass/main.scss:143
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/scss/parser.rb:1278:in `expected'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/scss/parser.rb:1208:in `expected'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/scss/parser.rb:1203:in `tok!'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/scss/parser.rb:677:in `block'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/scss/parser.rb:747:in `declaration_or_ruleset'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/scss/parser.rb:697:in `block_child'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/scss/parser.rb:686:in `block_contents'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/scss/parser.rb:678:in `block'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/scss/parser.rb:747:in `declaration_or_ruleset'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/scss/parser.rb:697:in `block_child'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/scss/parser.rb:689:in `block_contents'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/scss/parser.rb:678:in `block'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/scss/parser.rb:670:in `ruleset'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/scss/parser.rb:696:in `block_child'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/scss/parser.rb:686:in `block_contents'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/scss/parser.rb:137:in `stylesheet'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/scss/parser.rb:41:in `parse'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/engine.rb:414:in `_to_tree'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/engine.rb:321:in `to_tree'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:327:in `block in visit_import'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/stack.rb:88:in `block in with_import'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/stack.rb:135:in `with_frame'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/stack.rb:88:in `with_import'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:326:in `visit_import'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/tree/visitors/base.rb:36:in `visit'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/stack.rb:79:in `block in with_base'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/stack.rb:135:in `with_frame'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/stack.rb:79:in `with_base'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:162:in `visit'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/tree/visitors/base.rb:52:in `map'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/tree/visitors/base.rb:52:in `visit_children'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:171:in `block in visit_children'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:170:in `visit_children'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/tree/visitors/base.rb:36:in `block in visit'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:190:in `visit_root'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/tree/visitors/base.rb:36:in `visit'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:161:in `visit'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:10:in `visit'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/tree/root_node.rb:36:in `css_tree'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/engine.rb:389:in `_render_with_sourcemap'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/engine.rb:307:in `render_with_sourcemap'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/plugin/compiler.rb:462:in `update_stylesheet'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/plugin/compiler.rb:209:in `each'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/plugin/compiler.rb:443:in `on_file_changed'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/plugin/compiler.rb:320:in `block in watch'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-listen-4.0.0/lib/sass-listen/event/config.rb:23:in `call'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:115:in `_process_changes'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:19:in `block in loop_for'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:15:in `loop'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:15:in `loop_for'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-listen-4.0.0/lib/sass-listen/event/loop.rb:84:in `_wait_for_changes'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-listen-4.0.0/lib/sass-listen/event/loop.rb:42:in `block in setup'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-listen-4.0.0/lib/sass-listen/internals/thread_pool.rb:6:in `block in add'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: Invalid CSS after \"    color:black\": expected \"{\", was \";\"\A         on line 9 of sass/_article.scss\A         from line 143 of sass/main.scss\A \A 4:   border-bottom: 1px solid black;\A 5:   color:black;\A 6:   margin-bottom: 5px;\A 7:   .button-upDown{\A 8: <<<<<<< HEAD\A 9:     color:black;\A 10: =======\A 11:     color: black;\A 12:     .fa.header{\A 13:       margin: auto 10px;\A 14:     }"; }
+body {
+  overflow-y: scroll; }
+
+hr {
+  border: 1px solid black; }
+
+.content {
+  overflow-x: hidden;
+  font-family: "Segoe UI", "OpenSans", "sans-serif";
+  font-size: 1.2rem;
+  color: white; }
+
+.page {
+  width: 100%;
+  height: 100%;
+  -moz-transition: all 200ms ease;
+  -webkit-transition: all 200ms ease;
+  -o-transition: all 200ms ease;
+  transition: all 200ms ease; }
+  .page::before {
+    position: fixed;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: #42424200;
+    z-index: -2;
+    -moz-transition: all 200ms ease;
+    -webkit-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
+    transition: all 200ms ease; }
+
+.footer {
+  font-size: 0.8rem;
+  text-align: center;
+  padding: 0;
+  margin: 0; }
+
+input {
+  text-align: center; }
+
+.bars {
+  display: block;
+  width: 42px;
+  height: 42px;
+  line-height: 42px;
+  color: #fff;
+  text-align: center;
+  font-size: 2em;
+  line-height: 1.2rem;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  -moz-transition: all 200ms ease;
+  -webkit-transition: all 200ms ease;
+  -o-transition: all 200ms ease;
+  transition: all 200ms ease;
+  z-index: 500; }
+
+.filterlab {
+  display: block;
+  width: 42px;
+  height: 42px;
+  line-height: 42px;
+  color: #fff;
+  text-align: center;
+  font-size: 2em;
+  line-height: 1.2rem;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  -moz-transition: all 200ms ease;
+  -webkit-transition: all 200ms ease;
+  -o-transition: all 200ms ease;
+  transition: all 200ms ease;
+  z-index: 500; }
+
+input[type="checkbox"]#navigation {
+  display: none; }
+  input[type="checkbox"]#navigation:checked ~ .menu {
+    margin: 0; }
+  input[type="checkbox"]#navigation:checked ~ .bars {
+    left: 250px; }
+  input[type="checkbox"]#navigation:checked ~ .page {
+    overflow: hidden;
+    -webkit-transform: translate3d(250px, 0, 0);
+    -moz-transform: translate3d(250px, 0, 0);
+    -o-transform: translate3d(250px, 0, 0);
+    transform: translate3d(250px, 0, 0); }
+  input[type="checkbox"]#navigation:checked ~ .page::before {
+    position: fixed;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: #222222ee;
+    z-index: 2; }
+
+input[type="checkbox"]#trie {
+  display: none; }
+  input[type="checkbox"]#trie:checked ~ .filtre {
+    margin: 0; }
+  input[type="checkbox"]#trie:checked ~ .filterlab {
+    right: 250px; }
+  input[type="checkbox"]#trie:checked ~ .page {
+    overflow: hidden;
+    -webkit-transform: translate3d(-250px, 0, 0);
+    -moz-transform: translate3d(-250px, 0, 0);
+    -o-transform: translate3d(-250px, 0, 0);
+    transform: translate3d(-250px, 0, 0); }
+  input[type="checkbox"]#trie:checked ~ .page::before {
+    position: fixed;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: #222222ee;
+    z-index: 2; }
+
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100%;
+  margin: 0 0 0 -250px;
+  -moz-transition: all 200ms ease;
+  -webkit-transition: all 200ms ease;
+  -o-transition: all 200ms ease;
+  transition: all 200ms ease;
+  background-color: #424242; }
+  .menu .link {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #ffffff;
+    display: block;
+    transition: 0.3s; }
+    .menu .link:hover {
+      color: #ccc; }
+  .menu .logo {
+    background-color: #fff;
+    display: block;
+    padding: 40px 4.8rem;
+    width: 100%; }
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px; }
+
+  .sidenav a {
+    font-size: 18px; } }
+.filtre {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 250px;
+  height: 100%;
+  margin: 0 -250px 0 0;
+  -moz-transition: all 200ms ease;
+  -webkit-transition: all 200ms ease;
+  -o-transition: all 200ms ease;
+  transition: all 200ms ease;
+  background-color: #424242; }
+  .filtre .link {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #ffffff;
+    display: block;
+    transition: 0.3s; }
+    .filtre .link:hover {
+      color: #ccc; }
+  .filtre .logo {
+    background-color: #fff;
+    display: block;
+    padding: 40px 4.8rem;
+    width: 100%; }
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px; }
+
+  .sidenav a {
+    font-size: 18px; } }
+.backgroundImg {
+  background-color: #087F23; }
+  .backgroundImg::after {
+    content: "";
+    background-image: url(../img/background-mountain-min.jpg);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    background-attachment: fixed;
+    opacity: 0.65;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: fixed;
+    z-index: -1; }
+
+.title {
+  display: block;
+  line-height: 3.6rem; }
+
+.fa-plus {
+  color: black;
+  background-color: #FFFFFF90;
+  padding: 5px; }
+
+.fa-pen {
+  color: black; }
+
+.ajout {
+  position: relative;
+  display: block;
+  text-align: right; }
+
+.center {
+  text-align: center; }
+
+header.logoHeader {
+  height: 100px;
+  margin-top: 60px;
+  margin-bottom: 30px; }
+
+.container {
+  height: 100%; }
+
+.logoGtG {
+  display: block;
+  margin: 1.2rem auto; }
+
+.formInput, .button {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: white;
+  font-family: 'Segoe UI', 'OpenSans', 'sans-serif';
+  display: block;
+  border-style: none;
+  margin: 1.2rem auto;
+  width: 90%;
+  height: 40px;
+  border-radius: 9px;
+  padding: 0 1.2rem;
+  font-size: 1.2rem;
+  z-index: 4; }
+
+.button {
+  height: 60px;
+  background-color: #424242; }
+
+.otherCo {
+  margin: 1.8rem auto; }
+
+.socials {
+  display: flex;
+  justify-content: space-around;
+  background-color: rgba(255, 255, 255, 0.15);
+  padding: 1.2rem 0; }
+  .socials img {
+    height: 100%; }
+
+#linkInscription {
+  display: block;
+  margin: 1.2rem auto;
+  color: white; }
+  #linkInscription:link {
+    text-decoration: underline; }
+
+#returnArrow {
+  display: block;
+  margin-left: 1.2rem;
+  margin-top: 1.2rem; }
+
+/* PROFIL PAGE */
+#profilMenuIcon {
+  font-size: 1.5rem;
+  margin: 5px 5px; }
+
+#profilTitle {
+  font-size: 1.5rem;
+  width: 100%;
+  text-align: center; }
+
+#profilFormBG {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 500px; }
+
+.profilHead {
+  width: 100%;
+  background-color: #424242c9;
+  height: 150px; }
+
+.fa-power-off {
+  color: white;
+  font-size: 1.5rem;
+  float: right;
+  margin-top: 10px;
+  margin-right: 10px; }
+
+#profilPseudo {
+  width: 100%;
+  display: block;
+  margin-top: 230px;
+  font-family: 'Segoe UI', 'OpenSans', 'sans-serif';
+  background-color: #42424200;
+  border: none;
+  border-bottom: 1px solid #80E27E;
+  height: 30px;
+  text-align: center;
+  font-size: 1.2rem;
+  color: #80E27E; }
+
+.profilInfos {
+  position: relative;
+  display: block;
+  margin-top: 0;
+  margin-bottom: 5px;
+  padding-top: 0;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 0 0 5px 5px; }
+
+.profilForm {
+  display: block;
+  margin: 20px 5px;
+  padding-left: 30px;
+  font-family: 'Segoe UI', 'OpenSans', 'sans-serif';
+  border: none;
+  border-bottom: 1px solid #fff;
+  background-color: #00000000;
+  height: 40px;
+  font-size: 1rem;
+  color: #fff;
+  width: calc(100% - 30px); }
+
+.fa-envelope, .fa-lock, .fa-building, .fa-home, .fa-birthday-cake {
+  margin: 0px 5px 5px 5px;
+  position: absolute;
+  color: #fff;
+  height: 50px; }
+
+#btn-profil {
+  position: relative;
+  border: none;
+  margin-top: 40px; }
+
+.ui-dialog {
+  background: #fff;
+  background-color: #fff;
+  border-radius: 5px;
+  height: auto;
+  width: auto; }
+
+.ui-dialog-titlebar {
+  font-family: "Segoe UI", "OpenSans", "sans-serif";
+  padding-top: 6px;
+  text-align: center; }
+
+.ui-dialog-title {
+  color: #a80505;
+  font-family: "Segoe UI", "OpenSans", "sans-serif";
+  font-size: 1.1rem; }
+
+.ui-dialog-titlebar-close {
+  visibility: hidden; }
+
+.ui-dialog-content {
+  color: #000;
+  text-align: center;
+  font-size: 1.1rem; }
+
+.ui-dialog-buttonpane {
+  border-top: 1px solid #ccc; }
+
+.ui-dialog-buttonset {
+  display: inline-block;
+  background: #fff;
+  background-color: #fff;
+  border: none;
+  width: 100%; }
+
+.ui-button {
+  display: inline;
+  padding: 5px 30%;
+  background: #fff;
+  background-color: #fff;
+  border: none;
+  font-size: 1.1rem; }
+
+.ui-state-default {
+  background-color: #fff;
+  background: #fff; }
+
+.ui-state-hover {
+  background-color: #ccc;
+  background: #ccc; }
+
+.ui-state-active {
+  background-color: #ccc;
+  background: #ccc; }
+
+.article {
+  background-color: #ffffffaa;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  color: black;
+  margin-bottom: 5px; }
+  .article .button-upDown {
+    color: black; }
+    .article .button-upDown .fa.header {
+      margin: auto 10px; }
+    .article .button-upDown:hover {
+      color: black;
+      text-decoration: none; }
+    .article .button-upDown .article-entete {
+      color: black;
+      text-decoration: none;
+      min-height: 60px; }
+      .article .button-upDown .article-entete .article-titre {
+        margin: auto;
+        font-weight: 400; }
+      .article .button-upDown .article-entete .article-categorie {
+        margin: 5px; }
+  .article .article-contenu {
+    margin: 20px;
+    font-weight: 200; }
+  .article .article-image {
+    max-width: 600px;
+    width: 100%; }
+  .article .article-source {
+    color: royalblue;
+    padding: 3px;
+    font-style: italic;
+    margin: auto 20px; }
+  .article .article-image {
+    max-width: 600px;
+    width: 100%; }
+
+.map-container {
+  width: 100%;
+  height: calc(100% - 60px); }
+
+#map {
+  text-align: center;
+  width: 100%;
+  height: 100%; }
+
+.titreAccueil {
+  padding-top: 15%;
+  text-align: center;
+  font-size: 1.3rem;
+  text-transform: uppercase; }
+
+#logoAccueil {
+  display: block;
+  margin: 15% auto; }
+
+.textAccueil {
+  text-align: center;
+  color: #fff; }
+
+#liensAccueil {
+  text-align: center;
+  padding: 10% 0; }
+
+.linkAccueil {
+  display: inline-block;
+  padding: 0 2%;
+  margin: auto;
+  color: white; }
+
+.linkAccueil:link {
+  text-decoration: underline; }
+
+.linkAccueil:hover {
+  color: #ccc; }
+
+/*# sourceMappingURL=main.css.map */
