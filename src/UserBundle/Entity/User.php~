@@ -41,7 +41,7 @@ class User extends BaseUser
     protected $country;
 
     /**
-     * @ORM\Column(name="birthday", type="date", nullable=true)
+     * @ORM\Column(type="date")
      * @Assert\Date()
      */
     protected $birthday;
@@ -68,53 +68,5 @@ class User extends BaseUser
     public function getName()
     {
         return $this->name;
-    }
-
-    /**
-     * Set country.
-     *
-     * @param string $country
-     *
-     * @return User
-     */
-    public function setCountry($country)
-    {
-        $this->country = $country;
-
-        return $this;
-    }
-
-    /**
-     * Get country.
-     *
-     * @return string
-     */
-    public function getCountry()
-    {
-        return $this->country;
-    }
-
-    /**
-     * Set birthday.
-     *
-     * @param \DateTime $birthday
-     *
-     * @return User
-     */
-    public function setBirthday($birthday)
-    {
-        $this->birthday = $birthday;
-
-        return $this;
-    }
-
-    /**
-     * Get birthday.
-     *
-     * @return \DateTime
-     */
-    public function getBirthday()
-    {
-        return $this->birthday;
     }
 }

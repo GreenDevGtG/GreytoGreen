@@ -19,6 +19,9 @@ profile:
     show:
         username: 'Nom d''utilisateur'
         email: 'Adresse e-mail'
+        name: 'Nom'
+        country: 'Pays'
+        birthday: 'Date de naissance'
     edit:
         submit: 'Mettre à jour'
     flash:
@@ -32,6 +35,9 @@ registration:
     check_email: 'Un e-mail a été envoyé à l''adresse %email%. Il contient un lien d''activation sur lequel il vous faudra cliquer afin d''activer votre compte.'
     confirmed: 'Félicitations %username%, votre compte est maintenant activé.'
     back: 'Retour à la page d''origine.'
+    name: 'Nom'
+    country: 'Pays'
+    birthday: 'Date de naissance'
     submit: 'Créer un compte'
     flash:
         user_created: 'L''utilisateur a été créé avec succès.'
@@ -42,7 +48,7 @@ registration:
             Pour valider votre compte utilisateur, merci de vous rendre sur %confirmationUrl%
             Ce lien ne peut être utilisé qu'une seule fois pour valider votre compte.
             Cordialement,
-            L'équipe
+            L'équipe %company_name%
 resetting:
     check_email: |
         Un e-mail a été envoyé. Il contient un lien sur lequel il vous faudra cliquer pour réinitialiser votre mot de passe.
@@ -61,7 +67,7 @@ resetting:
             Bonjour %username% !
             Pour réinitialiser votre mot de passe, merci de vous rendre sur %confirmationUrl%
             Cordialement,
-            L'équipe
+            L'équipe %company_name%
 layout:
     logout: Déconnexion
     login: Connexion
@@ -71,6 +77,9 @@ form:
     group_name: 'Nom du groupe'
     username: 'Nom d''utilisateur'
     email: 'Adresse e-mail'
+    name: 'Nom'
+    country: 'Pays'
+    birthday: 'Date de naissance'
     current_password: 'Mot de passe actuel'
     password: 'Mot de passe'
     password_confirmation: 'Répéter le mot de passe'

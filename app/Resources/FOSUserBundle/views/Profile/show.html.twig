@@ -5,7 +5,9 @@
 
         <div class="page">
             <div class="container">
-                <img class="center" src="{{ asset("public/img/LogoGtGblanc.png") }}" id="logoAccueil">
+                <a href="{{ path('homepage') }}">
+                    <img class="center" src="{{ asset("public/img/LogoGtGblanc.png") }}" id="logoAccueil">
+                </a>
                 {% include "@FOSUser/Profile/show_content.html.twig" %}
             </div>
         </div>
