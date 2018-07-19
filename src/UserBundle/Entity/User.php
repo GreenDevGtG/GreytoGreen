@@ -1,314 +1,119 @@
 <?php
+// src/UserBundle/Entity/User.php
 
 namespace UserBundle\Entity;
 
+use FOS\UserBundle\Model\User as BaseUser;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
- * User
- *
- * @ORM\Table(name="user")
- * @ORM\Entity(repositoryClass="UserBundle\Repository\UserRepository")
+ * @ORM\Entity
+ * @ORM\Table(name="fos_user")
  */
-class User
+class User extends BaseUser
 {
     /**
-     * @var int
-     *
-     * @ORM\Column(name="id", type="integer")
      * @ORM\Id
+     * @ORM\Column(type="integer")
      * @ORM\GeneratedValue(strategy="AUTO")
      */
-    private $id;
+    protected $id;
 
     /**
-     * @var string
+     * @ORM\Column(type="string", length=255)
      *
-     * @ORM\Column(name="Pseudonyme", type="string", length=40, unique=true)
+     * @Assert\NotBlank(message="Please enter your name.", groups={"Registration", "Profile"})
+     * @Assert\Length(
+     *     min=3,
+     *     max=255,
+     *     minMessage="The name is too short.",
+     *     maxMessage="The name is too long.",
+     *     groups={"Registration", "Profile"}
+     * )
      */
-    private $pseudonyme;
+    protected $name;
 
     /**
-     * @var string
-     *
-     * @ORM\Column(name="Email", type="string", length=255, unique=true)
+     * @ORM\Column(type="string", length=255)
+     * @Assert\Country()
      */
-    private $email;
+    protected $country;
 
     /**
-     * @var string
-     *
-     * @ORM\Column(name="Mot_de_passe", type="string", length=255)
+     * @ORM\Column(name="birthday", type="date", nullable=true)
      */
-    private $motDePasse;
+    protected $birthday;
 
     /**
-     * @var string
+     * Set name.
      *
-     * @ORM\Column(name="Adresse", type="text")
-     */
-    private $adresse;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="Prenom", type="string", length=80)
-     */
-    private $prenom;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="Nom", type="string", length=80)
-     */
-    private $nom;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="Ville", type="string", length=45)
-     */
-    private $ville;
-
-    /**
-     * @var \DateTime
-     *
-     * @ORM\Column(name="Date_de_naissance", type="date")
-     */
-    private $dateDeNaissance;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="Pays", type="string", length=45)
-     */
-    private $pays;
-
-
-    /**
-     * Get id
-     *
-     * @return int
-     */
-    public function getId()
-    {
-        return $this->id;
-    }
-
-    /**
-     * Set pseudonyme
-     *
-     * @param integer $pseudonyme
+     * @param string $name
      *
      * @return User
      */
-    public function setPseudonyme($pseudonyme)
+    public function setName($name)
     {
-        $this->pseudonyme = $pseudonyme;
+        $this->name = $name;
 
         return $this;
     }
 
     /**
-     * Get pseudonyme
-     *
-     * @return int
-     */
-    public function getPseudonyme()
-    {
-        return $this->pseudonyme;
-    }
-
-    /**
-     * Set email
-     *
-     * @param string $email
-     *
-     * @return User
-     */
-    public function setEmail($email)
-    {
-        $this->email = $email;
-
-        return $this;
-    }
-
-    /**
-     * Get email
+     * Get name.
      *
      * @return string
      */
-    public function getEmail()
+    public function getName()
     {
-        return $this->email;
+        return $this->name;
     }
 
     /**
-     * Set motDePasse
+     * Set country.
      *
-     * @param string $motDePasse
+     * @param string $country
      *
      * @return User
      */
-    public function setMotDePasse($motDePasse)
+    public function setCountry($country)
     {
-        $this->motDePasse = $motDePasse;
+        $this->country = $country;
 
         return $this;
     }
 
     /**
-     * Get motDePasse
+     * Get country.
      *
      * @return string
      */
-    public function getMotDePasse()
+    public function getCountry()
     {
-        return $this->motDePasse;
+        return $this->country;
     }
 
     /**
-     * Set adresse
+     * Set birthday.
      *
-     * @param string $adresse
+     * @param \DateTime $birthday
      *
      * @return User
      */
-    public function setAdresse($adresse)
+    public function setBirthday($birthday)
     {
-        $this->adresse = $adresse;
+        $this->birthday = $birthday;
 
         return $this;
     }
 
     /**
-     * Get adresse
-     *
-     * @return string
-     */
-    public function getAdresse()
-    {
-        return $this->adresse;
-    }
-
-    /**
-     * Set prenom
-     *
-     * @param string $prenom
-     *
-     * @return User
-     */
-    public function setPrenom($prenom)
-    {
-        $this->prenom = $prenom;
-
-        return $this;
-    }
-
-    /**
-     * Get prenom
-     *
-     * @return string
-     */
-    public function getPrenom()
-    {
-        return $this->prenom;
-    }
-
-    /**
-     * Set nom
-     *
-     * @param string $nom
-     *
-     * @return User
-     */
-    public function setNom($nom)
-    {
-        $this->nom = $nom;
-
-        return $this;
-    }
-
-    /**
-     * Get nom
-     *
-     * @return string
-     */
-    public function getNom()
-    {
-        return $this->nom;
-    }
-
-    /**
-     * Set ville
-     *
-     * @param string $ville
-     *
-     * @return User
-     */
-    public function setVille($ville)
-    {
-        $this->ville = $ville;
-
-        return $this;
-    }
-
-    /**
-     * Get ville
-     *
-     * @return string
-     */
-    public function getVille()
-    {
-        return $this->ville;
-    }
-
-    /**
-     * Set dateDeNaissance
-     *
-     * @param \DateTime $dateDeNaissance
-     *
-     * @return User
-     */
-    public function setDateDeNaissance($dateDeNaissance)
-    {
-        $this->dateDeNaissance = $dateDeNaissance;
-
-        return $this;
-    }
-
-    /**
-     * Get dateDeNaissance
+     * Get birthday.
      *
      * @return \DateTime
      */
-    public function getDateDeNaissance()
+    public function getBirthday()
     {
-        return $this->dateDeNaissance;
-    }
-
-    /**
-     * Set pays
-     *
-     * @param string $pays
-     *
-     * @return User
-     */
-    public function setPays($pays)
-    {
-        $this->pays = $pays;
-
-        return $this;
-    }
-
-    /**
-     * Get pays
-     *
-     * @return string
-     */
-    public function getPays()
-    {
-        return $this->pays;
+        return $this->birthday;
     }
 }
-

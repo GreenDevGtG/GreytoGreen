@@ -13,5 +13,25 @@ jQuery(document).ready(function($) {
         }
     });
 
+    $(window).click(function()
+    {
+        $('input[type="checkbox"]').prop('checked', false);
+    });
+    $('.menu,.burger').click(function(event)
+    {
+        event.stopPropagation();
+    });
+
+    $('.button-upDown').on("click", function(){
+        if(!$(this).siblings().hasClass('show')){
+            $('.fa-sort-down,.fa-sort-up', this).removeClass('fa-sort-down').addClass('fa-sort-up');
+            $(this).parent().css('margin-bottom','20px');
+
+        }
+        else{
+            $('.fa-sort-down,.fa-sort-up', this).addClass('fa-sort-down').removeClass('fa-sort-up');
+            $(this).parent().css('margin-bottom','5px');
+        }
+    });
 
 });

@@ -1,29 +1,43 @@
 .article{
-  background-color: #ffffff66;
-  border-top: 1px solid #fff;
-  margin: 5px;
-
-  .article-entete {
-    line-height: 60px;
-    .article-titre {
-      margin:auto;
+  background-color: #ffffffaa;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  color:black;
+  margin-bottom: 5px;
+  .button-upDown{
+    color: black;
+    a{
+      color: black;
     }
-    .article-categorie {
-      margin: 5px;
+    .fa.header{
+      margin: auto 10px;
     }
-    .button-upDown {
-      margin: auto 30px;
+    &:hover{
+      color: black;
+      text-decoration: none;
     }
-    .article-contenu {
-      margin: 20px;
+    .article-entete {
+      color: black;
+      text-decoration: none;
+      min-height: 60px;
+      .article-titre {
+        margin:auto;
+        font-weight: 400;
+      }
+      .article-categorie {
+        margin: 5px;
+      }
     }
   }
+  .article-contenu {
+      margin: 20px;
+      font-weight: 200;
+    }
   .article-image{
     max-width: 600px ;
     width: 100%;
   }
   .article-source{
-    
     color:royalblue;
     padding: 3px;
     font-style: italic;

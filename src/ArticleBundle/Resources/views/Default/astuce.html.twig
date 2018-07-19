@@ -1,20 +1,29 @@
 {% extends '@Article/Default/index.html.twig' %}
 
-{% block titre %} Astuce {% endblock %}
+{% block titre %} Astuce
+    {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+        <a href="{{ path('astuce_add') }}" class="link ajout"><i class="fas fa-plus"></i></a>
+    {% endif %}
+
+{% endblock %}
+
+
+{% block filtre %}
+    {% include 'block/filtre.html.twig' %}
+{% endblock %}
 
 {% block content %}
 
-    {% for key,astuce in astuces %}
+    {% for key,astuce in articles %}
         <div class="article">
+            <a class="button-upDown" data-toggle="collapse" href="#collapse{{ key }}" role="button" aria-expanded="false" aria-controls="collapse{{ key }}">
             <header class="row article-entete">
                 <div class="col-1">
-                    <a class="button-upDown" data-toggle="collapse" href="#collapse{{ key }}" role="button" aria-expanded="false" aria-controls="collapse{{ key }}">
-                        <i class="text-white fa fa-sort-down"></i>
-                    </a>
+                        <i class="fa fa-sort-down header"></i> 
                 </div>
-                <h4 class="article-titre center col-8">{{ astuce.nom|capitalize }}</h4>
+                <h5 class="article-titre col-8">{{ astuce.nom }}</h5>
                 <div class="col-3">
-                    {% for key,cat in astuce.categorie if cat.nom != "Astuce" %}
+                    {% for key,cat in astuce.categories if cat.id != 1 %}
                         <span class="article-categorie badge badge-light float-right">
                             {{ cat.nom }}
                         </span>
@@ -22,17 +31,20 @@
                 </div>
                 
             </header>
-
-            <div class="collapse text-center" id="collapse{{ key }}">
+            </a>
+            <div class="collapse" id="collapse{{ key }}">
+            <div class="text-center">
                 <img class="article-image img-responsive " src="{{ astuce.urlImage }}" alt="">
-                <div class="article-contenu">
-                    {{ astuce.miseEnFormeContenu }}
-
-                </div>
+            </div>    
             <div>
+                <div class="article-contenu">
+                    <p>{{ astuce.miseEnFormeContenu }}</p> 
+                </div>
                 <a class="article-source" href="{{ astuce.urlSource }}">Source</a>
+                <a href="{{ path('astuce_update', {id: astuce.id}) }}"><i class="fa fa-pen"></i></a>
             </div> 
             </div>
+          
         </div>
     {% endfor %}
 

@@ -7,7 +7,7 @@ use Symfony\Component\HttpFoundation\File\UploadedFile;
  * Article
  *
  * @ORM\Table(name="article")
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="ArticleBundle\Repository\ArticleRepository")
  * @ORM\HasLifecycleCallbacks()
  */
 class Article
@@ -17,7 +17,7 @@ class Article
      *
      * @ORM\Column(name="id", type="integer", nullable=false)
      * @ORM\Id
-     * @ORM\GeneratedValue(strategy="IDENTITY")
+     * @ORM\GeneratedValue(strategy="AUTO")
      */
     private $id;
 
@@ -38,7 +38,7 @@ class Article
     /**
      * @var string
      *
-     * @ORM\Column(name="url_image", type="text", length=65535, nullable=false)
+     * @ORM\Column(name="url_image", type="text", length=65535, nullable=true)
      */
     private $urlImage;
 
@@ -52,53 +52,39 @@ class Article
     /**
      * @var \DateTime
      *
-     * @ORM\Column(name="cree_le", type="datetime", nullable=false)
+     * @ORM\Column(name="cree_le", type="datetime")
      */
     private $creeLe;
 
     /**
      * @var \DateTime
      *
-     * @ORM\Column(name="mis_a_jour_le", type="datetime", nullable=false)
+     * @ORM\Column(name="mis_a_jour_le", type="datetime")
      */
     private $misAJourLe;
 
     /**
      * @var \Doctrine\Common\Collections\Collection
      *
-     * @ORM\ManyToMany(targetEntity="UserBundle\Entity\Utilisateur", mappedBy="article")
+     * 
      */
-    private $utilisateur;
+    private $user;
 
     /**
      * @var \Doctrine\Common\Collections\Collection
      *
-     * @ORM\ManyToMany(targetEntity="AppBundle\Entity\Categorie", mappedBy="article")
-     * @ORM\JoinTable(name="categorie_article",
-     *   joinColumns={
-     *     @ORM\JoinColumn(name="article_id", referencedColumnName="id")
-     *   },
-     *   inverseJoinColumns={
-     *     @ORM\JoinColumn(name="categorie_id", referencedColumnName="id")
-     *   }
-     * )
+     * @ORM\ManyToMany(targetEntity="ArticleBundle\Entity\Categorie", inversedBy="articles")
+     * @ORM\JoinTable(name="categorie_article")
      */
-    private $categorie;
+    private $categories;
 
     /**
      * @var \Doctrine\Common\Collections\Collection
      *
-     * @ORM\ManyToMany(targetEntity="MapBundle\Entity\Lieu", inversedBy="article")
-     * @ORM\JoinTable(name="evenement",
-     *   joinColumns={
-     *     @ORM\JoinColumn(name="article_id", referencedColumnName="id")
-     *   },
-     *   inverseJoinColumns={
-     *     @ORM\JoinColumn(name="lieu_id", referencedColumnName="id")
-     *   }
-     * )
+     * @ORM\ManyToMany(targetEntity="MapBundle\Entity\Lieu", inversedBy="articles")
+     * @ORM\JoinTable(name="evenement")
      */
-    private $lieu;
+    private $lieus;
 
     /**
      * @var string
@@ -115,13 +101,16 @@ class Article
      */
     public function __construct()
     {
-        $this->utilisateur = new \Doctrine\Common\Collections\ArrayCollection();
-        $this->categorie = new \Doctrine\Common\Collections\ArrayCollection();
-        $this->lieu = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->categories = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->user = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->lieus = new \Doctrine\Common\Collections\ArrayCollection();
     }
 
     /**
-     * @param UploadedFile|null $file
+     * Set file.
+     * 
+     * @param UploadedFile $file
+     * 
      * @return Article
      */
     public function setFile(UploadedFile $file = null)
@@ -139,7 +128,9 @@ class Article
     }
 
     /**
-     * @return UploadedFile
+     * Get file.
+     * 
+     * @return Article
      */
     public function getFile()
     {
@@ -147,17 +138,15 @@ class Article
     }
 
     /**
-     * Fonction permettant de renomer l'image avant la sauvegarde en base.
-     *
      * @ORM\PrePersist()
      * @ORM\PreUpdate()
+     * 
+     * @return void
      */
     public function preUpload()
     {
-        if ($this->getFile() !== null) {
+        if (null !== $this->getFile()) {
             $hash = sha1(uniqid(mt_rand(), true));
-
-            // $hash ~= sd54sdf54sf6zaqsd54sqd654ds.jpg
             $this->setUrlImage($hash . '.' . $this->getFile()->guessExtension());
         }
     }
@@ -165,23 +154,95 @@ class Article
     /**
      * @ORM\PostPersist()
      * @ORM\PostUpdate()
+     * 
+     * @return void
      */
     public function upload()
     {
-        if ($this->getFile() === null) {
+        if (null === $this->getFile()) {
             return;
         }
 
         $this->getFile()->move($this->getUploadRootDir(), $this->getUrlImage());
+
+        if (isset($this->tmpPath)) {
+            $this->removeFile($this->getUploadRootDir() . '/' . $this->tmpPath);
+            $this->tmpPath = null;
+        }
+
         $this->setFile(null);
     }
 
     /**
+     * @ORM\PostRemove()
+     * 
+     * @return void
+     */
+    public function removeUpload()
+    {
+        if (($file = $this->getAbsolutePath())) {
+            $this->removeFile($file);
+        }
+    }
+
+    /**
+     * Get absolute path.
+     * 
+     * @return mixed
+     */
+    public function getAbsolutePath()
+    {
+        if (null === $this->getUrlImage()) {
+            return;
+        }
+
+        return $this->getUploadRootDir() . '/' . $this->getImage();
+    }
+
+    /**
+     * Get web path.
+     * 
+     * @return mixed
+     */
+    public function getWebPath()
+    {
+        if (null === $this->getUrlImage() || '' === $this->getUrlImage()) {
+            return;
+        }
+
+        return $this->getUploadDir() . '/' . $this->getUrlImage();
+    }
+
+    /**
+     * Get upload root dir.
+     * 
      * @return string
      */
     public function getUploadRootDir()
     {
-        return __DIR__ . '/../../../web/upload/astuces';
+        return __DIR__ . '/../../../web/upload/image/' . $this->getUploadDir();
+    }
+
+    /**
+     * Get upload dir.
+     * 
+     * @return string
+     */
+    protected function getUploadDir()
+    {
+        return 'article';
+    }
+
+    /**
+     * Remove file
+     * 
+     * @param string $filename
+     */
+    protected function removeFile($filename)
+    {
+        if (is_file($filename)) {
+            unlink($filename);
+        }
     }
 
     /**
@@ -292,75 +353,82 @@ class Article
         return $this;
     }
 
-    /**
-     * @return \DateTime
-     */
+    
     public function getMisAJourLe()
     {
         return $this->misAJourLe;
     }
 
-    /**
-     * @param \DateTime $misAJourLe
-     * @return Article
-     */
+    
     public function setMisAJourLe($misAJourLe)
     {
         $this->misAJourLe = $misAJourLe;
         return $this;
     }
 
+
     /**
      * @return \Doctrine\Common\Collections\Collection
      */
-    public function getUtilisateur()
+    public function getUser()
     {
-        return $this->utilisateur;
+        return $this->user;
     }
 
     /**
-     * @param \Doctrine\Common\Collections\Collection $utilisateur
+     * @param \Doctrine\Common\Collections\Collection $user
      * @return Article
      */
-    public function setUtilisateur($utilisateur)
+    public function setUser($user)
     {
-        $this->utilisateur = $utilisateur;
+        $this->user = $user;
         return $this;
     }
 
     /**
      * @return \Doctrine\Common\Collections\Collection
      */
-    public function getCategorie()
+    public function getCategories()
     {
-        return $this->categorie;
+        return $this->categories;
     }
 
     /**
-     * @param \Doctrine\Common\Collections\Collection $categorie
      * @return Article
      */
-    public function setCategorie($categorie)
+    public function setCategories($categories)
     {
-        $this->categorie = $categorie;
+        foreach ($categories as $categorie) {
+            $categorie->setArticles($this);
+            $this->categories[] = $categorie;
+        } 
+
         return $this;
     }
 
     /**
-     * @return \Doctrine\Common\Collections\Collection
+     * @return Article
      */
-    public function getLieu()
+    public function setCategorie(\ArticleBundle\Entity\Categorie $categorie)
     {
-        return $this->lieu;
+        $categorie->setArticles($this);
+        $this->categories[] = $categorie;
+        return $this;
+    }
+
+    
+    public function getLieus()
+    {
+        return $this->lieus;
     }
 
     /**
-     * @param \Doctrine\Common\Collections\Collection $lieu
      * @return Article
      */
     public function setLieu($lieu)
     {
-        $this->lieu = $lieu;
+        $lieu->setArticle($this);
+        $this->lieu[] = $lieu;
         return $this;
     }
 
@@ -387,22 +455,22 @@ class Article
     }
 
     function miseEnFormeContenu(){
-        $postTitre='</h3>';
+        $postTitre='</h5>';
     
         $postContenu='</div>';;
     
         $tab= explode('**',$this->getContenu());
         foreach ($tab as $key => $value) {
             if($key % 2 != 0){
-                $tab[$key]='<h3>
-                <a class="button-upDown" data-toggle="collapse" href="#collapseIn'.$key.'" role="button" aria-expanded="false" aria-controls="collapseIn'.$key.'">
-                    <i class="text-white fa fa-sort-down"></i>
-                </a>
-                '.$value.$postTitre;
+                $tab[$key]='<hr><h5 class="button-upDown">
+                <a data-toggle="collapse" href="#collapseIn'.$this->getId().$key.'" role="button" aria-expanded="false" aria-controls="collapseIn'.$this->getId().$key.'">
+                    <i class="fa fa-sort-down"></i>
+                
+                '.$value.$postTitre."</a>";
             }
-            elseif ($key != 0) {
+            elseif($key !=0) {
                 $value=str_replace('--','<br>-',$value);
-                $tab[$key]='<div class="collapse" id="collapseIn' . ($key - 1) . '" >'.$value.$postContenu;
+                $tab[$key]='<div class="collapse" id="collapseIn' . ($this->getId().$key - 1) . '" >'.$value.$postContenu;
             }
         }
         $raw = implode(' ',$tab);

@@ -17,7 +17,7 @@ class Lieu
      *
      * @ORM\Column(name="id", type="integer", nullable=false)
      * @ORM\Id
-     * @ORM\GeneratedValue(strategy="IDENTITY")
+     * @ORM\GeneratedValue(strategy="AUTO")
      */
     private $id;
 
@@ -59,9 +59,9 @@ class Lieu
     /**
      * @var \Doctrine\Common\Collections\Collection
      *
-     * @ORM\ManyToMany(targetEntity="ArticleBundle\Entity\Article", mappedBy="lieu")
+     * @ORM\ManyToMany(targetEntity="ArticleBundle\Entity\Article", mappedBy="lieus")
      */
-    private $article;
+    private $articles;
 
     /**
      * Constructor
@@ -182,9 +182,9 @@ class Lieu
     /**
      * @return \Doctrine\Common\Collections\Collection
      */
-    public function getArticle()
+    public function getArticles()
     {
-        return $this->article;
+        return $this->articles;
     }
 
     /**
@@ -193,7 +193,7 @@ class Lieu
      */
     public function setArticle($article)
     {
-        $this->article = $article;
+        $this->articles[] = $article;
         return $this;
     }
 

@@ -33,3 +33,18 @@ services:
     # AppBundle\Service\ExampleService:
     #     arguments:
     #         $someArgument: 'some_value'
+    ArticleRepository:
+        class: ArticleBundle\Repository\ArticleRepository
+        factory: ["@doctrine.orm.entity_manager", getRepository]
+        arguments:
+          - ArticleBundle\Entity\Article
+
+    app.form.registration:
+        class: UserBundle\Form\RegistrationType
+        tags:
+            - { name: form.type, alias: app_user_registration }
+
+    app.form.profile:
+        class: UserBundle\Form\ProfileType
+        tags:
+            - { name: form.type, alias: fos_user_profile }

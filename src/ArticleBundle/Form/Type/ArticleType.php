@@ -12,7 +12,8 @@ use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
-use AppBundle\Entity\Categorie;
+use ArticleBundle\Entity\Categorie;
+use ArticleBundle\Repository\ArticleRepository;
 
 class ArticleType extends AbstractType
 {
@@ -21,12 +22,13 @@ class ArticleType extends AbstractType
         $builder->add('nom', TextType::class)
             ->add('contenu', TextareaType::class)
             ->add('urlSource', TextareaType::class)
-            ->add('file', FileType::class)
-            ->add('categorie', EntityType::class, array(
+            ->add('file', FileType::class,array(
+                'required' => false
+            ))
+            ->add('categories', EntityType::class, array(
                 'class' => Categorie::class,
                 'choice_label' => 'getNom',
-                'by_reference' => false,
-                'multiple' => true,
+                'multiple' => true
             ))
             ->add('submit', SubmitType::class, [
                 'attr' => ['class' => 'btn btn-success']
@@ -37,6 +39,7 @@ class ArticleType extends AbstractType
     {
         $resolver->setDefaults(array(
             'data_class' => 'ArticleBundle\Entity\Article',
+            "allow_extra_fields" => true
         ));
     }
 }
