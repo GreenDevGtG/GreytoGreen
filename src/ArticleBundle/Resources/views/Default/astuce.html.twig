@@ -23,7 +23,7 @@
                 </div>
                 <h5 class="article-titre col-8">{{ astuce.nom }}</h5>
                 <div class="col-3">
-                    {% for key,cat in astuce.categories if cat.id != 1 %}
+                    {% for key,cat in astuce.categories if cat.id != 16 %}
                         <span class="article-categorie badge badge-light float-right">
                             {{ cat.nom }}
                         </span>
@@ -41,7 +41,9 @@
                     <p>{{ astuce.miseEnFormeContenu }}</p> 
                 </div>
                 <a class="article-source" href="{{ astuce.urlSource }}">Source</a>
+            {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
                 <a href="{{ path('astuce_update', {id: astuce.id}) }}"><i class="fa fa-pen"></i></a>
+            {% endif %}
             </div> 
             </div>
           
