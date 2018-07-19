@@ -6,17 +6,26 @@
         {% include 'block/navbar.html.twig' %}
     {% endblock %}
 
-
-
     <div class="page">
         <div class="container">
+
+            {% if app.request.hasPreviousSession %}
+                {% for type, messages in app.session.flashBag.all %}
+                    {% for message in messages %}
+
+                        <div class="{{ type }} alert alert-dismissible alert-light">
+                            <button type="button" class="close" data-dismiss="alert">&times;</button>
+                            {{ message|trans({}, 'FOSUserBundle') }}
+                        </div>
+
+                    {% endfor %}
+                {% endfor %}
+            {% endif %}
+
             <span class="title center">{% block titre %}{% endblock %}</span>
             {% block content %}{% endblock %}
+
         </div>
     </div>
-
-    {% block footer %}
-        {% include 'block/footer.html.twig' %}
-    {% endblock %}
 
 {% endblock %}

@@ -1,7 +1,11 @@
+
 map:
     resource: "@MapBundle/Controller/"
     type:     annotation
     prefix:   /
+
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
 
 article:
     resource: "@ArticleBundle/Controller/"
@@ -11,7 +15,7 @@ article:
 user:
     resource: "@UserBundle/Controller/"
     type:     annotation
-    prefix:   /
+    prefix:   /user
 
 app:
     resource: '@AppBundle/Controller/'

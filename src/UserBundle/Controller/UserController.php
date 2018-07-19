@@ -4,6 +4,8 @@ namespace UserBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 
 class UserController extends Controller
 {
@@ -12,29 +14,7 @@ class UserController extends Controller
      */
     public function userAction()
     {
-        return $this->render('@User/User/user.html.twig', [
-
-        ]);
-    }
-
-    /**
-     * @Route("/login", name="signIn")
-     */
-    public function loginAction()
-    {
-        return $this->render('@User/User/login.html.twig', [
-
-            ]);
-    }
-
-    /**
-     * @Route("/registration", name="signUp")
-     */
-    public function registrationAction()
-    {
-        return $this->render('@User/User/registration.html.twig', [
-
-            ]);
+        
     }
 
 }
