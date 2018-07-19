@@ -440,7 +440,7 @@ header.logoHeader {
         margin: 5px; }
   .article .article-contenu {
     margin: 20px;
-    font-weight: 200; }
+    font-weight: 300; }
   .article .article-image {
     max-width: 600px;
     width: 100%; }
@@ -452,6 +452,8 @@ header.logoHeader {
   .article .article-image {
     max-width: 600px;
     width: 100%; }
+  .article .collapse {
+    padding-bottom: 15px; }
 
 .map-container {
   width: 100%;

@@ -35,8 +35,11 @@
                 <div class="article-contenu">
                     <p>{{ evenement.miseEnFormeContenu }}</p> 
                 </div>
+                <hr/>
                 <a class="article-source" href="{{ evenement.urlSource }}">Source</a>
-                <a href="{{ path('evenement_update', {id: evenement.id}) }}"><i class="fa fa-pen"></i></a>
+                {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+                    <a href="{{ path('evenement_update', {id: astuce.id}) }}"><i class="fa fa-pen"></i></a>
+                {% endif %}
             </div> 
             </div>
         </div>
