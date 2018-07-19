@@ -38,7 +38,7 @@
                 <hr/>
                 <a class="article-source" href="{{ evenement.urlSource }}">Source</a>
                 {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
-                    <a href="{{ path('evenement_update', {id: astuce.id}) }}"><i class="fa fa-pen"></i></a>
+                    <a href="{{ path('evenement_update', {id: evenement.id}) }}"><i class="fa fa-pen"></i></a>
                 {% endif %}
             </div> 
             </div>
