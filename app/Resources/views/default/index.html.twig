@@ -23,17 +23,24 @@
                 </div>
 
                 <div id="liensAccueil">
+                {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+                    <a href="{{ path('fos_user_profile_show') }}" class="linkAccueil">
+                        Mon profil
+                    </a>
+                    
+                {% else %}
                     <a class="linkAccueil" href="{{ path('fos_user_registration_register') }}">S'inscrire</a>
                     <a class="linkAccueil" href="{{ path('fos_user_security_login') }}">Se connecter</a>
+                {% endif %}
                 </div>
 
                 <div id="aboutGtG">
-                    <p class="center formInput">
+                    <div class="center formInput">
                         <a class="linkAccueil" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
                             <i class="text-white fa fa-sort-down"></i>
                             A propos de Grey to Green
                         </a>
-                    </p>
+                    </div>
                     <div class="collapse center" id="collapseExample">
                         <div class="card card-body">
                             <p>L’application doit permettre de simplifier les démarches écologiques au quotidien tout en mettant en relation les différents acteurs du domaine.</p>

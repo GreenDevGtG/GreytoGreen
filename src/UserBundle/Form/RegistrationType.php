@@ -4,6 +4,7 @@ namespace UserBundle\Form;
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
+use Symfony\Component\Form\Extension\Core\Type\BirthdayType;
 
 class RegistrationType extends AbstractType
 {
@@ -12,7 +13,7 @@ class RegistrationType extends AbstractType
     {
         $builder->add('name');
         $builder->add('country');
-        $builder->add('birthday');
+        $builder->add('birthday', BirthdayType::class);
     }
 
     public function getParent()
