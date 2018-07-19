@@ -23,8 +23,15 @@
                 </div>
 
                 <div id="liensAccueil">
+                {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+                    <a href="{{ path('fos_user_profile_show') }}" class="linkAccueil">
+                        Mon profil
+                    </a>
+                    
+                {% else %}
                     <a class="linkAccueil" href="{{ path('fos_user_registration_register') }}">S'inscrire</a>
                     <a class="linkAccueil" href="{{ path('fos_user_security_login') }}">Se connecter</a>
+                {% endif %}
                 </div>
 
                 <div id="aboutGtG">
