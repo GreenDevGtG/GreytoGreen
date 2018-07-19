@@ -7,7 +7,7 @@
 
 .formInput, .button {
     background-color: $white-opac;
-    color: $font-color;
+    color: black;
     font-family: 'Segoe UI', 'OpenSans', 'sans-serif';
     display: block;
     border-style: none;
@@ -18,12 +18,17 @@
     padding: 0 $size-default;
     font-size: 1.2rem;
     z-index: 4;
+    &::placeholder{
+        color:#000000;
+        font-weight: 350;
+    }
 }
 
 
 .button {
     height: 60px;
     background-color: $grey;
+    color: white;
 }
 
 

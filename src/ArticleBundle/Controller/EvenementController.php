@@ -67,7 +67,7 @@ class EvenementController extends Controller
 
         $em = $this->getDoctrine()->getManager();
         $article = $em->getRepository('ArticleBundle:Article')->find($id);
-        $form = $this->createForm('ArticleBundle\Form\Type\ArticleType', $article);
+        $form = $this->createForm('ArticleBundle\Form\Type\ArticleUpdateType', $article);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {

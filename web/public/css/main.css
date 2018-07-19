@@ -244,8 +244,8 @@ header.logoHeader {
   margin: 1.2rem auto; }
 
 .formInput, .button {
-  background-color: rgba(255, 255, 255, 0.15);
-  color: white;
+  background-color: rgba(255, 255, 255, 0.55);
+  color: black;
   font-family: 'Segoe UI', 'OpenSans', 'sans-serif';
   display: block;
   border-style: none;
@@ -256,10 +256,14 @@ header.logoHeader {
   padding: 0 1.2rem;
   font-size: 1.2rem;
   z-index: 4; }
+  .formInput::placeholder, .button::placeholder {
+    color: #000000;
+    font-weight: 350; }
 
 .button {
   height: 60px;
-  background-color: #424242; }
+  background-color: #424242;
+  color: white; }
 
 .otherCo {
   margin: 1.8rem auto; }
@@ -267,7 +271,7 @@ header.logoHeader {
 .socials {
   display: flex;
   justify-content: space-around;
-  background-color: rgba(255, 255, 255, 0.15);
+  background-color: rgba(255, 255, 255, 0.55);
   padding: 1.2rem 0; }
   .socials img {
     height: 100%; }
@@ -473,7 +477,7 @@ header.logoHeader {
 
 #logoAccueil {
   display: block;
-  margin: 13% auto; }
+  margin: 100px auto; }
 
 .textAccueil {
   text-align: center;

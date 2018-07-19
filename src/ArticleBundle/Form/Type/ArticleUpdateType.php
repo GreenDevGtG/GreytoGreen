@@ -15,7 +15,7 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
 use ArticleBundle\Entity\Categorie;
 use ArticleBundle\Repository\ArticleRepository;
 
-class ArticleType extends AbstractType
+class ArticleUpdateType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
@@ -30,7 +30,7 @@ class ArticleType extends AbstractType
                 'choice_label' => 'getNom',
                 'multiple' => true
             ))
-            ->add('Ajouter', SubmitType::class, [
+            ->add('Modifier', SubmitType::class, [
                 'attr' => ['class' => 'btn btn-success']
             ]);
     }
