@@ -80,8 +80,7 @@ class AstuceController extends Controller
 
             return $this->redirectToRoute('astuce_homepage');
         }
-        //\Symfony\Component\VarDumper\VarDumper::dump($form->getData());
-        //echo $form->getErrors();
+
         return $this->render('@Article/Astuce/update.html.twig', array(
             'form' => $form->createView()
         ));

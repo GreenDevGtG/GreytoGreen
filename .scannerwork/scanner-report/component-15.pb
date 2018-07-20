@@ -1,1 +1,1 @@
-src/ArticleBundle :rsrc\ArticleBundle
+,src/ArticleBundle/Entity/FileUploadTrait.php 2phpXÑhr,src/ArticleBundle/Entity/FileUploadTrait.php

@@ -1,1 +1,1 @@
-src/AppBundle :rsrc\AppBundle
+src/ArticleBundle :rsrc\ArticleBundle

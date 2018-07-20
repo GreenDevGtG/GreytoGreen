@@ -1,1 +1,1 @@
-	src/AppBundle/Controller :rsrc\AppBundle\Controller
+	src/AppBundle/Controller :rsrc\AppBundle\Controller

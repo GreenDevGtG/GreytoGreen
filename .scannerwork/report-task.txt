@@ -2,5 +2,5 @@ projectKey=GreytoGreen
 serverUrl=http://localhost:9000
 serverVersion=7.2.1.14109
 dashboardUrl=http://localhost:9000/dashboard?id=GreytoGreen
-ceTaskId=AWSdTKb6bzZNBH5FEH8i
-ceTaskUrl=http://localhost:9000/api/ce/task?id=AWSdTKb6bzZNBH5FEH8i
+ceTaskId=AWS1G60eWAh1YA_4XjiM
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AWS1G60eWAh1YA_4XjiM

@@ -1,1 +1,1 @@
-%src/ArticleBundle/Entity/Category.php 2phpXChr%src/ArticleBundle/Entity/Category.php
+src/ArticleBundle/Entity :rsrc\ArticleBundle\Entity

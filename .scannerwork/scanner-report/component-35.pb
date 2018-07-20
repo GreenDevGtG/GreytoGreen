@@ -1,2 +1,1 @@
-#src/UserBundle/UserBundle.php 2phpX
-hrsrc/UserBundle/UserBundle.php
+#src/MapBundle/Entity/Lieu.php 2phpXËhrsrc/MapBundle/Entity/Lieu.php

@@ -1,4 +1,4 @@
-ы≤╡Йи,GreytoGreen(:2
+Ы╗Н╗к,GreytoGreen(:2
 cs,
 AWSJLUsuh8-NsQD2F0EV	Sonar waycs Ю⌠╣их,:6
 java.
@@ -44,4 +44,4 @@ javascriptЕд╢их,B
 
 typescript
 
-typescriptЕд╢их,j(3835a9ec11db23c747c56e9810c769cbc0e625f1
+typescriptЕд╢их,j(ab847566c81853096ef6b47f420017955e3bfd9f

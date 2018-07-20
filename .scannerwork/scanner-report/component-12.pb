@@ -1,1 +1,1 @@
-src/ArticleBundle/Controller :rsrc\ArticleBundle\Controller
+$src/ArticleBundle/Entity/Article.php 2phpXáhr$src/ArticleBundle/Entity/Article.php

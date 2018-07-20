@@ -1,1 +1,1 @@
-3src/ArticleBundle/Repository/CategoryRepository.php 2phpXhr3src/ArticleBundle/Repository/CategoryRepository.php
+src/ArticleBundle/Form/Type :rsrc\ArticleBundle\Form\Type

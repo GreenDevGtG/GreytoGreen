@@ -1,1 +1,1 @@
-&src/UserBundle/Tests/Controller :$rsrc\UserBundle\Tests\Controller
+&src/MapBundle :%rsrc\MapBundle

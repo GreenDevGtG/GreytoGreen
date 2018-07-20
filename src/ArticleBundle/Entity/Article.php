@@ -180,7 +180,7 @@ class Article
      */
     public function removeUpload()
     {
-        if (($file = $this->getAbsolutePath())) {
+        if ($file = $this->getAbsolutePath()) {
             $this->removeFile($file);
         }
     }
@@ -457,7 +457,7 @@ class Article
     function miseEnFormeContenu(){
         $postTitre='</h5>';
     
-        $postContenu='</div>';;
+        $postContenu='</div>';
     
         $tab= explode('**',$this->getContenu());
         foreach ($tab as $key => $value) {

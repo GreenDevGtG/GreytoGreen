@@ -1,1 +1,2 @@
-%src/UserBundle :#rsrc\UserBundle
+%src/MapBundle/MapBundle.php 2phpX
+hrsrc/MapBundle/MapBundle.php

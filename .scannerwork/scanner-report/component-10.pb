@@ -1,2 +1,2 @@
 
-$src/ArticleBundle/Entity/Article.php 2phpX hr$src/ArticleBundle/Entity/Article.php
+1src/ArticleBundle/Controller/AstuceController.php 2phpXYhr1src/ArticleBundle/Controller/AstuceController.php

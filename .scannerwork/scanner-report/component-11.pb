@@ -1,2 +1,2 @@
-src/ArticleBundle/Entity :
-rsrc\ArticleBundle\Entity
+src/ArticleBundle/Controller :
+rsrc\ArticleBundle\Controller

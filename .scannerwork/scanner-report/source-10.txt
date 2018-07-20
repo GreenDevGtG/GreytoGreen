@@ -1,159 +1,88 @@
 <?php
 
-namespace ArticleBundle\Entity;
+namespace ArticleBundle\Controller;
 
-use Doctrine\ORM\Mapping as ORM;
+use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\HttpFoundation\Request;
+
+
 
 /**
- * Article
- *
- * @ORM\Table(name="article")
- * @ORM\Entity(repositoryClass="ArticleBundle\Repository\ArticleRepository")
+ * @Route("/astuce")
  */
-class Article
+class AstuceController extends Controller
 {
     /**
-     * @var int
-     *
-     * @ORM\Column(name="id", type="integer")
-     * @ORM\Id
-     * @ORM\GeneratedValue(strategy="AUTO")
+     * @Route("/", name="astuce_homepage")
      */
-    private $id;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="Nom", type="string", length=100)
-     */
-    private $nom;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="Contenu", type="text")
-     */
-    private $contenu;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="URL_image", type="text")
-     */
-    private $uRLImage;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="URL_source", type="text")
-     */
-    private $uRLSource;
-
-
-    /**
-     * Get id
-     *
-     * @return int
-     */
-    public function getId()
+    public function indexAction()
     {
-        return $this->id;
+        $repo = $this->getDoctrine()->getRepository('ArticleBundle:Categorie');
+        $categorie = $repo->find(16);
+        $astuces = $categorie->getArticles();
+        
+        $cats = $repo->findAll();
+        return $this->render('@Article/Default/astuce.html.twig',[
+            'articles' => $astuces,
+            'categories' => $cats
+        ]);
     }
 
     /**
-     * Set nom
-     *
-     * @param string $nom
-     *
-     * @return Article
+     * @Route("/add", name="astuce_add")
      */
-    public function setNom($nom)
+    public function addAction(Request $request)
     {
-        $this->nom = $nom;
+        $form = $this->createForm('ArticleBundle\Form\Type\ArticleType');
+        $form->handleRequest($request);
 
-        return $this;
+        if ($form->isSubmitted() && $form->isValid()) {
+            $article = $form->getData();
+
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($article);
+
+            $em->flush();
+
+            $this->addFlash('success', 'Astuce ajoutée');
+            return $this->redirectToRoute('astuce_homepage');
+        }
+
+        return $this->render('@Article/Astuce/add.html.twig', [
+            'form' => $form->createView()
+        ]);
     }
 
     /**
-     * Get nom
-     *
-     * @return string
+     * @Route("/update/{id}", name="astuce_update", requirements={"id"="\d+"})
      */
-    public function getNom()
+    public function updateAction($id, Request $request)
     {
-        return $this->nom;
-    }
 
-    /**
-     * Set contenu
-     *
-     * @param string $contenu
-     *
-     * @return Article
-     */
-    public function setContenu($contenu)
-    {
-        $this->contenu = $contenu;
+        if (is_null($id)) {
+            $postData = $request->get('article');
+            $id = $postData['id'];
+        }
 
-        return $this;
-    }
+        $em = $this->getDoctrine()->getManager();
+        $article = $em->getRepository('ArticleBundle:Article')->find($id);
+        $form = $this->createForm('ArticleBundle\Form\Type\ArticleType', $article);
+        $form->handleRequest($request);
 
-    /**
-     * Get contenu
-     *
-     * @return string
-     */
-    public function getContenu()
-    {
-        return $this->contenu;
-    }
+        if ($form->isSubmitted() && $form->isValid()) {
+            $article = $form->getData();
 
-    /**
-     * Set uRLImage
-     *
-     * @param string $uRLImage
-     *
-     * @return Article
-     */
-    public function setURLImage($uRLImage)
-    {
-        $this->uRLImage = $uRLImage;
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($article);
 
-        return $this;
-    }
+            $em->flush();
 
-    /**
-     * Get uRLImage
-     *
-     * @return string
-     */
-    public function getURLImage()
-    {
-        return $this->uRLImage;
-    }
+            return $this->redirectToRoute('astuce_homepage');
+        }
 
-    /**
-     * Set uRLSource
-     *
-     * @param string $uRLSource
-     *
-     * @return Article
-     */
-    public function setURLSource($uRLSource)
-    {
-        $this->uRLSource = $uRLSource;
-
-        return $this;
-    }
-
-    /**
-     * Get uRLSource
-     *
-     * @return string
-     */
-    public function getURLSource()
-    {
-        return $this->uRLSource;
+        return $this->render('@Article/Astuce/update.html.twig', array(
+            'form' => $form->createView()
+        ));
     }
 }
-

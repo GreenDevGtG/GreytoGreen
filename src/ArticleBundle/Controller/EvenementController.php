@@ -80,8 +80,7 @@ class EvenementController extends Controller
 
             return $this->redirectToRoute('evenement_homepage');
         }
-        //\Symfony\Component\VarDumper\VarDumper::dump($form->getData());
-        //echo $form->getErrors();
+
         return $this->render('@Article/Evenement/update.html.twig', array(
             'form' => $form->createView()
         ));

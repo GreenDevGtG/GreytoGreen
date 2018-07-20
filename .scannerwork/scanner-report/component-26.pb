@@ -1,1 +1,1 @@
-src/UserBundle/Entity :rsrc\UserBundle\Entity
+2src/ArticleBundle/Controller/DefaultController.php 2phpX!hr2src/ArticleBundle/Controller/DefaultController.php

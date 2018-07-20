@@ -26,19 +26,4 @@ class RegistrationType extends AbstractType
         return 'app_user_registration';
     }
 
-    public function getName()
-    {
-        return $this->getBlockPrefix();
-    }
-
-    public function getCountry()
-    {
-        return $this->getBlockPrefix();
-    }
-
-    public function getBirthday()
-    {
-        return $this->getBlockPrefix();
-    }
-
 }
